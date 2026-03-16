@@ -26,8 +26,7 @@ use super::{HasherColumns, HasherFlags};
 use crate::{
     Felt,
     constraints::tagging::{
-        TagGroup, TaggingAirBuilderExt, tagged_assert_zero_integrity, tagged_assert_zeros,
-        tagged_assert_zeros_integrity,
+        TagGroup, TaggingAirBuilderExt, tagged_assert_zeros, tagged_assert_zeros_integrity,
     },
 };
 
@@ -116,10 +115,7 @@ pub(super) fn enforce_selector_consistency<AB>(
     // -------------------------------------------------------------------------
     // On row31, if s0 = 0 then s1 must be 0. This prevents (0,1,*) combinations.
     // Constraint: row31 * (1 - s0) * s1 = 0
-    tagged_assert_zero_integrity(
-        builder,
-        &SELECTOR_CONSIST_TAGS,
-        &mut idx,
+    builder.assert_zero(
         hasher_flag
             * flags.cycle_row_31.clone()
             * (one.clone() - cols.s0.clone())

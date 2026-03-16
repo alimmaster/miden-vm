@@ -28,7 +28,7 @@ use miden_crypto::stark::air::AirBuilder;
 use super::selectors::{ace_chiplet_flag, kernel_rom_chiplet_flag};
 use crate::{
     Felt, MainTraceRow,
-    constraints::tagging::{TagGroup, TaggingAirBuilderExt, tagged_assert_zero_integrity},
+    constraints::tagging::{TaggingAirBuilderExt},
 };
 
 // CONSTANTS
@@ -47,18 +47,9 @@ const R3_IDX: usize = 4;
 // TAGGING CONSTANTS
 // ================================================================================================
 
-pub(super) const KERNEL_ROM_BASE_ID: usize =
-    super::memory::MEMORY_BASE_ID + super::memory::MEMORY_COUNT + super::ace::ACE_COUNT;
-const KERNEL_ROM_SFIRST_ID: usize = KERNEL_ROM_BASE_ID;
 
-const KERNEL_ROM_SFIRST_NAMESPACE: &str = "chiplets.kernel_rom.sfirst.binary";
 
-const KERNEL_ROM_SFIRST_NAMES: [&str; 1] = [KERNEL_ROM_SFIRST_NAMESPACE; 1];
 
-const KERNEL_ROM_SFIRST_TAGS: TagGroup = TagGroup {
-    base: KERNEL_ROM_SFIRST_ID,
-    names: &KERNEL_ROM_SFIRST_NAMES,
-};
 
 // ENTRY POINTS
 // ================================================================================================
@@ -104,13 +95,7 @@ pub fn enforce_kernel_rom_constraints<AB>(
     // ==========================================================================
 
     // sfirst must be binary
-    let mut idx = 0;
-    tagged_assert_zero_integrity(
-        builder,
-        &KERNEL_ROM_SFIRST_TAGS,
-        &mut idx,
-        kernel_rom_flag.clone() * sfirst.clone() * (sfirst.clone() - one.clone()),
-    );
+    builder.assert_zero(kernel_rom_flag.clone() * sfirst.clone() * (sfirst.clone() - one.clone()));
 
     // ==========================================================================
     // DIGEST CONTIGUITY CONSTRAINTS

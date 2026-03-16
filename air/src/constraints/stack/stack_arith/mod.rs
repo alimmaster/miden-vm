@@ -11,88 +11,13 @@ use crate::{
     MainTraceRow,
     constraints::{
         op_flags::OpFlags,
-        tagging::{
-            TagGroup, TaggingAirBuilderExt, ids::TAG_STACK_ARITH_BASE,
-            tagged_assert_zero_integrity,
-        },
+        tagging::TaggingAirBuilderExt,
     },
     trace::decoder::USER_OP_HELPERS_OFFSET,
 };
 
 // CONSTANTS
 // ================================================================================================
-
-/// Number of stack arith/u32 constraints.
-#[allow(dead_code)]
-pub const NUM_CONSTRAINTS: usize = 42;
-
-/// Base tag ID for stack arith/u32 constraints.
-const STACK_ARITH_BASE_ID: usize = TAG_STACK_ARITH_BASE;
-
-/// Tag namespaces for stack arith/u32 constraints.
-const STACK_ARITH_NAMES: [&str; NUM_CONSTRAINTS] = [
-    // ADD/NEG/MUL/INV/INCR
-    "stack.arith.add",
-    "stack.arith.neg",
-    "stack.arith.mul",
-    "stack.arith.inv",
-    "stack.arith.incr",
-    // NOT
-    "stack.arith.not",
-    "stack.arith.not",
-    // AND
-    "stack.arith.and",
-    "stack.arith.and",
-    "stack.arith.and",
-    // OR
-    "stack.arith.or",
-    "stack.arith.or",
-    "stack.arith.or",
-    // EQ
-    "stack.arith.eq",
-    "stack.arith.eq",
-    // EQZ
-    "stack.arith.eqz",
-    "stack.arith.eqz",
-    // EXPACC
-    "stack.arith.expacc",
-    "stack.arith.expacc",
-    "stack.arith.expacc",
-    "stack.arith.expacc",
-    "stack.arith.expacc",
-    // EXT2MUL
-    "stack.arith.ext2mul",
-    "stack.arith.ext2mul",
-    "stack.arith.ext2mul",
-    "stack.arith.ext2mul",
-    // U32 shared/output
-    "stack.arith.u32.shared",
-    "stack.arith.u32.output",
-    "stack.arith.u32.output",
-    // U32SPLIT/U32ADD/U32ADD3
-    "stack.arith.u32.split",
-    "stack.arith.u32.add",
-    "stack.arith.u32.add3",
-    // U32SUB
-    "stack.arith.u32.sub",
-    "stack.arith.u32.sub",
-    "stack.arith.u32.sub",
-    // U32MUL/U32MADD
-    "stack.arith.u32.mul",
-    "stack.arith.u32.madd",
-    // U32DIV
-    "stack.arith.u32.div",
-    "stack.arith.u32.div",
-    "stack.arith.u32.div",
-    // U32ASSERT2
-    "stack.arith.u32.assert2",
-    "stack.arith.u32.assert2",
-];
-
-const STACK_ARITH_TAGS: TagGroup = TagGroup {
-    base: STACK_ARITH_BASE_ID,
-    names: &STACK_ARITH_NAMES,
-};
 
 // ENTRY POINTS
 // ================================================================================================
@@ -106,7 +31,6 @@ pub fn enforce_main<AB>(
 ) where
     AB: LiftedAirBuilder,
 {
-    let mut idx = 0usize;
 
     let s0: AB::Expr = local.stack[0].clone().into();
     let s1: AB::Expr = local.stack[1].clone().into();
@@ -165,31 +89,26 @@ pub fn enforce_main<AB>(
 
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_not.clone() * (s0.clone() * (s0.clone() - AB::Expr::ONE)),
     );
     assert_zero(builder,is_not * (s0.clone() + s0_next.clone() - AB::Expr::ONE));
 
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_and.clone() * (s0.clone() * (s0.clone() - AB::Expr::ONE)),
     );
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_and.clone() * (s1.clone() * (s1.clone() - AB::Expr::ONE)),
     );
     assert_zero(builder,is_and * (s0_next.clone() - s0.clone() * s1.clone()));
 
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_or.clone() * (s0.clone() * (s0.clone() - AB::Expr::ONE)),
     );
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_or.clone() * (s1.clone() * (s1.clone() - AB::Expr::ONE)),
     );
     assert_zero(
@@ -278,7 +197,6 @@ pub fn enforce_main<AB>(
     let u32_v_hi_comp = AB::Expr::ONE - uop_h4.clone() * (two_pow_32_minus_one - u32_v_hi.clone());
     assert_zero_integrity(
         builder,
-        &mut idx,
         u32_split_mul_madd * (u32_v_hi_comp * u32_v_lo.clone()),
     );
 
@@ -293,15 +211,13 @@ pub fn enforce_main<AB>(
     );
     assert_zero(builder,u32_two_outputs * (s1_next.clone() - u32_v_hi.clone()));
 
-    assert_zero_integrity(builder, &mut idx, is_u32split * (s0.clone() - u32_v64.clone()));
+    assert_zero_integrity(builder,is_u32split * (s0.clone() - u32_v64.clone()));
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_u32add * (s0.clone() + s1.clone() - u32_v48.clone()),
     );
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_u32add3 * (s0.clone() + s1.clone() + s2.clone() - u32_v48.clone()),
     );
 
@@ -318,12 +234,10 @@ pub fn enforce_main<AB>(
 
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_u32mul * (s0.clone() * s1.clone() - u32_v64.clone()),
     );
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_u32madd * (s0.clone() * s1.clone() + s2 - u32_v64.clone()),
     );
 
@@ -351,10 +265,6 @@ fn assert_zero<AB: TaggingAirBuilderExt>(builder: &mut AB, expr: AB::Expr) {
     builder.when_transition().assert_zero(expr);
 }
 
-fn assert_zero_integrity<AB: TaggingAirBuilderExt>(
-    builder: &mut AB,
-    idx: &mut usize,
-    expr: AB::Expr,
-) {
-    tagged_assert_zero_integrity(builder, &STACK_ARITH_TAGS, idx, expr);
+fn assert_zero_integrity<AB: TaggingAirBuilderExt>(builder: &mut AB, expr: AB::Expr) {
+    builder.assert_zero(expr);
 }

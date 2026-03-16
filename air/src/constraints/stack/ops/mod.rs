@@ -15,8 +15,7 @@ use crate::{
     constraints::{
         op_flags::OpFlags,
         tagging::{
-            TagGroup, TaggingAirBuilderExt, ids::TAG_STACK_OPS_BASE,
-            tagged_assert_zero_integrity, tagged_assert_zeros,
+            TagGroup, TaggingAirBuilderExt, ids::TAG_STACK_OPS_BASE, tagged_assert_zeros,
         },
     },
 };
@@ -374,7 +373,6 @@ pub fn enforce_main<AB>(
     // Binary constraint for the cswap selector (must be 0 or 1).
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_cswap.clone() * (cswap_c.clone() * (cswap_c.clone() - AB::Expr::ONE)),
     );
 
@@ -396,7 +394,6 @@ pub fn enforce_main<AB>(
     // Binary constraint for the cswapw selector (same selector as cswap).
     assert_zero_integrity(
         builder,
-        &mut idx,
         is_cswapw.clone() * (cswap_c.clone() * (cswap_c.clone() - AB::Expr::ONE)),
     );
 
@@ -434,7 +431,7 @@ pub fn enforce_main<AB>(
     );
 
     // ASSERT: top element must be 1 (shift handled by stack general).
-    assert_zero_integrity(builder, &mut idx, is_assert * (s0 - AB::Expr::ONE));
+    assert_zero_integrity(builder,is_assert * (s0 - AB::Expr::ONE));
 
     // CALLER: load fn_hash into the top 4 stack elements.
     assert_zeros(
@@ -456,12 +453,8 @@ pub fn enforce_main<AB>(
 // CONSTRAINT HELPERS
 // ================================================================================================
 
-fn assert_zero_integrity<AB: TaggingAirBuilderExt>(
-    builder: &mut AB,
-    idx: &mut usize,
-    expr: AB::Expr,
-) {
-    tagged_assert_zero_integrity(builder, &STACK_OPS_TAGS, idx, expr);
+fn assert_zero_integrity<AB: TaggingAirBuilderExt>(builder: &mut AB, expr: AB::Expr) {
+    builder.assert_zero(expr);
 }
 
 fn assert_zero<AB: TaggingAirBuilderExt>(builder: &mut AB, expr: AB::Expr) {

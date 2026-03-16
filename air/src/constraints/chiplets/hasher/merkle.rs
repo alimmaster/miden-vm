@@ -25,7 +25,7 @@ use super::{HasherColumns, HasherFlags};
 use crate::{
     Felt,
     constraints::tagging::{
-        TagGroup, TaggingAirBuilderExt, tagged_assert_zero_integrity, tagged_assert_zeros,
+        TagGroup, TaggingAirBuilderExt, tagged_assert_zeros,
     },
 };
 
@@ -36,7 +36,6 @@ const MERKLE_CAP_NAMESPACE: &str = "chiplets.hasher.merkle.capacity";
 const MERKLE_RATE0_NAMESPACE: &str = "chiplets.hasher.merkle.digest.rate0";
 const MERKLE_RATE1_NAMESPACE: &str = "chiplets.hasher.merkle.digest.rate1";
 
-const OUTPUT_INDEX_NAMES: [&str; 1] = [super::OUTPUT_INDEX_NAMESPACE];
 const MERKLE_ABSORB_NAMES: [&str; 12] = [
     MERKLE_CAP_NAMESPACE,
     MERKLE_CAP_NAMESPACE,
@@ -52,10 +51,6 @@ const MERKLE_ABSORB_NAMES: [&str; 12] = [
     MERKLE_RATE1_NAMESPACE,
 ];
 
-const OUTPUT_INDEX_TAGS: TagGroup = TagGroup {
-    base: super::HASHER_OUTPUT_IDX_ID,
-    names: &OUTPUT_INDEX_NAMES,
-};
 const MERKLE_ABSORB_TAGS: TagGroup = TagGroup {
     base: super::HASHER_MERKLE_ABSORB_BASE_ID,
     names: &MERKLE_ABSORB_NAMES,
@@ -92,13 +87,7 @@ pub(super) fn enforce_node_index_constraints<AB>(
     // -------------------------------------------------------------------------
 
     // Constraint 1: Index must be 0 on output rows.
-    let mut idx = 0;
-    tagged_assert_zero_integrity(
-        builder,
-        &OUTPUT_INDEX_TAGS,
-        &mut idx,
-        hasher_flag.clone() * flags.f_out.clone() * cols.node_index.clone(),
-    );
+    builder.assert_zero(hasher_flag.clone() * flags.f_out.clone() * cols.node_index.clone());
 
     // -------------------------------------------------------------------------
     // Index Shift Constraint
