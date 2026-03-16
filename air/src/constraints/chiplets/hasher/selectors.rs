@@ -25,21 +25,7 @@ use miden_crypto::stark::air::AirBuilder;
 use super::{HasherColumns, HasherFlags};
 use crate::{
     Felt,
-    constraints::tagging::{
-        TagGroup, TaggingAirBuilderExt, tagged_assert_zeros_integrity,
-    },
-};
-
-// TAGGING NAMESPACES
-// ================================================================================================
-
-const SELECTOR_BOOL_NAMESPACE: &str = "chiplets.hasher.selectors.binary";
-
-const SELECTOR_BOOL_NAMES: [&str; 3] = [SELECTOR_BOOL_NAMESPACE; 3];
-
-const SELECTOR_BOOL_TAGS: TagGroup = TagGroup {
-    base: super::HASHER_SELECTOR_BOOL_BASE_ID,
-    names: &SELECTOR_BOOL_NAMES,
+    constraints::tagging::TaggingAirBuilderExt,
 };
 
 // CONSTRAINT HELPERS
@@ -120,16 +106,9 @@ pub fn enforce_selector_booleanity<AB>(
     let s0: AB::Expr = s0.into();
     let s1: AB::Expr = s1.into();
     let s2: AB::Expr = s2.into();
-    let mut idx = 0;
-    tagged_assert_zeros_integrity(
-        builder,
-        &SELECTOR_BOOL_TAGS,
-        &mut idx,
-        SELECTOR_BOOL_NAMESPACE,
-        [
-            hasher_flag.clone() * s0.clone() * (s0 - AB::Expr::ONE),
-            hasher_flag.clone() * s1.clone() * (s1 - AB::Expr::ONE),
-            hasher_flag * s2.clone() * (s2 - AB::Expr::ONE),
-        ],
-    );
+    builder.assert_zeros([
+        hasher_flag.clone() * s0.clone() * (s0 - AB::Expr::ONE),
+        hasher_flag.clone() * s1.clone() * (s1 - AB::Expr::ONE),
+        hasher_flag * s2.clone() * (s2 - AB::Expr::ONE),
+    ]);
 }

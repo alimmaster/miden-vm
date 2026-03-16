@@ -31,22 +31,6 @@ pub struct TagGroup {
     pub names: &'static [&'static str],
 }
 
-/// Tag and assert a fixed list of integrity constraints, advancing the per-group index.
-pub fn tagged_assert_zeros_integrity<AB: TaggingAirBuilderExt, const N: usize>(
-    builder: &mut AB,
-    group: &TagGroup,
-    idx: &mut usize,
-    namespace: &'static str,
-    exprs: [AB::Expr; N],
-) {
-    debug_assert!(*idx + N <= group.names.len(), "tag index out of bounds");
-    let ids: [usize; N] = core::array::from_fn(|i| group.base + *idx + i);
-    builder.tagged_list(ids, namespace, |builder| {
-        builder.assert_zeros(exprs);
-    });
-    *idx += N;
-}
-
 /// Tag and assert a single extension-field constraint, advancing the per-group index.
 pub fn tagged_assert_zero_ext<AB: TaggingAirBuilderExt>(
     builder: &mut AB,

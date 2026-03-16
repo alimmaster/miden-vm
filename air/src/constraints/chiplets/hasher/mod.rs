@@ -42,22 +42,12 @@ pub use periodic::{STATE_WIDTH, periodic_columns};
 
 use crate::{
     Felt, MainTraceRow,
-    constraints::tagging::{TaggingAirBuilderExt, ids::TAG_CHIPLETS_BASE},
+    constraints::tagging::TaggingAirBuilderExt,
     trace::{
         CHIPLETS_OFFSET,
         chiplets::{HASHER_NODE_INDEX_COL_IDX, HASHER_SELECTOR_COL_RANGE, HASHER_STATE_COL_RANGE},
     },
 };
-
-// TAGGING IDS
-// ================================================================================================
-
-/// Base ID for hasher chiplet constraints (next after chiplet selectors).
-pub(super) const HASHER_BASE_ID: usize = TAG_CHIPLETS_BASE + 10;
-pub(super) const HASHER_PERM_INIT_BASE_ID: usize = HASHER_BASE_ID;
-pub(super) const HASHER_PERM_EXT_BASE_ID: usize = HASHER_PERM_INIT_BASE_ID + STATE_WIDTH;
-pub(super) const HASHER_PERM_INT_BASE_ID: usize = HASHER_PERM_EXT_BASE_ID + STATE_WIDTH;
-pub(super) const HASHER_SELECTOR_BOOL_BASE_ID: usize = HASHER_PERM_INT_BASE_ID + STATE_WIDTH;
 
 /// Precomputed hasher flags derived from selectors and cycle markers.
 struct HasherFlags<E> {
