@@ -2,7 +2,7 @@
 
 Rules for writing constraint code in `air/src/constraints/`.
 All transformations must be semantics-preserving: the resulting constraint polynomials
-must be algebraically identical. Verify with the checklist at the end.
+must be algebraically identical.
 
 ## AirBuilder Background
 
@@ -13,6 +13,14 @@ All constraint functions should bound on `LiftedAirBuilder`, not individual sub-
 The underlying traits are defined in `../plonky3/air/src/air.rs`. Field algebra traits
 (`PrimeCharacteristicRing`, `Field`, `ExtensionField`, `Algebra`) are in `../plonky3/field/src/field.rs`.
 All `../` paths in this document are relative to the repository root.
+
+### Key Source Locations (use these paths directly — do not search)
+- `LiftedAirBuilder`: `../p3-miden/p3-miden-lifted-air/src/builder.rs`
+- `AirBuilder` (`Var`, `Expr`): `../plonky3/air/src/air.rs`
+- `PrimeCharacteristicRing`, `Field`, `Algebra`: `../plonky3/field/src/field.rs`
+- `BoolNot`: `air/src/constraints/utils.rs`
+- `QuadFeltExpr` / `QuadFeltAirBuilder`: `air/src/constraints/ext_field.rs`
+- `Felt` constants: `air/src/constraints/constants.rs`
 
 ### Types
 
@@ -26,12 +34,13 @@ Clones on `Expr` do not affect runtime performance — constraint evaluation nev
 
 ### Assertion Methods
 
-All assertions ultimately call `assert_zero`. The semantic variants exist for readability:
+All assertions call `assert_zero` internally:
 - `assert_eq(a, b)` = `assert_zero(a - b)`
 - `assert_one(x)` = `assert_zero(x - 1)`
 - `assert_bool(x)` = `assert_zero(x * (x - 1))`
 - `assert_bools(array)` = batch `assert_bool`
 - `assert_zero_ext`, `assert_eq_ext`, `assert_one_ext` = extension field equivalents
+- `assert_eq_quad(lhs, rhs)` — component-wise equality on `QuadFeltExpr` limbs
 
 ### `when()` and `FilteredAirBuilder`
 
@@ -43,20 +52,27 @@ A gate can be a sum of flags (e.g. `f_a + f_b + f_c`). When the summands are lin
 
 Chaining `when(a).when(b).assert_zero(x)` produces `a * (b * x)` — same polynomial as `assert_zero(a * b * x)`. When multiple constraints share the same compound condition, use a scoped builder (`let builder = &mut builder.when(gate)`) so the condition is applied once per assertion. Nest scoped builders to express logically separate groups of constraints under a shared outer gate.
 
-### `QuadFeltExpr`
+---
 
-Defined in `air/src/constraints/ext_field.rs`. Represents a quadratic extension element `(c0, c1)`. Supports arithmetic (`Add`, `Sub`, `Mul`) and scalar multiply.
+## Applying Rules
 
-`QuadFeltAirBuilder` extension trait (blanket-implemented for all `AirBuilder`):
-- `assert_eq_quad(lhs, rhs)` — asserts component-wise equality on both limbs.
+**Mechanical rules (1, 6, 7, 8):** grep/comby for the pattern, edit matches. No need to
+read entire files. For bulk application, use the `comby-rust-refactor` agent with the
+comby patterns listed below.
+
+**Judgment rules (2, 3, 4, 5):** read the full function before editing.
+
+If subagents are used, paste the "Types" and "Key Source Locations" sections into the
+agent prompt — agents cannot read this file automatically. Never run `cargo check/build`
+inside agents; do one check after all edits are complete.
 
 ---
 
-## Rules
+## Mechanical Rules
 
-### 1. Use semantic assertion methods
+### Rule 1. Use semantic assertion methods
 
-Replace manual zero-check patterns:
+**Comby:** `comby 'builder.assert_zero(:[a] - :[b])' 'builder.assert_eq(:[a], :[b])' -matcher .rs`
 
 | Before | After |
 |--------|-------|
@@ -66,25 +82,94 @@ Replace manual zero-check patterns:
 | `assert_zero_ext(lhs - rhs)` | `assert_eq_ext(lhs, rhs)` |
 | loop of `assert_bool` | `assert_bools(array)` |
 
-### 2. Factor gates with `when()`
+### Rule 6. Keep trace columns as `AB::Var`
 
-When `assert_zero(gate * expr)` appears and `gate` is a binary selector/flag,
-replace with `when(gate).assert_zero(expr)` (or the appropriate semantic assertion).
+**Grep:** `: AB::Expr.*\.into\(\)` or `\.clone\(\)\.into\(\)`
+
+Column reads return `AB::Var` (`Copy`). Don't convert to `AB::Expr` at binding site.
+
+```rust
+// BAD
+let s0: AB::Expr = local.chiplets[0].clone().into();
+// GOOD
+let s0 = local.chiplets[0];
+```
+
+**Do NOT change:**
+- `PeriodicVar` reads — need `.into()` for arithmetic
+- Function args expecting `AB::Expr` — move `.into()` to call site
+- `.not()` calls — `BoolNot` needs `PrimeCharacteristicRing`, use `AB::Expr::from(x).not()`
+
+### Rule 7. Inline constants, never bind them
+
+**Grep:** `let.*=.*F_\d\|let.*= F_`
+
+`Felt` constants live in `constants.rs`. Use directly, never bind to local variables.
+For `1 - x` patterns, use `.not()` from `BoolNot` (in `utils.rs`).
+
+```rust
+delta_gc.clone() - F_1     // direct constant use
+s3_next.not()               // BoolNot for 1-x pattern (works on ExprEF too)
+```
+
+Cache `.not()` when reused:
+```rust
+let not_hs1 = hs1.not();
+let f_bp = hasher_active * s0 * not_hs1.clone() * not_hs2.clone();
+let f_mp = hasher_active * s0 * not_hs1.clone() * s2;
+```
+
+### Rule 8. Section headers
+
+Use `// ===...===` section headers within function bodies for visual grouping.
+
+```rust
+// =============================================
+// Binary constraints
+// =============================================
+builder.assert_bools(cols.op_bits);
+```
+
+---
+
+## Judgment Rules
+
+Read the full function before editing.
+
+### Rule 2. Factor gates with `when()`
+
+When `assert_zero(gate * expr)` and `gate` is a binary selector, replace with
+`when(gate).assert_zero(expr)` (or appropriate semantic assertion).
 
 ```rust
 // BEFORE
 builder.assert_zero(flag * x * (x - 1));
-// AFTER — flag is a selector, x*(x-1) is the bool check
+// AFTER
 builder.when(flag).assert_bool(x);
 ```
 
-When a pre-computed combined flag exists (e.g. `op_flags.right_shift()`), use it
-directly in a single `when()` rather than chaining its constituent parts.
+Use pre-computed combined flags (e.g. `op_flags.right_shift()`) directly in `when()`.
 
-Only decompose factors that are binary selectors/flags (constrained to {0, 1} elsewhere).
-Do NOT decompose intrinsic algebraic products (see "When NOT to apply" below).
+**Do NOT apply when the product is the constraint itself (intrinsic, not a gate):**
+```rust
+assert_zero(eq_diff * s0_next);           // conditional inverse
+assert_zero(op * (op - 1) * (op + 1));   // ternary validity
+assert_zero(sstart * sblock);             // mutual exclusion
+```
 
-### 3. Scoped builders and nesting
+**Do NOT apply to bus accumulators** — neither factor is a selector:
+```rust
+builder.when_transition().assert_eq_ext(p_next * req, p_local * resp);
+```
+
+**Gate vs intrinsic:** a factor is a gate if it's a binary selector controlling activation.
+It's intrinsic if it participates in the algebraic relationship.
+```rust
+builder.when(sp).assert_bool(delta_gc);                        // CORRECT: sp is a gate
+builder.when(sp).when(delta_gc).assert_zero(delta_gc - 1);    // WRONG: splits the bool check
+```
+
+### Rule 3. Scoped builders and nesting
 
 When multiple constraints share a gate, use a scoped builder. Use nested `{}` blocks
 to express logically separate groups under a shared outer gate. Only open a new block
@@ -129,169 +214,48 @@ Nesting for logically separate sub-groups:
 
 When a group of constraints all need `is_transition()` combined with a flag, pre-multiply into
 a single gate variable. Do not bind `is_transition()` on its own — only as part of a compound gate:
-
 ```rust
-// GOOD — compound gate, scoped builder
+// GOOD
 let gate = builder.is_transition() * flag;
 let builder = &mut builder.when(gate);
-builder.assert_eq(a_next, a);
-builder.assert_eq(b_next, b);
 
-// BAD — functionally identical, but the temporary borrow complicates lifetimes
+// BAD — temporary borrow complicates lifetimes
 let mut transition = builder.when_transition();
 let builder = &mut transition.when(flag);
 ```
 
-If every constraint in a function shares the same gate, compute it once at the top:
-
+If all constraints in a function share a gate, apply it once at the top:
 ```rust
 fn enforce_foo<AB: LiftedAirBuilder>(builder: &mut AB, flag: AB::Expr, ...) {
     let builder = &mut builder.when(flag);
-    // all constraints here share the gate
+    // all constraints share the gate
 }
 ```
 
-### 4. Inline small helpers
+### Rule 4. Inline small helpers
 
-Remove helper functions that:
-- Forward to a single constraint function with unpacked fields
-- Wrap `builder.when_transition().assert_zero(expr)` as `assert_zero(builder, expr)`
-- Are 15 lines or fewer (count the function body, not the signature)
+Inline functions that: forward to one constraint function with unpacked fields,
+wrap a single assertion, or are ≤15 lines. Keep functions that issue many constraints
+or are called from multiple sites. Use section comments and `{}` blocks for grouping.
 
-Inline the body at the call site. Only extract a function when it issues many
-constraints or is reused from multiple call sites.
+### Rule 5. Prefer intent comments, preserve existing formulas
 
-Use section comments and `{}` blocks for visual grouping instead of function boundaries.
-
-### 5. Prefer intent comments, preserve existing formulas
-
-Prefer comments that explain why a constraint exists over restating the formula. However,
-if a formula comment already exists in the code, keep it — do not delete existing comments
-that document the algebraic relationship. Only add new comments for intent, not formulas.
+New comments should explain *why*, not restate the formula. Don't delete existing
+formula comments.
 
 ```rust
 // Inside a span, gc can only stay the same or decrement by 1.
 builder.when(sp).assert_bool(delta_gc);
 ```
 
-### 6. Keep trace columns as `AB::Var`
-
-Trace column reads return `AB::Var`, which is `Copy`. Do not eagerly convert to `AB::Expr`:
-
-```rust
-// BAD — unnecessary clone and conversion
-let s0: AB::Expr = local.chiplets[0].clone().into();
-
-// GOOD — Var is Copy, implicit conversion on arithmetic
-let s0 = local.chiplets[0];
-```
-
-Column structs (`DecoderColumns<E>`, etc.) should be parameterized with `AB::Var`:
-bound `E: Copy` rather than `E: Clone`. Only convert to `Expr` at the point of use
-(e.g. `ace_chiplet_flag(s0.into(), ...)`), not at binding site.
-
-### 7. Inline constants, never bind them
-
-Numeric `Felt` constants live in `constants.rs`. Never bind them to local variables.
-
-```rust
-// RHS — use Felt constant directly (auto-coerces)
-delta_gc.clone() - F_1
-value.clone() * F_7
-
-// LHS — use .not() from BoolNot trait (import utils::BoolNot)
-s3_next.not()
-flag_sum.not()  // works on AB::ExprEF too
-```
-
-When the same `.not()` is used multiple times, store it in a named variable:
-
-```rust
-// GOOD — computed once, reused
-let not_hs1 = hs1.not();
-let f_bp = hasher_active * s0 * not_hs1.clone() * not_hs2.clone();
-let f_mp = hasher_active * s0 * not_hs1.clone() * s2;
-
-// BAD — redundant .not() calls
-let f_bp = hasher_active * s0 * hs1.not() * hs2.not();
-let f_mp = hasher_active * s0 * hs1.not() * s2;
-```
-
-### 8. Section headers
-
-Use section headers within a single function body for visual grouping:
-
-```rust
-// =============================================
-// Binary constraints
-// =============================================
-builder.assert_bools(cols.op_bits);
-
-// =============================================
-// Transition constraints
-// =============================================
-{
-    let builder = &mut builder.when(transition_flag);
-    builder.assert_eq(a_next, a);
-}
-```
-
----
-
-## When NOT to Apply These Rules
-
-### Intrinsic algebraic products
-
-Do NOT decompose with `when()` when the multiplicative structure IS the constraint:
-
-```rust
-// Conditional inverse (EQ/EQZ): if x != 0, h0 = 1/x forces result = 0
-assert_zero(eq_diff * s0_next);
-
-// Ternary validity: op in {-1, 0, 1}
-assert_zero(op * (op - 1) * (op + 1));
-
-// Mutual exclusion: can't both be 1
-assert_zero(sstart * sblock);
-
-// Range-check vanishing polynomial
-assert_zero(x * (x-1) * (x-2) * ... * (x-8));
-```
-
-A factor is a **gate** if it's a binary selector that controls activation.
-A factor is **intrinsic** if it participates in the algebraic relationship being checked.
-
-### Bus accumulator constraints
-
-Running products don't decompose into gate + assertion. Neither factor is a binary
-selector — both are accumulator values:
-
-```rust
-builder.when_transition().assert_eq_ext(p_next * req, p_local * resp);
-```
-
-### Correct decomposition of high-degree products
-
-```rust
-// sp IS a gate, delta_gc * (delta_gc - 1) is the bool check
-builder.when(sp).assert_bool(delta_gc);  // CORRECT
-
-// delta_gc is NOT a gate — don't split the bool check
-builder.when(sp).when(delta_gc).assert_zero(delta_gc - 1);  // WRONG
-```
-
 ---
 
 ## Semantics Preservation Checklist
 
-After every transformation, verify:
+After applying judgment rules (2, 3, 4), verify:
 
-1. **Gate equivalence:** `when(g).assert_zero(x)` == `assert_zero(g * x)`.
-2. **Transition scoping:** `when_transition().when(f)` == `when(is_transition * f)`.
-3. **No dropped constraints:** Every `assert_zero` in old code has a corresponding assertion.
-4. **No added constraints:** No new algebraic relations introduced.
-5. **Degree preservation:** `when(a).when(b).assert_zero(x)` has degree `deg(a) + deg(b) + deg(x)`.
-6. **Semantic equivalence:**
-   - `assert_eq(a, b)` == `assert_zero(a - b)` (no degree change)
-   - `assert_bool(x)` == `assert_zero(x * (x - 1))` (degree 2 in x)
-   - `assert_one(x)` == `assert_zero(x - 1)` (same degree)
+1. `when(g).assert_zero(x)` == `assert_zero(g * x)`
+2. `when_transition().when(f)` == `when(is_transition * f)`
+3. No dropped constraints — every original `assert_zero` has a corresponding assertion
+4. No added constraints
+5. Degree preserved — `when(a).when(b).assert_zero(x)` has degree `deg(a) + deg(b) + deg(x)`
