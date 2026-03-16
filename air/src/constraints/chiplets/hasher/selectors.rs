@@ -20,13 +20,14 @@
 //! | MUA       | 1  | 1  | 1  | Merkle update absorb |
 
 use miden_core::field::PrimeCharacteristicRing;
+use miden_crypto::stark::air::AirBuilder;
 
 use super::{HasherColumns, HasherFlags};
 use crate::{
     Felt,
     constraints::tagging::{
-        TagGroup, TaggingAirBuilderExt, tagged_assert_zero, tagged_assert_zero_integrity,
-        tagged_assert_zeros, tagged_assert_zeros_integrity,
+        TagGroup, TaggingAirBuilderExt, tagged_assert_zero_integrity, tagged_assert_zeros,
+        tagged_assert_zeros_integrity,
     },
 };
 
@@ -108,7 +109,7 @@ pub(super) fn enforce_selector_consistency<AB>(
     // Continuation constraint: hasher_flag * flag_cont * s0' = 0.
     // (Single constraint, so no batching benefit beyond using `.when(gate)`.)
     let gate = hasher_flag.clone() * flags.f_continuation();
-    tagged_assert_zero(builder, &SELECTOR_CONSIST_TAGS, &mut idx, gate * cols_next.s0.clone());
+    builder.when_transition().assert_zero(gate * cols_next.s0.clone());
 
     // -------------------------------------------------------------------------
     // Constraint 3: Invalid selector combinations rejection

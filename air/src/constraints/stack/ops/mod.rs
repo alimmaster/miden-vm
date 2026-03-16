@@ -8,14 +8,14 @@
 //! rewrites of stack positions for these op groups.
 
 use miden_core::field::PrimeCharacteristicRing;
-use miden_crypto::stark::air::LiftedAirBuilder;
+use miden_crypto::stark::air::{AirBuilder, LiftedAirBuilder};
 
 use crate::{
     MainTraceRow,
     constraints::{
         op_flags::OpFlags,
         tagging::{
-            TagGroup, TaggingAirBuilderExt, ids::TAG_STACK_OPS_BASE, tagged_assert_zero,
+            TagGroup, TaggingAirBuilderExt, ids::TAG_STACK_OPS_BASE,
             tagged_assert_zero_integrity, tagged_assert_zeros,
         },
     },
@@ -242,25 +242,25 @@ pub fn enforce_main<AB>(
     let mut idx = 0usize;
 
     // PAD
-    assert_zero(builder, &mut idx, is_pad * s0_next.clone());
+    assert_zero(builder,is_pad * s0_next.clone());
 
     // DUP*
-    assert_zero(builder, &mut idx, is_dup * (s0_next.clone() - s0.clone()));
-    assert_zero(builder, &mut idx, is_dup1 * (s0_next.clone() - s1.clone()));
-    assert_zero(builder, &mut idx, is_dup2 * (s0_next.clone() - s2.clone()));
-    assert_zero(builder, &mut idx, is_dup3 * (s0_next.clone() - s3.clone()));
-    assert_zero(builder, &mut idx, is_dup4 * (s0_next.clone() - s4.clone()));
-    assert_zero(builder, &mut idx, is_dup5 * (s0_next.clone() - s5.clone()));
-    assert_zero(builder, &mut idx, is_dup6 * (s0_next.clone() - s6.clone()));
-    assert_zero(builder, &mut idx, is_dup7 * (s0_next.clone() - s7.clone()));
-    assert_zero(builder, &mut idx, is_dup9 * (s0_next.clone() - s9.clone()));
-    assert_zero(builder, &mut idx, is_dup11 * (s0_next.clone() - s11.clone()));
-    assert_zero(builder, &mut idx, is_dup13 * (s0_next.clone() - s13.clone()));
-    assert_zero(builder, &mut idx, is_dup15 * (s0_next.clone() - s15.clone()));
+    assert_zero(builder,is_dup * (s0_next.clone() - s0.clone()));
+    assert_zero(builder,is_dup1 * (s0_next.clone() - s1.clone()));
+    assert_zero(builder,is_dup2 * (s0_next.clone() - s2.clone()));
+    assert_zero(builder,is_dup3 * (s0_next.clone() - s3.clone()));
+    assert_zero(builder,is_dup4 * (s0_next.clone() - s4.clone()));
+    assert_zero(builder,is_dup5 * (s0_next.clone() - s5.clone()));
+    assert_zero(builder,is_dup6 * (s0_next.clone() - s6.clone()));
+    assert_zero(builder,is_dup7 * (s0_next.clone() - s7.clone()));
+    assert_zero(builder,is_dup9 * (s0_next.clone() - s9.clone()));
+    assert_zero(builder,is_dup11 * (s0_next.clone() - s11.clone()));
+    assert_zero(builder,is_dup13 * (s0_next.clone() - s13.clone()));
+    assert_zero(builder,is_dup15 * (s0_next.clone() - s15.clone()));
 
     // CLK
     let clk: AB::Expr = local.clk.clone().into();
-    assert_zero(builder, &mut idx, is_clk * (s0_next.clone() - clk));
+    assert_zero(builder,is_clk * (s0_next.clone() - clk));
 
     // SWAP
     assert_zeros(
@@ -274,22 +274,22 @@ pub fn enforce_main<AB>(
     );
 
     // MOVUP
-    assert_zero(builder, &mut idx, is_movup2 * (s0_next.clone() - s2.clone()));
-    assert_zero(builder, &mut idx, is_movup3 * (s0_next.clone() - s3.clone()));
-    assert_zero(builder, &mut idx, is_movup4 * (s0_next.clone() - s4.clone()));
-    assert_zero(builder, &mut idx, is_movup5 * (s0_next.clone() - s5.clone()));
-    assert_zero(builder, &mut idx, is_movup6 * (s0_next.clone() - s6.clone()));
-    assert_zero(builder, &mut idx, is_movup7 * (s0_next.clone() - s7.clone()));
-    assert_zero(builder, &mut idx, is_movup8 * (s0_next.clone() - s8.clone()));
+    assert_zero(builder,is_movup2 * (s0_next.clone() - s2.clone()));
+    assert_zero(builder,is_movup3 * (s0_next.clone() - s3.clone()));
+    assert_zero(builder,is_movup4 * (s0_next.clone() - s4.clone()));
+    assert_zero(builder,is_movup5 * (s0_next.clone() - s5.clone()));
+    assert_zero(builder,is_movup6 * (s0_next.clone() - s6.clone()));
+    assert_zero(builder,is_movup7 * (s0_next.clone() - s7.clone()));
+    assert_zero(builder,is_movup8 * (s0_next.clone() - s8.clone()));
 
     // MOVDN
-    assert_zero(builder, &mut idx, is_movdn2 * (s2_next.clone() - s0.clone()));
-    assert_zero(builder, &mut idx, is_movdn3 * (s3_next.clone() - s0.clone()));
-    assert_zero(builder, &mut idx, is_movdn4 * (s4_next.clone() - s0.clone()));
-    assert_zero(builder, &mut idx, is_movdn5 * (s5_next.clone() - s0.clone()));
-    assert_zero(builder, &mut idx, is_movdn6 * (s6_next.clone() - s0.clone()));
-    assert_zero(builder, &mut idx, is_movdn7 * (s7_next.clone() - s0.clone()));
-    assert_zero(builder, &mut idx, is_movdn8 * (s8_next.clone() - s0.clone()));
+    assert_zero(builder,is_movdn2 * (s2_next.clone() - s0.clone()));
+    assert_zero(builder,is_movdn3 * (s3_next.clone() - s0.clone()));
+    assert_zero(builder,is_movdn4 * (s4_next.clone() - s0.clone()));
+    assert_zero(builder,is_movdn5 * (s5_next.clone() - s0.clone()));
+    assert_zero(builder,is_movdn6 * (s6_next.clone() - s0.clone()));
+    assert_zero(builder,is_movdn7 * (s7_next.clone() - s0.clone()));
+    assert_zero(builder,is_movdn8 * (s8_next.clone() - s0.clone()));
 
     // SWAPW
     assert_zeros(
@@ -450,7 +450,7 @@ pub fn enforce_main<AB>(
     );
 
     // SDEPTH: push current stack depth to the top.
-    assert_zero(builder, &mut idx, is_sdepth * (s0_next - stack_depth));
+    assert_zero(builder,is_sdepth * (s0_next - stack_depth));
 }
 
 // CONSTRAINT HELPERS
@@ -464,8 +464,8 @@ fn assert_zero_integrity<AB: TaggingAirBuilderExt>(
     tagged_assert_zero_integrity(builder, &STACK_OPS_TAGS, idx, expr);
 }
 
-fn assert_zero<AB: TaggingAirBuilderExt>(builder: &mut AB, idx: &mut usize, expr: AB::Expr) {
-    tagged_assert_zero(builder, &STACK_OPS_TAGS, idx, expr);
+fn assert_zero<AB: TaggingAirBuilderExt>(builder: &mut AB, expr: AB::Expr) {
+    builder.when_transition().assert_zero(expr);
 }
 
 fn assert_zeros<AB: TaggingAirBuilderExt, const N: usize>(

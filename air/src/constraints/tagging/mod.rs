@@ -31,22 +31,6 @@ pub struct TagGroup {
     pub names: &'static [&'static str],
 }
 
-/// Tag and assert a single constraint, advancing the per-group index.
-pub fn tagged_assert_zero<AB: TaggingAirBuilderExt>(
-    builder: &mut AB,
-    group: &TagGroup,
-    idx: &mut usize,
-    expr: AB::Expr,
-) {
-    debug_assert!(*idx < group.names.len(), "tag index out of bounds");
-    let id = group.base + *idx;
-    let name = group.names[*idx];
-    builder.tagged(id, name, |builder| {
-        builder.when_transition().assert_zero(expr);
-    });
-    *idx += 1;
-}
-
 /// Tag and assert a single integrity constraint, advancing the per-group index.
 pub fn tagged_assert_zero_integrity<AB: TaggingAirBuilderExt>(
     builder: &mut AB,

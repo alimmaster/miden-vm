@@ -19,28 +19,24 @@
 //! | MUA  | Merkle Update Absorb | Absorb next sibling (new path) |
 
 use miden_core::field::PrimeCharacteristicRing;
+use miden_crypto::stark::air::AirBuilder;
 
 use super::{HasherColumns, HasherFlags};
 use crate::{
     Felt,
     constraints::tagging::{
-        TagGroup, TaggingAirBuilderExt, tagged_assert_zero, tagged_assert_zero_integrity,
-        tagged_assert_zeros,
+        TagGroup, TaggingAirBuilderExt, tagged_assert_zero_integrity, tagged_assert_zeros,
     },
 };
 
 // TAGGING NAMESPACES
 // ================================================================================================
 
-const MERKLE_INDEX_BINARY_NAMESPACE: &str = "chiplets.hasher.merkle.index.binary";
-const MERKLE_INDEX_STABILITY_NAMESPACE: &str = "chiplets.hasher.merkle.index.stability";
 const MERKLE_CAP_NAMESPACE: &str = "chiplets.hasher.merkle.capacity";
 const MERKLE_RATE0_NAMESPACE: &str = "chiplets.hasher.merkle.digest.rate0";
 const MERKLE_RATE1_NAMESPACE: &str = "chiplets.hasher.merkle.digest.rate1";
 
 const OUTPUT_INDEX_NAMES: [&str; 1] = [super::OUTPUT_INDEX_NAMESPACE];
-const MERKLE_INDEX_NAMES: [&str; 2] =
-    [MERKLE_INDEX_BINARY_NAMESPACE, MERKLE_INDEX_STABILITY_NAMESPACE];
 const MERKLE_ABSORB_NAMES: [&str; 12] = [
     MERKLE_CAP_NAMESPACE,
     MERKLE_CAP_NAMESPACE,
@@ -59,10 +55,6 @@ const MERKLE_ABSORB_NAMES: [&str; 12] = [
 const OUTPUT_INDEX_TAGS: TagGroup = TagGroup {
     base: super::HASHER_OUTPUT_IDX_ID,
     names: &OUTPUT_INDEX_NAMES,
-};
-const MERKLE_INDEX_TAGS: TagGroup = TagGroup {
-    base: super::HASHER_MERKLE_INDEX_BASE_ID,
-    names: &MERKLE_INDEX_NAMES,
 };
 const MERKLE_ABSORB_TAGS: TagGroup = TagGroup {
     base: super::HASHER_MERKLE_ABSORB_BASE_ID,
@@ -121,8 +113,7 @@ pub(super) fn enforce_node_index_constraints<AB>(
 
     // Constraint 2: b must be binary when shifting (b^2 - b = 0)
     let gate = hasher_flag.clone() * f_shift.clone();
-    let mut idx = 0;
-    tagged_assert_zero(builder, &MERKLE_INDEX_TAGS, &mut idx, gate * (b.square() - b.clone()));
+    builder.when_transition().assert_zero(gate * (b.square() - b.clone()));
 
     // -------------------------------------------------------------------------
     // Index Stability Constraint
@@ -132,12 +123,9 @@ pub(super) fn enforce_node_index_constraints<AB>(
     // keep = 1 - f_out - f_shift
     let keep = one.clone() - f_out - f_shift;
     let gate = hasher_flag.clone() * keep;
-    tagged_assert_zero(
-        builder,
-        &MERKLE_INDEX_TAGS,
-        &mut idx,
-        gate * (cols_next.node_index.clone() - cols.node_index.clone()),
-    );
+    builder
+        .when_transition()
+        .assert_zero(gate * (cols_next.node_index.clone() - cols.node_index.clone()));
 }
 
 /// Enforces state constraints for Merkle absorb operations (MPA/MVA/MUA on row 31).
