@@ -3,7 +3,7 @@
 //! This module dispatches to the full tagging implementation in test/`testing` builds
 //! and a no-op fallback in production/no-std builds.
 
-use miden_crypto::stark::air::{AirBuilder, ExtensionBuilder};
+use miden_crypto::stark::air::ExtensionBuilder;
 
 pub mod ids;
 
@@ -29,22 +29,6 @@ pub use fallback::*;
 pub struct TagGroup {
     pub base: usize,
     pub names: &'static [&'static str],
-}
-
-/// Tag and assert a fixed list of constraints, advancing the per-group index.
-pub fn tagged_assert_zeros<AB: TaggingAirBuilderExt, const N: usize>(
-    builder: &mut AB,
-    group: &TagGroup,
-    idx: &mut usize,
-    namespace: &'static str,
-    exprs: [AB::Expr; N],
-) {
-    debug_assert!(*idx + N <= group.names.len(), "tag index out of bounds");
-    let ids: [usize; N] = core::array::from_fn(|i| group.base + *idx + i);
-    builder.tagged_list(ids, namespace, |builder| {
-        builder.when_transition().assert_zeros(exprs);
-    });
-    *idx += N;
 }
 
 /// Tag and assert a fixed list of integrity constraints, advancing the per-group index.

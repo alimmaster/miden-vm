@@ -58,12 +58,6 @@ pub(super) const HASHER_PERM_INIT_BASE_ID: usize = HASHER_BASE_ID;
 pub(super) const HASHER_PERM_EXT_BASE_ID: usize = HASHER_PERM_INIT_BASE_ID + STATE_WIDTH;
 pub(super) const HASHER_PERM_INT_BASE_ID: usize = HASHER_PERM_EXT_BASE_ID + STATE_WIDTH;
 pub(super) const HASHER_SELECTOR_BOOL_BASE_ID: usize = HASHER_PERM_INT_BASE_ID + STATE_WIDTH;
-pub(super) const HASHER_SELECTOR_CONSIST_BASE_ID: usize = HASHER_SELECTOR_BOOL_BASE_ID + 3;
-pub(super) const HASHER_ABP_BASE_ID: usize = HASHER_SELECTOR_CONSIST_BASE_ID + 4;
-pub(super) const HASHER_OUTPUT_IDX_ID: usize = HASHER_ABP_BASE_ID + 4;
-pub(super) const HASHER_MERKLE_INDEX_BASE_ID: usize = HASHER_OUTPUT_IDX_ID + 1;
-pub(super) const HASHER_MERKLE_ABSORB_BASE_ID: usize = HASHER_MERKLE_INDEX_BASE_ID + 2;
-
 
 /// Precomputed hasher flags derived from selectors and cycle markers.
 struct HasherFlags<E> {

@@ -14,133 +14,10 @@ use crate::{
     MainTraceRow,
     constraints::{
         op_flags::OpFlags,
-        tagging::{
-            TagGroup, TaggingAirBuilderExt, ids::TAG_STACK_OPS_BASE, tagged_assert_zeros,
-        },
+        tagging::TaggingAirBuilderExt,
     },
 };
 
-// CONSTANTS
-// ================================================================================================
-
-/// Number of stack ops constraints.
-pub const NUM_CONSTRAINTS: usize = 88;
-
-/// Base tag ID for stack ops constraints.
-const STACK_OPS_BASE_ID: usize = TAG_STACK_OPS_BASE;
-
-/// Tag namespaces for stack ops constraints.
-const STACK_OPS_NAMES: [&str; NUM_CONSTRAINTS] = [
-    // PAD
-    "stack.ops.pad",
-    // DUP*
-    "stack.ops.dup",
-    "stack.ops.dup1",
-    "stack.ops.dup2",
-    "stack.ops.dup3",
-    "stack.ops.dup4",
-    "stack.ops.dup5",
-    "stack.ops.dup6",
-    "stack.ops.dup7",
-    "stack.ops.dup9",
-    "stack.ops.dup11",
-    "stack.ops.dup13",
-    "stack.ops.dup15",
-    // CLK
-    "stack.ops.clk",
-    // SWAP: exchange the top two stack items.
-    "stack.ops.swap",
-    "stack.ops.swap",
-    // MOVUP: move an item at depth N to the top.
-    "stack.ops.movup2",
-    "stack.ops.movup3",
-    "stack.ops.movup4",
-    "stack.ops.movup5",
-    "stack.ops.movup6",
-    "stack.ops.movup7",
-    "stack.ops.movup8",
-    // MOVDN: move the top item down to depth N.
-    "stack.ops.movdn2",
-    "stack.ops.movdn3",
-    "stack.ops.movdn4",
-    "stack.ops.movdn5",
-    "stack.ops.movdn6",
-    "stack.ops.movdn7",
-    "stack.ops.movdn8",
-    // SWAPW: swap word [0..3] with word [4..7].
-    "stack.ops.swapw",
-    "stack.ops.swapw",
-    "stack.ops.swapw",
-    "stack.ops.swapw",
-    "stack.ops.swapw",
-    "stack.ops.swapw",
-    "stack.ops.swapw",
-    "stack.ops.swapw",
-    // SWAPW2: swap word [0..3] with word [8..11].
-    "stack.ops.swapw2",
-    "stack.ops.swapw2",
-    "stack.ops.swapw2",
-    "stack.ops.swapw2",
-    "stack.ops.swapw2",
-    "stack.ops.swapw2",
-    "stack.ops.swapw2",
-    "stack.ops.swapw2",
-    // SWAPW3: swap word [0..3] with word [12..15].
-    "stack.ops.swapw3",
-    "stack.ops.swapw3",
-    "stack.ops.swapw3",
-    "stack.ops.swapw3",
-    "stack.ops.swapw3",
-    "stack.ops.swapw3",
-    "stack.ops.swapw3",
-    "stack.ops.swapw3",
-    // SWAPDW: swap double-word [0..7] with [8..15].
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    "stack.ops.swapdw",
-    // CSWAP
-    "stack.ops.cswap",
-    "stack.ops.cswap",
-    "stack.ops.cswap",
-    // CSWAPW
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    "stack.ops.cswapw",
-    // ASSERT
-    "stack.system.assert",
-    // CALLER
-    "stack.system.caller",
-    "stack.system.caller",
-    "stack.system.caller",
-    "stack.system.caller",
-    // SDEPTH
-    "stack.io.sdepth",
-];
-
-/// Tag metadata for this constraint group.
-const STACK_OPS_TAGS: TagGroup = TagGroup {
-    base: STACK_OPS_BASE_ID,
-    names: &STACK_OPS_NAMES,
-};
 
 // ENTRY POINT
 // ================================================================================================
@@ -238,8 +115,6 @@ pub fn enforce_main<AB>(
     let is_caller = op_flags.caller();
     let is_sdepth = op_flags.sdepth();
 
-    let mut idx = 0usize;
-
     // PAD
     assert_zero(builder,is_pad * s0_next.clone());
 
@@ -264,8 +139,6 @@ pub fn enforce_main<AB>(
     // SWAP
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.ops.swap",
         [
             is_swap.clone() * (s0_next.clone() - s1.clone()),
             is_swap * (s1_next.clone() - s0.clone()),
@@ -293,8 +166,6 @@ pub fn enforce_main<AB>(
     // SWAPW
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.ops.swapw",
         [
             is_swapw.clone() * (s0_next.clone() - s4.clone()),
             is_swapw.clone() * (s1_next.clone() - s5.clone()),
@@ -310,8 +181,6 @@ pub fn enforce_main<AB>(
     // SWAPW2
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.ops.swapw2",
         [
             is_swapw2.clone() * (s0_next.clone() - s8.clone()),
             is_swapw2.clone() * (s1_next.clone() - s9.clone()),
@@ -327,8 +196,6 @@ pub fn enforce_main<AB>(
     // SWAPW3
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.ops.swapw3",
         [
             is_swapw3.clone() * (s0_next.clone() - s12.clone()),
             is_swapw3.clone() * (s1_next.clone() - s13.clone()),
@@ -344,8 +211,6 @@ pub fn enforce_main<AB>(
     // SWAPDW
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.ops.swapdw",
         [
             is_swapdw.clone() * (s0_next.clone() - s8.clone()),
             is_swapdw.clone() * (s1_next.clone() - s9.clone()),
@@ -379,8 +244,6 @@ pub fn enforce_main<AB>(
     // Conditional swap equations for the top two stack items.
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.ops.cswap",
         [
             is_cswap.clone()
                 * (s0_next.clone()
@@ -400,8 +263,6 @@ pub fn enforce_main<AB>(
     // Conditional swap equations for the top two words.
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.ops.cswapw",
         [
             is_cswapw.clone()
                 * (s0_next.clone()
@@ -436,8 +297,6 @@ pub fn enforce_main<AB>(
     // CALLER: load fn_hash into the top 4 stack elements.
     assert_zeros(
         builder,
-        &mut idx,
-        "stack.system.caller",
         [
             is_caller.clone() * (s0_next.clone() - fn_hash_0),
             is_caller.clone() * (s1_next.clone() - fn_hash_1),
@@ -463,9 +322,7 @@ fn assert_zero<AB: TaggingAirBuilderExt>(builder: &mut AB, expr: AB::Expr) {
 
 fn assert_zeros<AB: TaggingAirBuilderExt, const N: usize>(
     builder: &mut AB,
-    idx: &mut usize,
-    namespace: &'static str,
     exprs: [AB::Expr; N],
 ) {
-    tagged_assert_zeros(builder, &STACK_OPS_TAGS, idx, namespace, exprs);
+    builder.when_transition().assert_zeros(exprs);
 }

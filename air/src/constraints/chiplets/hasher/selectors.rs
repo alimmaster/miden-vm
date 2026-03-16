@@ -26,7 +26,7 @@ use super::{HasherColumns, HasherFlags};
 use crate::{
     Felt,
     constraints::tagging::{
-        TagGroup, TaggingAirBuilderExt, tagged_assert_zeros, tagged_assert_zeros_integrity,
+        TagGroup, TaggingAirBuilderExt, tagged_assert_zeros_integrity,
     },
 };
 
@@ -34,25 +34,12 @@ use crate::{
 // ================================================================================================
 
 const SELECTOR_BOOL_NAMESPACE: &str = "chiplets.hasher.selectors.binary";
-const SELECTOR_STABILITY_NAMESPACE: &str = "chiplets.hasher.selectors.stability";
-const SELECTOR_CONT_NAMESPACE: &str = "chiplets.hasher.selectors.continuation";
-const SELECTOR_INVALID_NAMESPACE: &str = "chiplets.hasher.selectors.invalid";
 
 const SELECTOR_BOOL_NAMES: [&str; 3] = [SELECTOR_BOOL_NAMESPACE; 3];
-const SELECTOR_CONSIST_NAMES: [&str; 4] = [
-    SELECTOR_STABILITY_NAMESPACE,
-    SELECTOR_STABILITY_NAMESPACE,
-    SELECTOR_CONT_NAMESPACE,
-    SELECTOR_INVALID_NAMESPACE,
-];
 
 const SELECTOR_BOOL_TAGS: TagGroup = TagGroup {
     base: super::HASHER_SELECTOR_BOOL_BASE_ID,
     names: &SELECTOR_BOOL_NAMES,
-};
-const SELECTOR_CONSIST_TAGS: TagGroup = TagGroup {
-    base: super::HASHER_SELECTOR_CONSIST_BASE_ID,
-    names: &SELECTOR_CONSIST_NAMES,
 };
 
 // CONSTRAINT HELPERS
@@ -93,12 +80,7 @@ pub(super) fn enforce_selector_consistency<AB>(
     // Use a combined gate to share `hasher_flag * stability_gate` across both stability
     // constraints.
     let gate = hasher_flag.clone() * stability_gate;
-    let mut idx = 0;
-    tagged_assert_zeros(
-        builder,
-        &SELECTOR_CONSIST_TAGS,
-        &mut idx,
-        SELECTOR_STABILITY_NAMESPACE,
+    builder.when_transition().assert_zeros(
         [
             gate.clone() * (cols_next.s1.clone() - cols.s1.clone()),
             gate * (cols_next.s2.clone() - cols.s2.clone()),

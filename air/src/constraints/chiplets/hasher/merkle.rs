@@ -24,36 +24,7 @@ use miden_crypto::stark::air::AirBuilder;
 use super::{HasherColumns, HasherFlags};
 use crate::{
     Felt,
-    constraints::tagging::{
-        TagGroup, TaggingAirBuilderExt, tagged_assert_zeros,
-    },
-};
-
-// TAGGING NAMESPACES
-// ================================================================================================
-
-const MERKLE_CAP_NAMESPACE: &str = "chiplets.hasher.merkle.capacity";
-const MERKLE_RATE0_NAMESPACE: &str = "chiplets.hasher.merkle.digest.rate0";
-const MERKLE_RATE1_NAMESPACE: &str = "chiplets.hasher.merkle.digest.rate1";
-
-const MERKLE_ABSORB_NAMES: [&str; 12] = [
-    MERKLE_CAP_NAMESPACE,
-    MERKLE_CAP_NAMESPACE,
-    MERKLE_CAP_NAMESPACE,
-    MERKLE_CAP_NAMESPACE,
-    MERKLE_RATE0_NAMESPACE,
-    MERKLE_RATE0_NAMESPACE,
-    MERKLE_RATE0_NAMESPACE,
-    MERKLE_RATE0_NAMESPACE,
-    MERKLE_RATE1_NAMESPACE,
-    MERKLE_RATE1_NAMESPACE,
-    MERKLE_RATE1_NAMESPACE,
-    MERKLE_RATE1_NAMESPACE,
-];
-
-const MERKLE_ABSORB_TAGS: TagGroup = TagGroup {
-    base: super::HASHER_MERKLE_ABSORB_BASE_ID,
-    names: &MERKLE_ABSORB_NAMES,
+    constraints::tagging::TaggingAirBuilderExt,
 };
 
 // CONSTRAINT HELPERS
@@ -155,12 +126,7 @@ pub(super) fn enforce_merkle_absorb_state<AB>(
     // Constraint 1: Capacity reset to zero (batched).
     // Use a combined gate to share `hasher_flag * f_absorb` across all 4 lanes.
     let gate_absorb = hasher_flag.clone() * f_absorb.clone();
-    let mut idx = 0;
-    tagged_assert_zeros(
-        builder,
-        &MERKLE_ABSORB_TAGS,
-        &mut idx,
-        MERKLE_CAP_NAMESPACE,
+    builder.when_transition().assert_zeros(
         core::array::from_fn::<_, 4, _>(|i| gate_absorb.clone() * cap_next[i].clone()),
     );
 
@@ -171,11 +137,7 @@ pub(super) fn enforce_merkle_absorb_state<AB>(
     // Constraint 2: If b=0, digest goes to rate0 (h'[0..4] = h[0..4])
     let f_b0 = f_absorb.clone() * (one.clone() - b.clone());
     let gate_b0 = hasher_flag.clone() * f_b0;
-    tagged_assert_zeros(
-        builder,
-        &MERKLE_ABSORB_TAGS,
-        &mut idx,
-        MERKLE_RATE0_NAMESPACE,
+    builder.when_transition().assert_zeros(
         core::array::from_fn::<_, 4, _>(|i| {
             gate_b0.clone() * (rate0_next[i].clone() - digest[i].clone())
         }),
@@ -184,11 +146,7 @@ pub(super) fn enforce_merkle_absorb_state<AB>(
     // Constraint 3: If b=1, digest goes to rate1 (h'[4..8] = h[0..4])
     let f_b1 = f_absorb * b;
     let gate_b1 = hasher_flag * f_b1;
-    tagged_assert_zeros(
-        builder,
-        &MERKLE_ABSORB_TAGS,
-        &mut idx,
-        MERKLE_RATE1_NAMESPACE,
+    builder.when_transition().assert_zeros(
         core::array::from_fn::<_, 4, _>(|i| {
             gate_b1.clone() * (rate1_next[i].clone() - digest[i].clone())
         }),
