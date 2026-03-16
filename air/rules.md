@@ -199,9 +199,22 @@ Numeric `Felt` constants live in `constants.rs`. Never bind them to local variab
 delta_gc.clone() - F_1
 value.clone() * F_7
 
-// LHS — Felt - Expr doesn't compile, so use Expr::ONE/ZERO
-AB::Expr::ONE - flag.clone()
-AB::ExprEF::ONE - flag_sum
+// LHS — use .not() from BoolNot trait (import utils::BoolNot)
+s3_next.not()
+flag_sum.not()  // works on AB::ExprEF too
+```
+
+When the same `.not()` is used multiple times, store it in a named variable:
+
+```rust
+// GOOD — computed once, reused
+let not_hs1 = hs1.not();
+let f_bp = hasher_active * s0 * not_hs1.clone() * not_hs2.clone();
+let f_mp = hasher_active * s0 * not_hs1.clone() * s2;
+
+// BAD — redundant .not() calls
+let f_bp = hasher_active * s0 * hs1.not() * hs2.not();
+let f_mp = hasher_active * s0 * hs1.not() * s2;
 ```
 
 ### 8. Section headers
