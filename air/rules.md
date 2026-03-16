@@ -190,15 +190,18 @@ Column structs (`DecoderColumns<E>`, etc.) should be parameterized with `AB::Var
 bound `E: Copy` rather than `E: Clone`. Only convert to `Expr` at the point of use
 (e.g. `ace_chiplet_flag(s0.into(), ...)`), not at binding site.
 
-### 7. Use `AB::F` for field constants
+### 7. Inline constants, never bind them
+
+Numeric `Felt` constants live in `constants.rs`. Never bind them to local variables.
 
 ```rust
-// BAD
-let one: AB::Expr = AB::Expr::ONE;
-sstart - one
+// RHS — use Felt constant directly (auto-coerces)
+delta_gc.clone() - F_1
+value.clone() * F_7
 
-// GOOD — F is Copy, operators handle Var/Expr + F automatically
-sstart - AB::F::ONE
+// LHS — Felt - Expr doesn't compile, so use Expr::ONE/ZERO
+AB::Expr::ONE - flag.clone()
+AB::ExprEF::ONE - flag_sum
 ```
 
 ### 8. Section headers
