@@ -1,0 +1,12 @@
+fa79579f7d -> 7a366bde1f: refactor: add per-bus domain separation to Challenges encoding
+Unchanged: 462 | Updated: 8 | Removed: 0 | Added: 0
+
+UPDATED:
+    src/constraints/chiplets/bus/chiplets.rs:330 -> src/constraints/chiplets/bus/chiplets.rs:331
+    src/constraints/chiplets/bus/hash_kernel.rs:264 -> src/constraints/chiplets/bus/hash_kernel.rs:275
+    src/constraints/chiplets/bus/wiring.rs:147 -> src/constraints/chiplets/bus/wiring.rs:148
+    src/constraints/decoder/bus.rs:430 -> src/constraints/decoder/bus.rs:441
+    src/constraints/decoder/bus.rs:656 -> src/constraints/decoder/bus.rs:667
+    src/constraints/decoder/bus.rs:850 -> src/constraints/decoder/bus.rs:861
+    src/constraints/range/bus.rs:127 -> src/constraints/range/bus.rs:129
+    src/constraints/stack/bus.rs:133 -> src/constraints/stack/bus.rs:135

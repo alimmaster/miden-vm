@@ -1,0 +1,32 @@
+{
+  "94b25974d5": [
+    {
+      "group_remark": "`ChipletSelectors` struct now threaded as parameter; selector access changed from field lookup to method call, shifting line numbers.",
+      "applies_to": "all"
+    }
+  ],
+  "39e1e3a01f": [
+    {
+      "group_remark": "New last-row constraints enforce all chiplet selectors equal 1 at the final trace row.",
+      "applies_to": "all"
+    }
+  ],
+  "fa79579f7d": [
+    {
+      "group_remark": "`when_transition()` guard removed; transition gate now multiplied directly into each constraint expression.",
+      "applies_to": "all"
+    }
+  ],
+  "7a366bde1f": [
+    {
+      "group_remark": "Per-bus domain tag added to `Challenges` encoding; each bus constraint now includes a distinct domain separator.",
+      "applies_to": "all"
+    }
+  ],
+  "c14fd13f56": [
+    {
+      "group_remark": "Small helper function inlined; constraint expression unchanged, only call-site location moved.",
+      "applies_to": "all"
+    }
+  ]
+}

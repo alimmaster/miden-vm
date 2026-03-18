@@ -22,6 +22,9 @@ use miden_crypto::stark::air::{
 pub mod config;
 mod constraints;
 
+#[cfg(feature = "std")]
+pub mod constraint_recorder;
+
 pub mod trace;
 use trace::{AUX_TRACE_WIDTH, MainTraceRow, TRACE_WIDTH, bus_types};
 

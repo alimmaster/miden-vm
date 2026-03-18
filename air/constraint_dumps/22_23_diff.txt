@@ -1,0 +1,9 @@
+94b25974d5 -> 39e1e3a01f: refactor: enforce all chiplet selectors are 1 in last row
+Unchanged: 465 | Updated: 0 | Removed: 0 | Added: 5
+
+ADDED:
+    base:7cbcc54e08ab667c x1 | src/constraints/chiplets/selectors.rs:147
+    base:9135c9ab1eb2b32b x1 | src/constraints/chiplets/selectors.rs:148
+    base:9f7ec73e28f67e00 x1 | src/constraints/chiplets/selectors.rs:149
+    base:2e22c4eb5611927e x1 | src/constraints/chiplets/selectors.rs:150
+    base:bcb02cec55cf2223 x1 | src/constraints/chiplets/selectors.rs:151

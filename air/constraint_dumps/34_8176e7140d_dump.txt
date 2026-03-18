@@ -1,0 +1,3754 @@
+# base_constraints: 446
+# ext_constraints: 24
+# unique_base: 446
+# unique_ext: 24
+---
+base:00354b4cfc32abd1 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:158:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:00a057a374e01285 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:01ad353a6220b2fe x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:487:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:01bf0db0c1a9ee26 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:203:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:02360d3e2bd5131d x1
+  5: miden_air::constraints::decoder::enforce_group_count_constraints
+  at ./src/constraints/decoder/mod.rs:282:10
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:83:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:0296831fc04cc61f x1
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:90:13
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:02c8c76a65e9b24f x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:281:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:031c956e1c0f5b89 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:03fe3f52a8d8bd30 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:132:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:04b88010d6771907 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:05052e052541c605 x1
+  5: miden_air::constraints::decoder::enforce_in_span_constraints
+  at ./src/constraints/decoder/mod.rs:125:13
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:71:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:0561ba478392b2c2 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:269:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:06baebda2b192ca7 x1
+  5: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
+  at ./src/constraints/chiplets/hasher/selectors.rs:63:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:262:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:071f41c3b9666d4e x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:234:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:07638c336476a24c x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:08bd3e06b0eff07e x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:123:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:091bc7ba69fb82c8 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:0958e59d1a10b258 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:0b1023fcf019332e x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:120:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:0b9bbb229457c471 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:173:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:0c3044da0c07cc82 x1
+  4: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:227:13
+  5: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:0c612a55002cf461 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:292:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:0d2a64b4b0d6acea x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:156:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:0d34b6628a1cc540 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:79:41
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:0d4c424fdc4e379b x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:0da40dadd122cf63 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:266:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:0dc4fd749cab1938 x1
+  5: miden_air::constraints::stack::overflow::enforce_stack_depth_constraints
+  at ./src/constraints/stack/overflow/mod.rs:145:10
+  6: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:63:5
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:0dd42c4a5d477093 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:101:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:0e2dcdf83dc7784a x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:0e5e8ee465fd6e0d x1
+  5: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:231:14
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:0f9fe67a1d548d3b x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:217:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:0fc523feb2e28ddf x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:211:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:0fcdba72d9934752 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row
+  at ./src/constraints/chiplets/memory.rs:130:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:66:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:103c413d21cbf259 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:121:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:106696cbb996a7f3 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:110:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:109afa1ca85aba43 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:248:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:113f14bf0526501a x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:221:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:11714347bbcca80f x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:134:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:1286d86e52ce1480 x1
+  5: miden_air::constraints::decoder::enforce_extra_columns
+  at ./src/constraints/decoder/mod.rs:151:13
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:76:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:1402460cf1f9388c x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:142d5181a24bf206 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:174:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:14666cec6d57909e x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:166:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:14d021d8b4090bea x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:203:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:14dd5a461b81953b x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:110:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:15a27a9c530f1b1f x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:293:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:162ec03779806ee3 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:175:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:167dac1a5e0b839f x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:16de3a880877c719 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:62:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:174661b3858430a1 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:235:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:1794cccc7f32e37f x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:333:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:17b880430ca2f800 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:335:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:18b3ed3e6ff63258 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:251:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:18e132b44c5caeb5 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:148:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:19bf739af9b37fd6 x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:218:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:1a47b71e247171d9 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:1a5bc8cd6d0fd650 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:183:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:1a5e5656959a3f25 x1
+  7: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:258:14
+  8: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:1b23210a44400fa9 x1
+  5: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:116:28
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:1c82da72f0483a65 x1
+  5: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:147:17
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:1d92221191a5691c x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:483:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:1dbbaf628ed842bd x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:222:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:1eb91b6d2515bfa1 x1
+  7: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:131:37
+
+base:2076f65ca97d7633 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:341:29
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:207ee722142e9e71 x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:52:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:21c9704724691823 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:158:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:223def4bbe2a1f52 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:22b6f52f91661cc5 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:296:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2301902b6ca414cb x1
+  7: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:132:38
+
+base:2331d2d79e404d88 x1
+  6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
+  at ./src/constraints/chiplets/kernel_rom.rs:94:17
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:42:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:2365f8056a8c8500 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:23e6a30f21355d3a x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:249c65054a6eb5af x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:24a63340a78bd293 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:210:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:24b3b1ed724a0a76 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2523ffb523e9ff7a x1
+  5: miden_air::constraints::decoder::enforce_group_count_constraints
+  at ./src/constraints/decoder/mod.rs:289:10
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:83:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:258027cc205debb3 x1
+  6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
+  at ./src/constraints/chiplets/kernel_rom.rs:77:43
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:42:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:262503f160477bed x1
+  6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
+  at ./src/constraints/chiplets/kernel_rom.rs:91:17
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:42:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:271a6c82a162ab77 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:27ca1d698887a955 x1
+  7: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:134:40
+
+base:28243642876a9642 x1
+  7: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:135:41
+
+base:2833ba150f9dea35 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:246:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:28b5bacaad92a20e x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:299:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:296c78759f5e853f x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:50:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2999f02525fa36b5 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:29f1b550b2fdf9c5 x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:55:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2a48b47e06ee6430 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2a4960e48fa15565 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:336:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2bcf6595d2c95e97 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:157:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:2d4657bd1fddf009 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:304:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2d82a7840bf5d190 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:147:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:2e07efd4bf073738 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:230:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2e0aa95775ca51bd x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2e22c4eb5611927e x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:150:14
+
+base:2ea448355288da55 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:223:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2f22b7b6d3a75031 x1
+  5: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:155:17
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2f4aee9bb818d85c x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:255:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:2f643f90a6cb3bb0 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:304240545126d872 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:80:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:30496513ca300772 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:120:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:30be87c0e51074c1 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
+  at ./src/constraints/chiplets/hasher/state.rs:113:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:271:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:31d593dc20820caa x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:109:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:3218d5e7232a7613 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:191:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:322cceffa1cf2341 x1
+  6: miden_air::constraints::range::enforce_main
+  at ./src/constraints/range/mod.rs:32:33
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:52:5
+
+base:3261692f76c5327e x1
+  5: miden_air::constraints::decoder::enforce_in_span_constraints
+  at ./src/constraints/decoder/mod.rs:133:31
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:71:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:32628565d8271894 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:254:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:336d14b36317b9b4 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:33cd4a4cdfe025b7 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:130:10
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:3607dc9085d598cd x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:252:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:36c6dce822787750 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:74:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:376d6ccb940a0cfa x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:105:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:37a7dee38125e3f4 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:278:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:38e7ed15d915a726 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:176:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:38ff7e9b0745161f x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:39d1bbc3641cc30f x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:212:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:3a05228147a86cb6 x1
+  4: miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints
+  at ./src/constraints/chiplets/hasher/merkle.rs:55:13
+  5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:280:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:3a3dae4b79f6499b x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:3b24219b6e9faba1 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:302:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:3bc3527027c8d010 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:171:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:3cb4ea7ee5ddc7de x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:166:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:3cdd8a02b2495935 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:207:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:3ebd2d9f09ce3875 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row
+  at ./src/constraints/chiplets/memory.rs:129:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:66:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:3f1273be34eb6245 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:114:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:400bdc54d1bddfff x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:40a672d7f5ebddf9 x1
+  4: miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints
+  at ./src/constraints/chiplets/memory.rs:395:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:157:5
+  6: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:419b59fe15ad8702 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:41a2cc7afa05ca22 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:138:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:41f16c99a7b98bd6 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:134:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:42ca5b229a10b00b x1
+  5: miden_air::constraints::decoder::enforce_op_group_decoding_constraints
+  at ./src/constraints/decoder/mod.rs:361:31
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:84:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:4312cde4a157110e x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:356:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:436f369b3d435e83 x1
+  4: miden_air::constraints::decoder::enforce_op_bit_group_constraints
+  at ./src/constraints/decoder/mod.rs:179:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:77:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:43a8d49d36110cad x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:448f88facc5b5da3 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:101:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:45799324a3005672 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:253:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:459f3a198a42fdce x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:74:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:45a0084944e49998 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:111:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:45ca9053292c60af x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:265:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:463e256cd6866a38 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:81:36
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:4698542b601d4590 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:146:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:472fa0aee6574397 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:48c5c2dabddef276 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:80:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:4c45633bbc9c6ff6 x1
+  4: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
+  at ./src/constraints/chiplets/hasher/selectors.rs:78:13
+  5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:262:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:4c75ffd27e9de237 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:4ccf1c75fca1dd93 x1
+  5: miden_air::constraints::decoder::enforce_block_address_constraints
+  at ./src/constraints/decoder/mod.rs:518:31
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:87:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:4edbfcab5a3557c2 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:74:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:4edd1f5f4fab7826 x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:117:33
+
+base:51f7bc0eab84a09a x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:313:36
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:52494b0d52417e09 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:527a8b0eb54758e9 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:87:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:52f8f1218be346b1 x1
+  6: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:58:29
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:52faa0a44d33c90b x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row
+  at ./src/constraints/chiplets/memory.rs:128:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:66:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:53d84d41cf5c5c02 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:55cd58fbf02bf9bf x1
+  5: miden_air::constraints::decoder::enforce_block_address_constraints
+  at ./src/constraints/decoder/mod.rs:525:10
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:87:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:567135941dd3f5eb x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:569eae97bc7f7e08 x1
+  4: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:240:13
+  5: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:571d9bf161a5fde1 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:262:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:57cfa934659fe4be x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:483:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:5801c1bcfd92da28 x1
+  5: miden_air::constraints::decoder::enforce_op_index_constraints
+  at ./src/constraints/decoder/mod.rs:415:10
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:85:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:583ae73f5c31fe83 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:268:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:5910874354254e0e x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:247:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:595679ef7e71b109 x1
+  5: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:231:14
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:59c42f839eb88698 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:120:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:59edca94cc542234 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:80:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:5a78e346a2c454c1 x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:206:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:5ac42c2f020670be x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:211:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:5b412568a607d921 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:217:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:5bbb29d88722b6fc x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:5d4d6011fd26333e x1
+  5: miden_air::constraints::decoder::enforce_op_group_decoding_constraints
+  at ./src/constraints/decoder/mod.rs:356:10
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:84:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:5d5dc97702304639 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:263:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:5db144af7d40ecd5 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:138:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:5dfbf774b1cc050c x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:213:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:5f2ccd9703b2d898 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row
+  at ./src/constraints/chiplets/memory.rs:127:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:66:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:5f8cf2c0cbc88c11 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:5f9a88d75a935dca x1
+  5: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:231:14
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:6062cb084802829a x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:256:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:609762a8b81df486 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:74:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:60b316efe2dce0ba x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:60cd9094c995707b x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:6155c69e0fd52907 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows
+  at ./src/constraints/chiplets/memory.rs:96:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:63:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:617386fb61d3d4cf x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:115:31
+
+base:6198236bcb01f59a x1
+  4: miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints
+  at ./src/constraints/chiplets/memory.rs:399:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:157:5
+  6: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:61eccb52243f37f1 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:241:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:625cec41883ce8b8 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:627479931fe95651 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:646a078b1b49e544 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:131:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:65c6958b510cf4f4 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:103:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:6667674650badcb1 x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:211:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:66bed174e6927f09 x1
+  5: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:231:14
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:672d7dd3c15def49 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:67bc70b2bfdf1e5f x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:231:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:680f541f12b3de6e x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:337:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:6a3ebb115cbf592f x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:101:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:6a5b0e0c6b867409 x1
+  6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
+  at ./src/constraints/chiplets/kernel_rom.rs:93:17
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:42:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:6c019014e7909fde x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:122:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:6c7486ebd0fbcf31 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:6d0552f34cdfad67 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:139:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:6d9b74a0f8f7dbf3 x1
+  5: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:59:30
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:6f983bc8167cfc2c x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:168:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:71991ed6f158d1f0 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:71ec27a935fe913b x1
+  5: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:87:28
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:74a044a9322e56f2 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:334:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:765035aafe7f6ce3 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:767cd256a2ef0bb5 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:81:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:76972f38e49012cb x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:133:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:76c528daa30338e4 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:78ed18d46cd3c6b1 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:154:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:79d04330c1646183 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:142:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:7a75aa74f6087dfc x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:199:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:7ab7c8289ce26cc9 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:7b4f9a1ce04e7164 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:248:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:7be7896a12ed341b x1
+  4: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:239:13
+  5: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:7cbcc54e08ab667c x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:147:14
+
+base:7d0eb8004c68fb83 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:131:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:7dc3787ba1aeb7fb x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:250:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:7dee3124981ff6cf x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:114:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:7fec19d60046bb03 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:172:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:81bdab6d35cadb38 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:298:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:81d11174d1935a01 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:138:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:8224b4e64679a1fc x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:822c0a3d79b85a22 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:8286d5efeb76d7e2 x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:477:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:82f0d8eb6e2337da x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:84a2b5dfdaaf8098 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:8512ed686aec190f x1
+  5: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:237:31
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:85343915e6637bff x1
+  7: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:258:14
+  8: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:865d5019a55726d5 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:225:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:890d38f22267e5cb x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:114:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:8938e9b5b78382e1 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:301:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:89a92218aa9aab0a x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:194:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:8a2e0719044ecd53 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:149:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:8aae5d629b6228ea x1
+  6: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:58:35
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:8c871c80bfbf0d51 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:282:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:8cb3ef3e93eb1232 x1
+  6: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:80:33
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:8d5ea31441b76cc1 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:8ef84127a71612ea x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:236:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:8f5d392f225e6653 x1
+  5: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:231:14
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:9006fe4831f2ec35 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:297:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9135c9ab1eb2b32b x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:148:14
+
+base:914cc25eff722253 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:125:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:915c1c314436e632 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:193:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:917f382c9612345d x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:917f6d27e05d56f1 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:91c343f43bc0d6b4 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:94:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:922c15260ece66b4 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:9289bfa6f7c84dd6 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:138:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:92a072fc4d5a536d x1
+  5: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:60:29
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:92e21218ffef0422 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:202:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:942c5f174f6ec3d0 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:279:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:959fa1a9161c25b2 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:280:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:95f81a53d76c1c77 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:138:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9650cf2e8901cfe2 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:211:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:96bf109ec62cbb48 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:9743901acd007ac2 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:9796358beddcb4de x1
+  5: miden_air::constraints::decoder::enforce_in_span_constraints
+  at ./src/constraints/decoder/mod.rs:129:31
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:71:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:97b359817c42a1a7 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:981c76b8165857d2 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:303:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:98b398c17cbe3882 x1
+  5: miden_air::constraints::decoder::enforce_extra_columns
+  at ./src/constraints/decoder/mod.rs:155:13
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:76:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:99d5c2511b4827b5 x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:53:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9a8627ab8f221997 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9a916565afe89fc6 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:9ae19c327f51af8e x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:267:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9b69a738cd8ca46f x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:477:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:9d5f993b86a06059 x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:464:10
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:9dce28b001bd623a x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:9de572a5166dcc0b x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:348:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9e1f81d8e7ebdbee x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:283:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9e3cb5846addcc76 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:237:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9f3446bf2caaedf5 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:331:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:9f7ec73e28f67e00 x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:149:14
+
+base:9fa9edf94d71f2f9 x1
+  5: miden_air::constraints::range::enforce_main
+  at ./src/constraints/range/mod.rs:31:34
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:52:5
+
+base:a08185028ec3a4d8 x1
+  5: miden_air::constraints::decoder::enforce_op_index_constraints
+  at ./src/constraints/decoder/mod.rs:424:31
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:85:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:a150411fc8067c71 x1
+  4: miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints
+  at ./src/constraints/chiplets/hasher/merkle.rs:70:13
+  5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:280:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:a170da8d4627c3ee x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:156:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:a193dbc8c0022e70 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:a35e176a3348e478 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:a440ec62d598a73b x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:324:37
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:a4f600497b1ae7b3 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:a5ca09fa25b0cdf0 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:181:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:a6ce8db3d6e828a4 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:a6e7777d108157bc x1
+  5: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:106:13
+
+base:a89f547061fb535c x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:176:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:a8c437878b56c92e x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:a90e852183131442 x1
+  5: miden_air::constraints::range::enforce_main
+  at ./src/constraints/range/mod.rs:41:35
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:52:5
+
+base:aa1ee997634b937b x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:300:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:aa31f1d2eb980c03 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:aa93cc39f55a353e x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:abdceb1b3b0b7061 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:101:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:ad9de33ec1e5c7b8 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:ae2edbb5b407d514 x1
+  4: miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints
+  at ./src/constraints/chiplets/hasher/merkle.rs:80:13
+  5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:280:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:ae8e789344369d08 x1
+  7: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:138:18
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:aeb522f3eab86892 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:af46cd28232175f6 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:af663a07ca66c9f8 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:afa0a892808e38e3 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:137:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:afa280d571605ae6 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:130:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b058c00b5e8cdc12 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b142efc32cee23d6 x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:467:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:b1c407d630908d7a x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:330:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b2196114fc947f68 x1
+  5: miden_air::constraints::stack::overflow::enforce_overflow_index_constraints
+  at ./src/constraints/stack/overflow/mod.rs:168:31
+  6: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:72:5
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b29b169c258d639c x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:222:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b2b936240a58bf11 x1
+  7: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:125:32
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b3993ebcdd58080a x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:223:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b3f62672998660cb x1
+  4: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:212:13
+  5: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b408e79064a9c4d7 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:195:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b4bbc4a73cebb3cc x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:320:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b6acc474340d8ad1 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:b6f1abd759f72699 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:b73f235c04c4ea77 x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:222:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:b8c155abf2c38628 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:264:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:b9391ac8105581f7 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:96:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:b95119471d6822b9 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:74:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:b9bd1ac00aad1057 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:b9e6b7f1d06fde51 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:127:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:b9f45b55e06bc5cc x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:93:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:ba34201b228f8299 x1
+  6: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:57:30
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:ba43fb8e47af138a x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:131:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:ba777ee673801762 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:332:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:bbe5003e9fda8b14 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:125:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:bc1bb7fdc52a2640 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:bc1cac764b020bfd x1
+  4: miden_air::constraints::decoder::enforce_block_address_constraints
+  at ./src/constraints/decoder/mod.rs:530:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:87:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:bcb02cec55cf2223 x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:151:14
+
+base:bcd310999c9670f2 x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:477:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:bd272c0ac8f9fe9b x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:bf4e333e241987da x1
+  5: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
+  at ./src/constraints/chiplets/hasher/selectors.rs:63:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:262:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:bf9ab0c51629fef3 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:c145bdda280e561a x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:120:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:c204fb96a21bf9e8 x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:74:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:c206addd1ac23f16 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:c34453b5151a52fc x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:c39634c1851479b8 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:94:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:c3d9d1cf8b3faf79 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:c4493dccc83503bf x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:99:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:c57ccddf6882e072 x1
+  6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
+  at ./src/constraints/chiplets/kernel_rom.rs:104:50
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:42:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:c68f5dd779cc15f4 x1
+  7: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:258:14
+  8: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:c6a79de9d6185955 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:c6cb3268dee13757 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:c9e5a2859a1d070a x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:249:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:caff37a882fd9aa9 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:cb125f7691a2d450 x1
+  4: miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints
+  at ./src/constraints/chiplets/memory.rs:401:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:157:5
+  6: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:ccf489c27e7519f6 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:114:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:cd0c85ab94881fed x1
+  4: miden_air::constraints::decoder::enforce_batch_flags_constraints
+  at ./src/constraints/decoder/mod.rs:477:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:86:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:cd1caea157052901 x1
+  6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
+  at ./src/constraints/chiplets/kernel_rom.rs:92:17
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:42:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:cdbde3ecd4448301 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:295:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:cf1eb44d77fb05bf x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:cf6092d665d0e6c0 x1
+  4: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:69:17
+  5: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d1009c8a07cb69d1 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:305:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d20d54072da5ca49 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:233:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d21460d65f83019e x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:137:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:d24ed0e2ad9e7c74 x1
+  4: miden_air::constraints::decoder::enforce_op_bit_group_constraints
+  at ./src/constraints/decoder/mod.rs:178:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:77:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:d2d94669629a0c26 x1
+  4: miden_air::constraints::chiplets::memory::enforce_scw_readonly_constraint
+  at ./src/constraints/chiplets/memory.rs:424:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:184:5
+  6: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:d2f635a1c926e10e x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:d316d678ab9b3a9e x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:110:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:d373df2e076f374c x1
+  4: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:226:13
+  5: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d3ddbce8aa81d969 x1
+  5: miden_air::constraints::decoder::enforce_op_index_constraints
+  at ./src/constraints/decoder/mod.rs:419:31
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:85:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:d47b89aa7acb2032 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:290:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d52daf858ba61aeb x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:101:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:d5ab94d5c8839a17 x1
+  7: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:114:32
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d78703b782739976 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
+  at ./src/constraints/chiplets/hasher/state.rs:113:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:271:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:d803b711b7b3f129 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:125:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:d8165265bc371598 x1
+  5: miden_air::constraints::decoder::enforce_in_span_constraints
+  at ./src/constraints/decoder/mod.rs:122:30
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:71:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:d8414cf1f89dc28a x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:229:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d866f136810cbf36 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:211:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:d8f982c9a36143f4 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:da8a557d6228f62e x1
+  4: miden_air::constraints::decoder::enforce_op_bit_group_constraints
+  at ./src/constraints/decoder/mod.rs:174:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:77:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:dae76c910072e36d x1
+  5: miden_air::constraints::decoder::enforce_group_count_constraints
+  at ./src/constraints/decoder/mod.rs:305:10
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:83:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:dafd2f41dc438dc4 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows
+  at ./src/constraints/chiplets/memory.rs:99:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:63:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:dc0fc9c6b6d546cd x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
+  at ./src/constraints/chiplets/hasher/state.rs:113:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:271:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:dc16547dbee2ba78 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:349:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:dc3ae77a4c4e94ba x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:54:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:dc4f48088d9970c1 x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:116:32
+
+base:dc56135951fafd70 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows
+  at ./src/constraints/chiplets/memory.rs:103:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:63:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:dd24fba8aea54e53 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:191:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:de02682e938d1de0 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:de9d8f8450bceabb x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:167:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:df7e7fcded607c36 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:dfa2247b2300ce85 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:dfa4a7c1d72ea3f7 x1
+  4: miden_air::constraints::decoder::enforce_group_count_constraints
+  at ./src/constraints/decoder/mod.rs:310:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:83:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:dfeba64404c28705 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:277:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e03174a4f25d55d7 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e03f8ef1173c8a89 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e0bd21f4d2634581 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:131:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e25dda93780b8ce1 x1
+  7: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:133:39
+
+base:e25edeecd4579b8d x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:e349ea156ddecf60 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:196:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e372734a97dbfbd5 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e3d6744c62ba822d x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e3fde60a915fb6b6 x1
+  4: miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints
+  at ./src/constraints/chiplets/memory.rs:397:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last
+  at ./src/constraints/chiplets/memory.rs:157:5
+  6: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:69:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e41739508821d66a x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows
+  at ./src/constraints/chiplets/memory.rs:97:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:63:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e459dc59bbb4e4cd x1
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:74:13
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:e5c82628cba70c9d x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:126:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e5d071b939628646 x1
+  5: miden_air::constraints::stack::overflow::enforce_overflow_index_constraints
+  at ./src/constraints/stack/overflow/mod.rs:173:31
+  6: miden_air::constraints::stack::overflow::enforce_main
+  at ./src/constraints/stack/overflow/mod.rs:72:5
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:28:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e5e380d9202eec17 x1
+  5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
+  at ./src/constraints/chiplets/hasher/merkle.rs:138:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:289:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e71be058892623c7 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:83:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e72c637254004344 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:150:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e750b6ae45cd29b8 x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:e7657b91f2d09971 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:294:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e775c1950a0caa79 x1
+  4: miden_air::constraints::decoder::enforce_general_constraints
+  at ./src/constraints/decoder/mod.rs:211:17
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:82:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:e7d35437bde1484e x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:140:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e86291bdb722a307 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:350:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:e8bffe92a68cb6a2 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e8f853a7361fe3e7 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:94:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:e922c85f1da58359 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows
+  at ./src/constraints/chiplets/memory.rs:104:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:63:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:e9eb9214abc15a2c x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:319:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:eae788ad825b6454 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:173:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:ebcb0c98d544451e x1
+  5: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:57:34
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:ed82b29756c061d6 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
+  at ./src/constraints/chiplets/hasher/state.rs:113:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:271:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:edc481c6053ee809 x1
+  6: miden_air::constraints::chiplets::selectors::build_chiplet_selectors
+  at ./src/constraints/chiplets/selectors.rs:114:37
+
+base:ee717c9613387edc x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:125:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:eed2ab7640e9f529 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f0399f41fc60d0fc x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f1a44fe70f4e18f6 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:190:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f27f011ad7af7c0f x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f2b76ca1531914b5 x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:56:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f2febf92fb709644 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:201:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f372c2d1d826262c x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f373bbdae463c587 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:347:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f39f38b8224e18fb x1
+  4: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
+  at ./src/constraints/chiplets/hasher/selectors.rs:71:13
+  5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:262:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f3af616e4d617c81 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:122:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f3f0db9377938f18 x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:148:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f4135f10e7fdc1f9 x1
+  7: miden_air::constraints::system::enforce_main
+  at ./src/constraints/system/mod.rs:94:25
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:51:5
+
+base:f5956e66ada6a592 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:187:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f76fd2bcc671b90e x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:276:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f8564b492146438e x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:141:17
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f915719019f98d74 x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:49:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f93330d92e20a709 x1
+  5: miden_air::constraints::decoder::enforce_group_count_constraints
+  at ./src/constraints/decoder/mod.rs:297:10
+  6: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:83:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:f9c476a2d717e508 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:159:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f9c8d97cc58383c5 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:180:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:f9ccb648e24f9a17 x1
+  4: miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows
+  at ./src/constraints/chiplets/ace.rs:110:13
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:41:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f9cf1194e5da6a93 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:f9d0d05b1d185be8 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:fa0ced4c271cd4fe x1
+  4: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:228:13
+  5: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fa42ffbcd554e10c x1
+  6: miden_air::constraints::stack::stack_arith::enforce_main
+  at ./src/constraints/stack/stack_arith/mod.rs:195:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:31:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fadc6dc84993cca0 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerbase_constraints
+  at ./src/constraints/stack/crypto/mod.rs:80:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:27:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fb5055427480ca4b x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:162:28
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fc755b70c034e0a6 x1
+  6: miden_air::constraints::stack::crypto::enforce_hornerext_constraints
+  at ./src/constraints/stack/crypto/mod.rs:172:21
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:28:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fd4dad373d2c7f57 x1
+  4: miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints
+  at ./src/constraints/chiplets/bitwise.rs:110:17
+  5: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:39:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:fd4e1eb1a76d2691 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:88:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:fd5ca15582851a1b x1
+  6: miden_air::constraints::stack::crypto::enforce_cryptostream_constraints
+  at ./src/constraints/stack/crypto/mod.rs:51:13
+  7: miden_air::constraints::stack::crypto::enforce_main
+  at ./src/constraints/stack/crypto/mod.rs:26:5
+  8: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:30:5
+  9: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fd820a5316806df0 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:255:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fde131b1a52cc5fd x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fe2e54cab17dccd5 x1
+  4: miden_air::constraints::decoder::enforce_op_index_constraints
+  at ./src/constraints/decoder/mod.rs:432:13
+  5: miden_air::constraints::decoder::enforce_main
+  at ./src/constraints/decoder/mod.rs:85:5
+  6: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:56:5
+
+base:fe850f0688a27156 x1
+  5: miden_air::constraints::stack::general::enforce_main
+  at ./src/constraints/stack/general/mod.rs:76:35
+  6: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:27:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fe85bcd97be72ee9 x1
+  6: miden_air::constraints::stack::ops::enforce_main
+  at ./src/constraints/stack/ops/mod.rs:291:17
+  7: miden_air::constraints::stack::enforce_main
+  at ./src/constraints/stack/mod.rs:29:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:55:5
+
+base:fe90b9798554972a x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:53:21
+
+base:ff15a362ebd67f8c x1
+  6: miden_air::constraints::public_inputs::enforce_main
+  at ./src/constraints/public_inputs.rs:44:21
+
+base:ff61c8be4955e573 x1
+  4: miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows
+  at ./src/constraints/chiplets/memory.rs:98:13
+  5: miden_air::constraints::chiplets::memory::enforce_memory_constraints
+  at ./src/constraints/chiplets/memory.rs:63:5
+  6: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:40:5
+  7: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+base:ff8009dac187aa46 x1
+  5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
+  at ./src/constraints/chiplets/hasher/state.rs:93:13
+  6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
+  at ./src/constraints/chiplets/hasher/mod.rs:245:5
+  7: miden_air::constraints::chiplets::enforce_main
+  at ./src/constraints/chiplets/mod.rs:38:5
+  8: miden_air::constraints::enforce_main
+  at ./src/constraints/mod.rs:57:5
+
+ext:09ff9e009d7c673c_c496b6868d77850c x1
+  5: miden_air::constraints::range::bus::enforce_bus
+  at ./src/constraints/range/bus.rs:127:31
+  6: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:85:5
+
+ext:20c12d1b3fbe467b_19f451d1e6b75d57 x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:2a14b8a67cf1559d_e8f98b0586944b38 x1
+  6: miden_air::constraints::chiplets::bus::hash_kernel::enforce_hash_kernel_constraint
+  at ./src/constraints/chiplets/bus/hash_kernel.rs:275:10
+  7: miden_air::constraints::chiplets::bus::enforce_bus
+  at ./src/constraints/chiplets/bus/mod.rs:27:5
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:88:5
+
+ext:3385ec8692775d36_1a60835c88d9f57a x1
+  6: miden_air::constraints::stack::bus::enforce_bus
+  at ./src/constraints/stack/bus.rs:134:31
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:86:5
+
+ext:3bc484929cfaaecb_debcb87918297cf6 x1
+  6: miden_air::constraints::chiplets::bus::chiplets::enforce_chiplets_bus_constraint
+  at ./src/constraints/chiplets/bus/chiplets.rs:331:31
+  7: miden_air::constraints::chiplets::bus::enforce_bus
+  at ./src/constraints/chiplets/bus/mod.rs:30:5
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:88:5
+
+ext:3e99b0a636258495_853701863c182b4d x1
+  7: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:115:11
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:49e71c183eb4e0b8_d9c7cd5f8f08bfbb x1
+  6: miden_air::constraints::decoder::bus::enforce_block_hash_table_constraint
+  at ./src/constraints/decoder/bus.rs:653:31
+  7: miden_air::constraints::decoder::bus::enforce_bus
+  at ./src/constraints/decoder/bus.rs:198:5
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:87:5
+
+ext:613c9bb7eac614c1_6c9dce67a880beb0 x1
+  5: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:117:11
+  6: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:643f03f99d91f4b5_0a8662cd54f3d710 x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:6526bfd3500d26e5_cdb2e3ffcfa75151 x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:7159271ca5c5876b_eab8bf60d7031a93 x1
+  7: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:112:11
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:75dc7b124143c8d3_32fdd3485ff0e6ce x1
+  7: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:111:11
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:7891b41ac09aad8e_7efbbb3ec59b8255 x1
+  7: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:113:11
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:7f07752fdafc6f91_c902b5444f316dde x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:824ab7b8af178eee_6ab6961299b26cc1 x1
+  6: miden_air::constraints::decoder::bus::enforce_op_group_table_constraint
+  at ./src/constraints/decoder/bus.rs:851:31
+  7: miden_air::constraints::decoder::bus::enforce_bus
+  at ./src/constraints/decoder/bus.rs:199:5
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:87:5
+
+ext:9244c3f6a5220636_811899051ef95506 x1
+  7: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:114:11
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:93d55e17d1fe0e04_8bd0e350d0b73e20 x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:a62d98f6de952176_1784551da6bbc0a9 x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:b862aa2e88596658_34acc269b0697230 x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:bf4fa2b67913b539_4956905ccfc5de53 x1
+  7: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:110:11
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:c30075511562c1d6_7eed890bf86f7c50 x1
+  6: miden_air::constraints::enforce_bus_last_row
+  at ./src/constraints/mod.rs:140:14
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:83:5
+
+ext:da2c38aba5a7269a_1463831c3352196b x1
+  6: miden_air::constraints::decoder::bus::enforce_block_stack_table_constraint
+  at ./src/constraints/decoder/bus.rs:427:31
+  7: miden_air::constraints::decoder::bus::enforce_bus
+  at ./src/constraints/decoder/bus.rs:197:5
+  8: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:87:5
+
+ext:f4e81cf7d41bd195_9fa6db849a702cd9 x1
+  5: miden_air::constraints::enforce_bus_first_row
+  at ./src/constraints/mod.rs:116:11
+  6: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:79:5
+
+ext:ffafca43f539b308_c9560cc258eee592 x1
+  5: miden_air::constraints::chiplets::bus::wiring::enforce_wiring_bus_constraint
+  at ./src/constraints/chiplets/bus/wiring.rs:148:31
+  6: miden_air::constraints::chiplets::bus::enforce_bus
+  at ./src/constraints/chiplets/bus/mod.rs:33:5
+  7: miden_air::constraints::enforce_bus
+  at ./src/constraints/mod.rs:88:5

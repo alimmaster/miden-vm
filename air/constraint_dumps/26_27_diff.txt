@@ -1,0 +1,5 @@
+59565a12ef -> c14fd13f56: refactor: inline small constraint helper functions
+Unchanged: 469 | Updated: 1 | Removed: 0 | Added: 0
+
+UPDATED:
+    src/constraints/decoder/mod.rs:699 -> src/constraints/decoder/mod.rs:132
