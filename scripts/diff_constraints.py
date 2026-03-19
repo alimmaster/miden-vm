@@ -924,7 +924,11 @@ def main():
     )
     parser.add_argument(
         "--pr-comment", type=int, default=None, metavar="PR",
-        help="Post/update a constraint report comment on this PR number",
+        help="PR number for generating diff links (also posts comment unless --no-post)",
+    )
+    parser.add_argument(
+        "--no-post", action="store_true",
+        help="Generate pr_comment.md with links but do not post to GitHub",
     )
     parser.add_argument(
         "--regenerate", action="store_true",
@@ -964,7 +968,7 @@ def main():
         comment_file.write_text(comment_body)
         print(f"\nPR comment saved to: {comment_file}")
 
-        if args.pr_comment:
+        if args.pr_comment and not args.no_post:
             post_or_update_comment(args.pr_comment, comment_body)
 
         print(f"Dumps in: {dump_dir}")
@@ -1186,7 +1190,7 @@ def main():
     print(f"\nPR comment saved to: {comment_file}")
 
     # --- Post to GitHub if requested ---
-    if args.pr_comment:
+    if args.pr_comment and not args.no_post:
         post_or_update_comment(args.pr_comment, comment_body)
 
     print(f"Dumps saved in: {dump_dir}")

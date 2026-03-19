@@ -73,7 +73,7 @@ base:04b88010d6771907 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -99,7 +99,7 @@ base:06baebda2b192ca7 x1
   5: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
   at ./src/constraints/chiplets/hasher/selectors.rs:70:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:192:5
+  at ./src/constraints/chiplets/hasher/mod.rs:191:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -143,7 +143,7 @@ base:0958e59d1a10b258 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -153,7 +153,7 @@ base:0b1023fcf019332e x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:125:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -201,7 +201,7 @@ base:0d4c424fdc4e379b x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -321,7 +321,7 @@ base:1402460cf1f9388c x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -447,7 +447,7 @@ base:1a47b71e247171d9 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -463,7 +463,7 @@ base:1a5bc8cd6d0fd650 x1
 
 base:1a5e5656959a3f25 x1
   7: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:189:43
+  at ./src/constraints/chiplets/hasher/mod.rs:188:43
   8: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   9: miden_air::constraints::enforce_main
@@ -555,7 +555,7 @@ base:2301902b6ca414cb x1
 
 base:2331d2d79e404d88 x1
   6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
-  at ./src/constraints/chiplets/kernel_rom.rs:76:17
+  at ./src/constraints/chiplets/kernel_rom.rs:73:17
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:42:5
   8: miden_air::constraints::enforce_main
@@ -615,7 +615,7 @@ base:2523ffb523e9ff7a x1
 
 base:258027cc205debb3 x1
   6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
-  at ./src/constraints/chiplets/kernel_rom.rs:59:43
+  at ./src/constraints/chiplets/kernel_rom.rs:56:43
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:42:5
   8: miden_air::constraints::enforce_main
@@ -623,7 +623,7 @@ base:258027cc205debb3 x1
 
 base:262503f160477bed x1
   6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
-  at ./src/constraints/chiplets/kernel_rom.rs:73:17
+  at ./src/constraints/chiplets/kernel_rom.rs:70:17
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:42:5
   8: miden_air::constraints::enforce_main
@@ -677,7 +677,7 @@ base:2999f02525fa36b5 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -795,7 +795,7 @@ base:30496513ca300772 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:125:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -805,7 +805,7 @@ base:30be87c0e51074c1 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
   at ./src/constraints/chiplets/hasher/state.rs:113:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:204:9
+  at ./src/constraints/chiplets/hasher/mod.rs:203:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -923,7 +923,7 @@ base:3a05228147a86cb6 x1
   4: miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints
   at ./src/constraints/chiplets/hasher/merkle.rs:58:13
   5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:214:5
+  at ./src/constraints/chiplets/hasher/mod.rs:213:5
   6: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   7: miden_air::constraints::enforce_main
@@ -933,7 +933,7 @@ base:3a3dae4b79f6499b x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1057,7 +1057,7 @@ base:43a8d49d36110cad x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1129,7 +1129,7 @@ base:4c45633bbc9c6ff6 x1
   4: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
   at ./src/constraints/chiplets/hasher/selectors.rs:82:13
   5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:192:5
+  at ./src/constraints/chiplets/hasher/mod.rs:191:5
   6: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   7: miden_air::constraints::enforce_main
@@ -1169,7 +1169,7 @@ base:52494b0d52417e09 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1283,7 +1283,7 @@ base:59c42f839eb88698 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:125:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1349,7 +1349,7 @@ base:5db144af7d40ecd5 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:143:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1469,7 +1469,7 @@ base:646a078b1b49e544 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:136:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1535,7 +1535,7 @@ base:6a3ebb115cbf592f x1
 
 base:6a5b0e0c6b867409 x1
   6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
-  at ./src/constraints/chiplets/kernel_rom.rs:75:17
+  at ./src/constraints/chiplets/kernel_rom.rs:72:17
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:42:5
   8: miden_air::constraints::enforce_main
@@ -1583,7 +1583,7 @@ base:71991ed6f158d1f0 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1691,7 +1691,7 @@ base:7d0eb8004c68fb83 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:136:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1733,7 +1733,7 @@ base:81d11174d1935a01 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:143:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1743,7 +1743,7 @@ base:8224b4e64679a1fc x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1753,7 +1753,7 @@ base:822c0a3d79b85a22 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1789,7 +1789,7 @@ base:8512ed686aec190f x1
 
 base:85343915e6637bff x1
   7: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:189:43
+  at ./src/constraints/chiplets/hasher/mod.rs:188:43
   8: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   9: miden_air::constraints::enforce_main
@@ -1861,7 +1861,7 @@ base:8d5ea31441b76cc1 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1935,7 +1935,7 @@ base:922c15260ece66b4 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -1945,7 +1945,7 @@ base:9289bfa6f7c84dd6 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:143:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2007,7 +2007,7 @@ base:96bf109ec62cbb48 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2017,7 +2017,7 @@ base:9743901acd007ac2 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2081,7 +2081,7 @@ base:9a916565afe89fc6 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2115,7 +2115,7 @@ base:9dce28b001bd623a x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2175,7 +2175,7 @@ base:a150411fc8067c71 x1
   4: miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints
   at ./src/constraints/chiplets/hasher/merkle.rs:73:13
   5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:214:5
+  at ./src/constraints/chiplets/hasher/mod.rs:213:5
   6: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   7: miden_air::constraints::enforce_main
@@ -2193,7 +2193,7 @@ base:a193dbc8c0022e70 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2291,7 +2291,7 @@ base:ae2edbb5b407d514 x1
   4: miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints
   at ./src/constraints/chiplets/hasher/merkle.rs:83:13
   5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:214:5
+  at ./src/constraints/chiplets/hasher/mod.rs:213:5
   6: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   7: miden_air::constraints::enforce_main
@@ -2431,7 +2431,7 @@ base:b6f1abd759f72699 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2471,7 +2471,7 @@ base:b9bd1ac00aad1057 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2505,7 +2505,7 @@ base:ba43fb8e47af138a x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:136:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2531,7 +2531,7 @@ base:bc1bb7fdc52a2640 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2571,7 +2571,7 @@ base:bf4e333e241987da x1
   5: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
   at ./src/constraints/chiplets/hasher/selectors.rs:70:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:192:5
+  at ./src/constraints/chiplets/hasher/mod.rs:191:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2585,7 +2585,7 @@ base:c145bdda280e561a x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:125:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2625,7 +2625,7 @@ base:c3d9d1cf8b3faf79 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2641,7 +2641,7 @@ base:c4493dccc83503bf x1
 
 base:c57ccddf6882e072 x1
   6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
-  at ./src/constraints/chiplets/kernel_rom.rs:86:50
+  at ./src/constraints/chiplets/kernel_rom.rs:83:50
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:42:5
   8: miden_air::constraints::enforce_main
@@ -2649,7 +2649,7 @@ base:c57ccddf6882e072 x1
 
 base:c68f5dd779cc15f4 x1
   7: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:189:43
+  at ./src/constraints/chiplets/hasher/mod.rs:188:43
   8: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   9: miden_air::constraints::enforce_main
@@ -2711,7 +2711,7 @@ base:cd0c85ab94881fed x1
 
 base:cd1caea157052901 x1
   6: miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints
-  at ./src/constraints/chiplets/kernel_rom.rs:74:17
+  at ./src/constraints/chiplets/kernel_rom.rs:71:17
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:42:5
   8: miden_air::constraints::enforce_main
@@ -2841,7 +2841,7 @@ base:d78703b782739976 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
   at ./src/constraints/chiplets/hasher/state.rs:113:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:204:9
+  at ./src/constraints/chiplets/hasher/mod.rs:203:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2883,7 +2883,7 @@ base:d8f982c9a36143f4 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -2919,7 +2919,7 @@ base:dc0fc9c6b6d546cd x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
   at ./src/constraints/chiplets/hasher/state.rs:113:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:204:9
+  at ./src/constraints/chiplets/hasher/mod.rs:203:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3019,7 +3019,7 @@ base:e03174a4f25d55d7 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3029,7 +3029,7 @@ base:e03f8ef1173c8a89 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3039,7 +3039,7 @@ base:e0bd21f4d2634581 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:136:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3065,7 +3065,7 @@ base:e372734a97dbfbd5 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3075,7 +3075,7 @@ base:e3d6744c62ba822d x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3131,7 +3131,7 @@ base:e5e380d9202eec17 x1
   5: miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state
   at ./src/constraints/chiplets/hasher/merkle.rs:143:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:223:5
+  at ./src/constraints/chiplets/hasher/mod.rs:222:5
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3141,7 +3141,7 @@ base:e71be058892623c7 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:83:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3197,7 +3197,7 @@ base:e8bffe92a68cb6a2 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3245,7 +3245,7 @@ base:ed82b29756c061d6 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation
   at ./src/constraints/chiplets/hasher/state.rs:113:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:204:9
+  at ./src/constraints/chiplets/hasher/mod.rs:203:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3295,7 +3295,7 @@ base:f27f011ad7af7c0f x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3323,7 +3323,7 @@ base:f372c2d1d826262c x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3341,7 +3341,7 @@ base:f39f38b8224e18fb x1
   4: miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency
   at ./src/constraints/chiplets/hasher/selectors.rs:75:13
   5: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:192:5
+  at ./src/constraints/chiplets/hasher/mod.rs:191:5
   6: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   7: miden_air::constraints::enforce_main
@@ -3441,7 +3441,7 @@ base:f9cf1194e5da6a93 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3451,7 +3451,7 @@ base:f9d0d05b1d185be8 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3513,7 +3513,7 @@ base:fd4e1eb1a76d2691 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:88:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3591,7 +3591,7 @@ base:ff8009dac187aa46 x1
   5: miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps
   at ./src/constraints/chiplets/hasher/state.rs:93:13
   6: miden_air::constraints::chiplets::hasher::enforce_hasher_constraints
-  at ./src/constraints/chiplets/hasher/mod.rs:179:9
+  at ./src/constraints/chiplets/hasher/mod.rs:178:9
   7: miden_air::constraints::chiplets::enforce_main
   at ./src/constraints/chiplets/mod.rs:38:5
   8: miden_air::constraints::enforce_main
@@ -3611,7 +3611,7 @@ ext:20c12d1b3fbe467b_19f451d1e6b75d57 x1
 
 ext:2a14b8a67cf1559d_e8f98b0586944b38 x1
   6: miden_air::constraints::chiplets::bus::hash_kernel::enforce_hash_kernel_constraint
-  at ./src/constraints/chiplets/bus/hash_kernel.rs:254:10
+  at ./src/constraints/chiplets/bus/hash_kernel.rs:247:10
   7: miden_air::constraints::chiplets::bus::enforce_bus
   at ./src/constraints/chiplets/bus/mod.rs:27:5
   8: miden_air::constraints::enforce_bus
@@ -3625,7 +3625,7 @@ ext:3385ec8692775d36_1a60835c88d9f57a x1
 
 ext:3bc484929cfaaecb_debcb87918297cf6 x1
   6: miden_air::constraints::chiplets::bus::chiplets::enforce_chiplets_bus_constraint
-  at ./src/constraints/chiplets/bus/chiplets.rs:327:31
+  at ./src/constraints/chiplets/bus/chiplets/mod.rs:81:31
   7: miden_air::constraints::chiplets::bus::enforce_bus
   at ./src/constraints/chiplets/bus/mod.rs:30:5
   8: miden_air::constraints::enforce_bus

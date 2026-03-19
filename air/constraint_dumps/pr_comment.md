@@ -2,7 +2,7 @@
 
 ## Constraint Equivalence Report
 
-**Last updated:** 2026-03-18 15:24 UTC  
+**Last updated:** 2026-03-19 13:24 UTC  
 **Range:** `f7c294c441..cf499bd2f8` (42 commits)
 
 ### Summary
