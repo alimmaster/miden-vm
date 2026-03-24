@@ -1376,7 +1376,7 @@ mod tests {
         lower_advice_map_decl, lower_attribute, lower_function_type_from_signature,
         lower_type_expr_from_alias_body,
     };
-    use crate::{ast, parser::cst_lowering::context::LoweringContext};
+    use crate::{ast, parser::cst::context::LoweringContext};
 
     #[test]
     fn lowers_procedure_signatures_from_cst_tokens() {
