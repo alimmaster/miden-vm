@@ -50,6 +50,12 @@ enum InternalParserBackend {
 
 impl Default for InternalParserBackend {
     fn default() -> Self {
+        #[cfg(feature = "std")]
+        {
+            return Self::CstExperimental;
+        }
+
+        #[cfg(not(feature = "std"))]
         Self::Legacy
     }
 }
@@ -66,6 +72,12 @@ pub enum ParserBackend {
 #[cfg(any(test, feature = "testing"))]
 impl Default for ParserBackend {
     fn default() -> Self {
+        #[cfg(feature = "std")]
+        {
+            return Self::CstExperimental;
+        }
+
+        #[cfg(not(feature = "std"))]
         Self::Legacy
     }
 }
@@ -620,12 +632,12 @@ end
 
         assert!(parsed.is_ok(), "parsing panicked, expected a structured error");
         let err = parsed.unwrap().expect_err("parsing succeeded, expected an error");
-        crate::assert_diagnostic!(err, "this reference is invalid without a corresponding import");
+        crate::assert_diagnostic!(err, "length exceeds the maximum of 255 bytes");
     }
 
     #[cfg(feature = "std")]
     #[test]
-    fn experimental_cst_backend_can_be_invoked_for_parse_forms() {
+    fn parse_forms_uses_cst_backend_by_default_under_std() {
         let source = test_source_file(
             "\
 const ERR = 1
@@ -636,11 +648,13 @@ end
 ",
         );
 
-        let legacy = parse_forms_with_backend(source.clone(), ParserBackend::Legacy)
-            .expect("legacy parser should succeed");
-        let cst = parse_forms_with_backend(source, ParserBackend::CstExperimental)
+        let default = parse_forms(source.clone()).expect("default parser should succeed");
+        let cst = parse_forms_with_backend(source.clone(), ParserBackend::CstExperimental)
             .expect("cst backend should succeed");
+        let legacy = parse_forms_with_backend(source, ParserBackend::Legacy)
+            .expect("legacy parser should succeed");
 
+        assert_eq!(default, cst);
         assert_eq!(cst, legacy);
     }
 

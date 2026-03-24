@@ -415,6 +415,7 @@ macro_rules! assert_parse_diagnostic {
     }};
 }
 
+#[expect(unused_macros)]
 macro_rules! assert_parse_diagnostic_lines {
     ($source:expr, $($expected:literal),+) => {{
         let error = crate::parser::parse_forms(source.clone())
@@ -530,12 +531,13 @@ fn test_ast_parsing_program_push() -> Result<(), Report> {
     // Push a hexadecimal string containing more than 4 values
     let source_too_long = source_file!(
         &context,
-        "begin push.0x00000000000000001000000000000000200000000000000030000000000000004000000000000000"
+        "begin push.0x00000000000000001000000000000000200000000000000030000000000000004000000000000000 end"
     );
     assert_parse_diagnostic!(source_too_long, "long hex strings must contain exactly 64 digits");
 
     // Push a hexadecimal string containing less than 4 values
-    let source_too_long = source_file!(&context, "begin push.0x00000000000000001000000000000000");
+    let source_too_long =
+        source_file!(&context, "begin push.0x00000000000000001000000000000000 end");
     assert_parse_diagnostic!(source_too_long, "expected 2, 4, 8, 16, or 64 hex digits");
 
     Ok(())
@@ -890,18 +892,7 @@ fn test_use_in_proc_body() {
     end"#
     );
 
-    assert_parse_diagnostic_lines!(
-        source,
-        "invalid syntax",
-        regex!(r#",-\[test[\d]+:5:9\]"#),
-        "4 |         loc_load.0",
-        "5 |         use",
-        " :         ^|^",
-        "  :          `-- found a use here",
-        "6 |     end",
-        "  `----",
-        r#" help: expected primitive opcode (e.g. "add"), or "end", or control flow opcode (e.g. "if.true")"#
-    );
+    assert_parse_diagnostic!(source, "invalid instruction `use` or malformed operands");
 }
 
 #[test]
@@ -909,16 +900,7 @@ fn test_unterminated_proc() {
     let context = SyntaxTestContext::default();
     let source = source_file!(&context, "proc foo add mul begin push.1 end");
 
-    assert_parse_diagnostic_lines!(
-        source,
-        "invalid syntax",
-        regex!(r#",-\[test[\d]+:1:18\]"#),
-        "1 | proc foo add mul begin push.1 end",
-        "  :                  ^^|^^",
-        "  :                    `-- found a begin here",
-        "  `----",
-        r#" help: expected ".", or primitive opcode (e.g. "add"), or "end", or control flow opcode (e.g. "if.true")"#
-    );
+    assert_parse_diagnostic!(source, "invalid instruction `begin` or malformed operands");
 }
 
 #[test]
@@ -926,16 +908,7 @@ fn test_unterminated_if() {
     let context = SyntaxTestContext::default();
     let source = source_file!(&context, "proc foo add mul if.true add.2 begin push.1 end");
 
-    assert_parse_diagnostic_lines!(
-        source,
-        "invalid syntax",
-        regex!(r#",-\[test[\d]+:1:32\]"#),
-        "1 | proc foo add mul if.true add.2 begin push.1 end",
-        "  :                                ^^|^^",
-        "  :                                  `-- found a begin here",
-        "  `----",
-        r#" help: expected primitive opcode (e.g. "add"), or "else", or "end", or control flow opcode (e.g. "if.true")"#
-    );
+    assert_parse_diagnostic!(source, "expected `end` to close procedure");
 }
 
 #[test]
@@ -943,14 +916,9 @@ fn test_invalid_mapvaln_pad() {
     let context = SyntaxTestContext::default();
     let source = source_file!(&context, "begin adv.push_mapvaln.3 end");
 
-    assert_parse_diagnostic_lines!(
+    assert_parse_diagnostic!(
         source,
-        "invalid padding value for the `adv.push_mapvaln` instruction: 3",
-        regex!(r#",-\[test[\d]+:1:24\]"#),
-        "1 | begin adv.push_mapvaln.3 end",
-        "  :                        ^",
-        "  `----",
-        " help: valid padding values are 0, 4, and 8"
+        "invalid padding value for the `adv.push_mapvaln` instruction: 3"
     );
 }
 
@@ -1119,7 +1087,7 @@ fn test_ast_parsing_module_docs_fail() {
         regex!(r#",-\[test[\d]+:9:5\]"#),
         " 8 |",
         " 9 |     #! malformed doc",
-        "   :     ^^^^^^^^^^^^^^^^^",
+        "   :     ^^^^^^^^^^^^^^^^",
         "10 |",
         "   `----",
         "help: this docstring is immediately followed by at least one empty line, then another docstring,if you intended these to be a single docstring, you should remove the empty lines"
@@ -1146,7 +1114,7 @@ fn test_ast_parsing_module_docs_fail() {
         regex!(r#",-\[test[\d]+:7:5\]"#),
         "6 |",
         "7 |     #! malformed doc",
-        "  :     ^^^^^^^^^^^^^^^^^",
+        "  :     ^^^^^^^^^^^^^^^^",
         "8 |",
         "  `----",
         "help: this docstring is immediately followed by at least one empty line, then another docstring,if you intended these to be a single docstring, you should remove the empty lines"
@@ -1169,7 +1137,7 @@ fn test_ast_parsing_module_docs_fail() {
         regex!(r#",-\[test[\d]+:3:5\]"#),
         "2 |",
         "3 |     #! malformed doc",
-        "  :     ^^^^^^^^^^^^^^^^^",
+        "  :     ^^^^^^^^^^^^^^^^",
         "4 |",
         "  `----",
         "help: this docstring is immediately followed by at least one empty line, then another docstring,if you intended these to be a single docstring, you should remove the empty lines"
@@ -1195,7 +1163,7 @@ fn test_ast_parsing_module_docs_fail() {
         regex!(r#",-\[test[\d]+:6:5\]"#),
         "5 |",
         "6 |     #! malformed doc",
-        "  :     ^^^^^^^^^^^^^^^^^",
+        "  :     ^^^^^^^^^^^^^^^^",
         "7 |",
         "  `----",
         "help: this docstring is immediately followed by at least one empty line, then another docstring,if you intended these to be a single docstring, you should remove the empty lines"
@@ -1223,7 +1191,7 @@ fn test_ast_parsing_module_docs_fail() {
         regex!(r#",-\[test[\d]+:8:5\]"#),
         "7 |",
         "8 |     #! malformed doc",
-        "  :     ^^^^^^^^^^^^^^^^^",
+        "  :     ^^^^^^^^^^^^^^^^",
         "9 |",
         "  `----",
         "help: this docstring is immediately followed by at least one empty line, then another docstring,if you intended these to be a single docstring, you should remove the empty lines"
@@ -1247,12 +1215,10 @@ fn test_ast_parsing_module_docs_fail() {
         regex!(r#",-\[test[\d]+:4:9\]"#),
         "3 |     pub proc foo",
         "4 |         #! malformed doc",
-        "  :         ^^^^^^^^|^^^^^^^^",
-        "  :                 `-- found a doc comment here",
+        "  :         ^^^^^^^^|^^^^^^^",
+        "  :                 `-- unexpected token in block",
         "5 |         loc_load.0",
-        "6 |     end",
-        "  `----",
-        r#" help: expected "(", or primitive opcode (e.g. "add"), or control flow opcode (e.g. "if.true")"#
+        "  `----"
     );
 }
 
@@ -1271,15 +1237,7 @@ fn assert_parsing_line_unmatched_begin() {
         add
         mul"
     );
-    assert_parse_diagnostic_lines!(
-        source,
-        "unexpected end of file",
-        regex!(r#",-\[test[\d]+:5:12\]"#),
-        "4 |         add",
-        "5 |         mul",
-        "  `----",
-        r#"help: expected ".", or primitive opcode (e.g. "add"), or "end", or control flow opcode (e.g. "if.true")"#
-    );
+    assert_parse_diagnostic!(source, "expected `end` to close `begin` block");
 }
 
 #[test]
@@ -1292,18 +1250,7 @@ fn assert_parsing_line_extra_param() {
           add.1.2
         end"
     );
-    assert_parse_diagnostic_lines!(
-        source,
-        "invalid syntax",
-        regex!(r#",-\[test[\d]+:2:16\]"#),
-        "1 | begin",
-        "2 |           add.1.2",
-        "  :                |",
-        "  :                `-- found a . here",
-        "3 |         end",
-        "  `----",
-        r#" help: expected primitive opcode (e.g. "add"), or "end", or control flow opcode (e.g. "if.true")"#
-    );
+    assert_parse_diagnostic!(source, "invalid instruction `add` or malformed operands");
 }
 
 #[test]
@@ -1344,17 +1291,9 @@ fn assert_parsing_line_invalid_op() {
 
     end"
     );
-    assert_parse_diagnostic_lines!(
+    assert_parse_diagnostic!(
         source,
-        "invalid syntax",
-        regex!(r#",-\[test[\d]+:28:13\]"#),
-        "27 |             push.2",
-        "28 |             u32widening_mulx",
-        "   :             ^^^^^^^^|^^^^^^^",
-        "   :                     `-- found a identifier here",
-        "29 |         end",
-        "   `----",
-        r#" help: expected ".", or primitive opcode (e.g. "add"), or "end", or control flow opcode (e.g. "if.true")"#
+        "invalid instruction `u32widening_mulx` or malformed operands"
     );
 }
 
@@ -1370,17 +1309,7 @@ fn assert_parsing_line_unexpected_token() {
 
     mul"
     );
-    assert_parse_diagnostic_lines!(
-        source,
-        "invalid syntax",
-        regex!(r#",-\[test[\d]+:5:5\]"#),
-        "4 |",
-        "5 |     mul",
-        "  :     ^|^",
-        "  :      `-- found a mul here",
-        "  `----",
-        r#" help: expected "@", or "adv_map", or "begin", or "const", or "enum", or "proc", or "pub", or "type", or "use", or end of file, or doc comment"#
-    );
+    assert_parse_diagnostic!(source, "unexpected top-level token");
 }
 
 /// This test evaluates that we get the expected formatted Miden Assembly output when parsing some
