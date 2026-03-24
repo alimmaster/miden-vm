@@ -981,10 +981,10 @@ fn render_token_sequence_with_style(tokens: &[SyntaxToken], style: SpacingStyle)
     let mut previous: Option<&SyntaxToken> = None;
 
     for token in tokens {
-        if let Some(previous_token) = previous {
-            if needs_space(previous_token, token, style) {
-                rendered.push(' ');
-            }
+        if let Some(previous_token) = previous
+            && needs_space(previous_token, token, style)
+        {
+            rendered.push(' ');
         }
         rendered.push_str(token.text());
         previous = Some(token);

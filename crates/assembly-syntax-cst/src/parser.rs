@@ -1233,7 +1233,9 @@ end
             parse
                 .diagnostics()
                 .iter()
-                .any(|diag| diag.to_string().contains("expected `end`")),
+                .flat_map(|diag| diag.labels.as_deref().unwrap_or(&[]).iter())
+                .filter_map(|label| label.label())
+                .any(|label| label.contains("expected `end`")),
             "expected an `end`-related diagnostic, got {:?}",
             parse.diagnostics()
         );
@@ -1247,7 +1249,14 @@ end
     fn surfaces_invalid_tokens_as_diagnostics() {
         let parse = parse_text("proc foo\n    §\nend\n");
         assert!(parse.has_errors());
-        assert!(parse.diagnostics().iter().any(|diag| diag.to_string().contains("unrecognized")));
+        assert!(
+            parse
+                .diagnostics()
+                .iter()
+                .flat_map(|diag| diag.labels.as_deref().unwrap_or(&[]).iter())
+                .filter_map(|label| label.label())
+                .any(|label| label.contains("unrecognized token"))
+        );
     }
 
     #[test]
@@ -1289,7 +1298,14 @@ end
         let diagnostic = parse
             .diagnostics()
             .iter()
-            .find(|diag| diag.to_string().contains("unrecognized"))
+            .find(|diag| {
+                diag.labels
+                    .as_deref()
+                    .unwrap_or(&[])
+                    .iter()
+                    .filter_map(|label| label.label())
+                    .any(|label| label.contains("unrecognized token"))
+            })
             .expect("invalid-token diagnostic");
         let offset = source.as_str().find('§').expect("invalid token offset");
         let expected =
