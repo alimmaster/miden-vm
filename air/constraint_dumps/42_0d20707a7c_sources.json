@@ -1,0 +1,2822 @@
+{
+  "base:00354b4cfc32abd1": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s11);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 158,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:00a057a374e01285": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:01ad353a6220b2fe": {
+    "source_expr": "builder.assert_zero(f_g1 * dec.hasher_state[1]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 485,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:01bf0db0c1a9ee26": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s6);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 203,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:02360d3e2bd5131d": {
+    "source_expr": "builder .when_transition() .assert_zero(sp.clone() * delta_gc.clone() * (delta_gc.clone() - F_1));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 282,
+    "function": "miden_air::constraints::decoder::enforce_group_count_constraints"
+  },
+  "base:0296831fc04cc61f": {
+    "source_expr": "builder.assert_one(dec.in_span.into() + op_flags.control_flow());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 90,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:02c8c76a65e9b24f": {
+    "source_expr": "builder.assert_eq(s14_next, s2);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 281,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:031c956e1c0f5b89": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:03fe3f52a8d8bd30": {
+    "source_expr": "builder.assert_bool(s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 132,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:04b88010d6771907": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:05052e052541c605": {
+    "source_expr": "builder.assert_bool(sp);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 125,
+    "function": "miden_air::constraints::decoder::enforce_in_span_constraints"
+  },
+  "base:0561ba478392b2c2": {
+    "source_expr": "builder.assert_eq(s11_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 269,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:06baebda2b192ca7": {
+    "source_expr": "builder.assert_zeros([gate.clone() * (s1_next - s1.clone()), gate * (s2_next - s2)]);",
+    "file": "./src/constraints/chiplets/hasher/selectors.rs",
+    "line": 70,
+    "function": "miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency"
+  },
+  "base:071f41c3b9666d4e": {
+    "source_expr": "builder.assert_bool(s0_next.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 234,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:07638c336476a24c": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:08bd3e06b0eff07e": {
+    "source_expr": "builder.assert_zero(ace_last.clone() * sstart.clone());",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 114,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:091bc7ba69fb82c8": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:0958e59d1a10b258": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:0b1023fcf019332e": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_absorb.clone() * cap_next[i].clone() }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 125,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:0b9bbb229457c471": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, clk);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 173,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:0c3044da0c07cc82": {
+    "source_expr": "builder.assert_zero(is_u32add3 * (s0.clone() + s1.clone() + s2.clone() - u32_v48));",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 227,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:0c612a55002cf461": {
+    "source_expr": "builder.assert_eq(s3_next, s11);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 292,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:0d2a64b4b0d6acea": {
+    "source_expr": "builder.assert_eq(s0_next.clone(), AB::Expr::ONE - s0.clone() * uop_h0.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 156,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:0d34b6628a1cc540": {
+    "source_expr": "builder.when(f_syscall).assert_zero(ctx_next);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 79,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:0d4c424fdc4e379b": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:0da40dadd122cf63": {
+    "source_expr": "builder.assert_eq(s9_next, s1);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 266,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:0dc4fd749cab1938": {
+    "source_expr": "builder .when_transition() .assert_zero(depth_delta_part + left_shift_part - right_shift_part + call_part);",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 145,
+    "function": "miden_air::constraints::stack::overflow::enforce_stack_depth_constraints"
+  },
+  "base:0dd42c4a5d477093": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.system.fn_hash[i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 101,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:0e2dcdf83dc7784a": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:0e5e8ee465fd6e0d": {
+    "source_expr": "builder .when_transition() .assert_zero(f_end.clone() * f_repeat_next.clone() * (hi_next - hi));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 231,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:0f9fe67a1d548d3b": {
+    "source_expr": "builder.assert_zero(f_repeat * end_flags.is_loop_body.into().not());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 217,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:0fc523feb2e28ddf": {
+    "source_expr": "builder.assert_zero(f_dyn.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 211,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:0fcdba72d9934752": {
+    "source_expr": "builder.assert_zero(gate * c3 * cols_next.values[3].into());",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 124,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row"
+  },
+  "base:103c413d21cbf259": {
+    "source_expr": "builder.assert_bool(s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 121,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:106696cbb996a7f3": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 106,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:109afa1ca85aba43": {
+    "source_expr": "builder.assert_eq(s1_next, s5);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 248,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:113f14bf0526501a": {
+    "source_expr": "builder.when(gate).assert_eq(s3_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 221,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:11714347bbcca80f": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 134,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:1286d86e52ce1480": {
+    "source_expr": "builder.assert_eq(dec.extra[0], expected_e0);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 151,
+    "function": "miden_air::constraints::decoder::enforce_extra_columns"
+  },
+  "base:1402460cf1f9388c": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:142d5181a24bf206": {
+    "source_expr": "builder.assert_bool(exp_bit);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 174,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:14666cec6d57909e": {
+    "source_expr": "builder.assert_zero( ace_flag.clone() * f_read.clone() * (id1.clone() - id0.clone() + AB::Expr::ONE), );",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 157,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:14d021d8b4090bea": {
+    "source_expr": "builder.assert_zero(gate * id0);",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 194,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:14dd5a461b81953b": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 106,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:15a27a9c530f1b1f": {
+    "source_expr": "builder.assert_eq(s4_next, s12);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 293,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:162ec03779806ee3": {
+    "source_expr": "builder.assert_bool(exp_bit);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 175,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:167dac1a5e0b839f": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:16de3a880877c719": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 62,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:174661b3858430a1": {
+    "source_expr": "builder.assert_eq(s1_next.clone(), u32_v_lo.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 235,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:1794cccc7f32e37f": {
+    "source_expr": "builder.assert_eq(s4_next, cswap_c * s1.into() + cswap_c_inv.clone() * s5.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 333,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:17b880430ca2f800": {
+    "source_expr": "builder.assert_eq(s6_next, cswap_c * s3.into() + cswap_c_inv.clone() * s7.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 335,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:18b3ed3e6ff63258": {
+    "source_expr": "builder.assert_eq(s4_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 251,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:18e132b44c5caeb5": {
+    "source_expr": "builder.assert_eq(acc1_next, acc_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 148,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:19bf739af9b37fd6": {
+    "source_expr": "builder.assert_zero(f_repeat * end_flags.is_loop_body.into().not());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 218,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:1a47b71e247171d9": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:1a5bc8cd6d0fd650": {
+    "source_expr": "builder.assert_zero( ace_flag.clone() * f_eval.clone() * op.clone() * (op.clone() - F_1) * (op.clone() + F_1), );",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 174,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:1a5e5656959a3f25": {
+    "source_expr": "builder.when(ctx.hasher_flag.clone()).assert_bools(ctx.cols.selectors);",
+    "file": "./src/constraints/chiplets/hasher/mod.rs",
+    "line": 189,
+    "function": "miden_air::constraints::chiplets::hasher::enforce_hasher_constraints"
+  },
+  "base:1b23210a44400fa9": {
+    "source_expr": "builder.when(gate).assert_zero(s0_next);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 116,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:1c82da72f0483a65": {
+    "source_expr": "builder.assert_eq(s0_next.clone(), AB::Expr::ONE - eq_diff * uop_h0.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 147,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:1d92221191a5691c": {
+    "source_expr": "builder.assert_zero(tiny_batch.clone() * dec.hasher_state[2 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 481,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:1dbbaf628ed842bd": {
+    "source_expr": "builder.assert_eq(s1_next.clone(), u32_v_hi.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 222,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:1eb91b6d2515bfa1": {
+    "source_expr": "let mut transition = builder.when_transition();",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 134,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:2076f65ca97d7633": {
+    "source_expr": "builder.when(is_assert).assert_one(s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 341,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:207ee722142e9e71": {
+    "source_expr": "builder.assert_eq(next.stack[12], local.stack[12].into() + F_8);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 52,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:21c9704724691823": {
+    "source_expr": "builder.assert_zero(within_section_gate * (id0.clone() - expected_id0));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 149,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:223def4bbe2a1f52": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:22b6f52f91661cc5": {
+    "source_expr": "builder.assert_eq(s7_next, s15);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 296,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:2301902b6ca414cb": {
+    "source_expr": "let mut transition = builder.when_transition();",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 135,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:2331d2d79e404d88": {
+    "source_expr": "builder.assert_eq(krom_next.root[3], krom.root[3]);",
+    "file": "./src/constraints/chiplets/kernel_rom.rs",
+    "line": 76,
+    "function": "miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints"
+  },
+  "base:2365f8056a8c8500": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:23e6a30f21355d3a": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:249c65054a6eb5af": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:24a63340a78bd293": {
+    "source_expr": "builder.assert_zero(constrain_value(c1, cols.values[1], cols_next.values[1]));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 203,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last"
+  },
+  "base:24b3b1ed724a0a76": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:2523ffb523e9ff7a": {
+    "source_expr": "builder .when_transition() .assert_zero(sp.clone() * delta_gc.clone() * is_push.not() * h0);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 289,
+    "function": "miden_air::constraints::decoder::enforce_group_count_constraints"
+  },
+  "base:258027cc205debb3": {
+    "source_expr": "builder.when(kernel_rom_flag.clone()).assert_bool(krom.s_first);",
+    "file": "./src/constraints/chiplets/kernel_rom.rs",
+    "line": 59,
+    "function": "miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints"
+  },
+  "base:262503f160477bed": {
+    "source_expr": "builder.assert_eq(krom_next.root[1], krom.root[1]);",
+    "file": "./src/constraints/chiplets/kernel_rom.rs",
+    "line": 73,
+    "function": "miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints"
+  },
+  "base:271a6c82a162ab77": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:27ca1d698887a955": {
+    "source_expr": "transition.when(s01234.clone()).assert_eq(sel_next[4], sel[4]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 137,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:28243642876a9642": {
+    "source_expr": "transition.when(s01234.clone()).assert_eq(sel_next[4], sel[4]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 138,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:2833ba150f9dea35": {
+    "source_expr": "builder.assert_eq(s1 - s1_next.clone(), u32_v_lo.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 246,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:28b5bacaad92a20e": {
+    "source_expr": "builder.assert_eq(s10_next, s2);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 299,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:296c78759f5e853f": {
+    "source_expr": "builder.assert_eq(next.stack[10], local.stack[10]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 50,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:2999f02525fa36b5": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:29f1b550b2fdf9c5": {
+    "source_expr": "builder.assert_eq(next.stack[15], local.stack[15]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 55,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:2a48b47e06ee6430": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:2a4960e48fa15565": {
+    "source_expr": "builder.assert_eq(s7_next, cswap_c * s4.into() + cswap_c_inv.clone() * s8.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 336,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:2bcf6595d2c95e97": {
+    "source_expr": "builder.assert_zero(within_section_gate.clone() * (ptr_next.clone() - expected_ptr_next));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 148,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:2d4657bd1fddf009": {
+    "source_expr": "builder.assert_eq(s15_next, s7);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 304,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:2d82a7840bf5d190": {
+    "source_expr": "builder.assert_zero(gate_transition * (prev_output_next - output.clone()));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 140,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:2e07efd4bf073738": {
+    "source_expr": "builder.assert_eq(acc1_next, acc_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 230,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:2e0aa95775ca51bd": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:2e22c4eb5611927e": {
+    "source_expr": "last.assert_one(sel[4]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 153,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:2ea448355288da55": {
+    "source_expr": "builder.assert_eq(tmp1, tmp_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 223,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:2f22b7b6d3a75031": {
+    "source_expr": "builder.assert_eq(s0_next.clone(), AB::Expr::ONE - s0.clone() * uop_h0.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 155,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:2f4aee9bb818d85c": {
+    "source_expr": "builder.assert_eq(s1_next, u32_v_lo);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 255,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:2f643f90a6cb3bb0": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:304240545126d872": {
+    "source_expr": "builder.assert_bools(dec.batch_flags);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:30496513ca300772": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_absorb.clone() * cap_next[i].clone() }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 125,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:30be87c0e51074c1": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate.clone() * (h_cap_next[i].clone() - h_cap[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 113,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation"
+  },
+  "base:31d593dc20820caa": {
+    "source_expr": "builder.assert_zero(ace_flag.clone() * sblock.clone() * (sblock.clone() - AB::Expr::ONE));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 100,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:3218d5e7232a7613": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 191,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:322cceffa1cf2341": {
+    "source_expr": "builder.when_last_row().assert_eq(v, TWO_POW_16_MINUS_1);",
+    "file": "./src/constraints/range/mod.rs",
+    "line": 32,
+    "function": "miden_air::constraints::range::enforce_main"
+  },
+  "base:3261692f76c5327e": {
+    "source_expr": "builder.when_transition().assert_zero(respan_flag * sp_next.not());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 133,
+    "function": "miden_air::constraints::decoder::enforce_in_span_constraints"
+  },
+  "base:32628565d8271894": {
+    "source_expr": "builder.assert_eq(s7_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 254,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:336d14b36317b9b4": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:33cd4a4cdfe025b7": {
+    "source_expr": "builder .assert_zero(ace_transition.clone() * f_next.clone() * sblock.clone() * sblock_next.not());",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 121,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:3607dc9085d598cd": {
+    "source_expr": "builder.assert_eq(s5_next, s1);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 252,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:36c6dce822787750": {
+    "source_expr": "builder.assert_bools(dec.op_bits);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 74,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:376d6ccb940a0cfa": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next.clone(), s0.clone() + F_1);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 105,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:37a7dee38125e3f4": {
+    "source_expr": "builder.assert_eq(s3_next, s15);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 278,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:38e7ed15d915a726": {
+    "source_expr": "builder.assert_zero(ace_transition.clone() * f_read.clone() * (selected - n_eval));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 167,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:38ff7e9b0745161f": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:39d1bbc3641cc30f": {
+    "source_expr": "builder.assert_zero(constrain_value(c3, cols.values[3], cols_next.values[3]));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 205,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last"
+  },
+  "base:3a05228147a86cb6": {
+    "source_expr": "builder.assert_zero(hasher_flag.clone() * flags.f_out.clone() * node_index.clone());",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 58,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints"
+  },
+  "base:3a3dae4b79f6499b": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:3b24219b6e9faba1": {
+    "source_expr": "builder.assert_eq(s13_next, s5);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 302,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:3bc3527027c8d010": {
+    "source_expr": "builder.assert_eq(exp_val.clone(), (exp - F_1) * exp_bit.clone() + F_1);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 171,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:3cb4ea7ee5ddc7de": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s15);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 166,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:3cdd8a02b2495935": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s7);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 207,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:3ebd2d9f09ce3875": {
+    "source_expr": "builder.assert_zero(gate * c3 * cols_next.values[3].into());",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 123,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row"
+  },
+  "base:3f1273be34eb6245": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 110,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:400bdc54d1bddfff": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:40a672d7f5ebddf9": {
+    "source_expr": "builder.assert_zero(gate * n0.clone() * (n0 - one.clone()));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 334,
+    "function": "miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints"
+  },
+  "base:419b59fe15ad8702": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:41a2cc7afa05ca22": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s4);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 138,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:41f16c99a7b98bd6": {
+    "source_expr": "builder.assert_zero(ace_flag.clone() * f_end.clone() * sblock.not());",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 125,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:42ca5b229a10b00b": {
+    "source_expr": "builder.when_transition().assert_zero(sp * (end_next + respan_next) * h0);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 361,
+    "function": "miden_air::constraints::decoder::enforce_op_group_decoding_constraints"
+  },
+  "base:4312cde4a157110e": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, stack_depth);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 356,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:436f369b3d435e83": {
+    "source_expr": "builder.assert_zero(very_high_prefix * b1);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 179,
+    "function": "miden_air::constraints::decoder::enforce_op_bit_group_constraints"
+  },
+  "base:43a8d49d36110cad": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:448f88facc5b5da3": {
+    "source_expr": "builder.assert_zero(gate_transition.clone() * (op_flag.clone() - op_flag_next));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 97,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:45799324a3005672": {
+    "source_expr": "builder.assert_eq(s6_next, s2);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 253,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:459f3a198a42fdce": {
+    "source_expr": "builder.assert_bools(dec.op_bits);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 74,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:45a0084944e49998": {
+    "source_expr": "builder.assert_bool(s0.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 111,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:45ca9053292c60af": {
+    "source_expr": "builder.assert_eq(s8_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 265,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:463e256cd6866a38": {
+    "source_expr": "builder.when(default_flag).assert_eq(ctx_next, ctx);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 81,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:4698542b601d4590": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s6);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 146,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:472fa0aee6574397": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:48c5c2dabddef276": {
+    "source_expr": "builder.assert_bools(dec.batch_flags);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:4c45633bbc9c6ff6": {
+    "source_expr": "builder.assert_zero(hasher_flag * flags.cycle_row_31.clone() * s0.not() * s1);",
+    "file": "./src/constraints/chiplets/hasher/selectors.rs",
+    "line": 82,
+    "function": "miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency"
+  },
+  "base:4c75ffd27e9de237": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:4ccf1c75fca1dd93": {
+    "source_expr": "builder.when_transition().assert_zero(sp * (addr_next.clone() - addr.clone()));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 516,
+    "function": "miden_air::constraints::decoder::enforce_block_address_constraints"
+  },
+  "base:4edbfcab5a3557c2": {
+    "source_expr": "builder.assert_bools(dec.op_bits);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 74,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:4edd1f5f4fab7826": {
+    "source_expr": "builder.when(s0123.clone()).assert_bool(sel[4]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 120,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:51f7bc0eab84a09a": {
+    "source_expr": "builder.when(is_cswap.clone()).assert_bool(cswap_c);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 313,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:52494b0d52417e09": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:527a8b0eb54758e9": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 87,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:52f8f1218be346b1": {
+    "source_expr": "builder.when_first_row().assert_zero(local.stack.b1);",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 58,
+    "function": "miden_air::constraints::stack::overflow::enforce_main"
+  },
+  "base:52faa0a44d33c90b": {
+    "source_expr": "builder.assert_zero(gate.clone() * c2 * cols_next.values[2].into());",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 122,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row"
+  },
+  "base:53d84d41cf5c5c02": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:55cd58fbf02bf9bf": {
+    "source_expr": "builder .when_transition() .assert_zero(respan_flag * (addr_next - addr.clone() - HASH_CYCLE_LEN_FELT));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 523,
+    "function": "miden_air::constraints::decoder::enforce_block_address_constraints"
+  },
+  "base:567135941dd3f5eb": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:569eae97bc7f7e08": {
+    "source_expr": "builder.assert_zero(is_u32madd * (s0.clone() * s1.clone() + s2 - u32_v64));",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 240,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:571d9bf161a5fde1": {
+    "source_expr": "builder.assert_eq(s1_next, s9);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 262,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:57cfa934659fe4be": {
+    "source_expr": "builder.assert_zero(tiny_batch.clone() * dec.hasher_state[2 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 481,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:5801c1bcfd92da28": {
+    "source_expr": "builder .when_transition() .assert_zero((span_flag + respan_flag) * ox_next.clone());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 415,
+    "function": "miden_air::constraints::decoder::enforce_op_index_constraints"
+  },
+  "base:583ae73f5c31fe83": {
+    "source_expr": "builder.assert_eq(s11_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 268,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:5910874354254e0e": {
+    "source_expr": "builder.assert_eq(s0 - s0_next.clone(), u32_v_hi.clone() + F_1);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 247,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:595679ef7e71b109": {
+    "source_expr": "builder .when_transition() .assert_zero(f_end.clone() * f_repeat_next.clone() * (hi_next - hi));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 231,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:59c42f839eb88698": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_absorb.clone() * cap_next[i].clone() }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 125,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:59edca94cc542234": {
+    "source_expr": "builder.assert_bools(dec.batch_flags);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:5a78e346a2c454c1": {
+    "source_expr": "builder.assert_zero(split_or_loop * s0_binary);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 206,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:5ac42c2f020670be": {
+    "source_expr": "builder.assert_zero(f_dyn.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 211,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:5b412568a607d921": {
+    "source_expr": "builder.when(gate).assert_eq(s2_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 217,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:5bbb29d88722b6fc": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:5d4d6011fd26333e": {
+    "source_expr": "builder .when_transition() .assert_zero((f_span + f_respan + is_push + f_sgc) * h0_shift);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 356,
+    "function": "miden_air::constraints::decoder::enforce_op_group_decoding_constraints"
+  },
+  "base:5d5dc97702304639": {
+    "source_expr": "builder.assert_eq(s2_next, s10);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 263,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:5db144af7d40ecd5": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b1.clone() * (rate1_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 143,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:5dfbf774b1cc050c": {
+    "source_expr": "builder.assert_zero(constrain_value(c3, cols.values[3], cols_next.values[3]));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 206,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last"
+  },
+  "base:5f2ccd9703b2d898": {
+    "source_expr": "builder.assert_zero(gate.clone() * c1 * cols_next.values[1].into());",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 121,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_first_row"
+  },
+  "base:5f8cf2c0cbc88c11": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:5f9a88d75a935dca": {
+    "source_expr": "builder .when_transition() .assert_zero(f_end.clone() * f_repeat_next.clone() * (hi_next - hi));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 231,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:6062cb084802829a": {
+    "source_expr": "builder.assert_eq(s1_next, u32_v_lo);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 256,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:609762a8b81df486": {
+    "source_expr": "builder.assert_bools(dec.op_bits);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 74,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:60b316efe2dce0ba": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:60cd9094c995707b": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:6155c69e0fd52907": {
+    "source_expr": "builder.assert_zero(gate.clone() * is_word.clone() * (is_word.clone() - F_1));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 91,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows"
+  },
+  "base:617386fb61d3d4cf": {
+    "source_expr": "builder.when(s012.clone()).assert_bool(sel[3]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 118,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:6198236bcb01f59a": {
+    "source_expr": "builder.assert_zero(gate_not_n0.clone() * n1.clone() * (n1 - one));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 338,
+    "function": "miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints"
+  },
+  "base:61eccb52243f37f1": {
+    "source_expr": "builder.when(gate).assert_eq(s8_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 241,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:625cec41883ce8b8": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:627479931fe95651": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:646a078b1b49e544": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b0.clone() * (rate0_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 136,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:65c6958b510cf4f4": {
+    "source_expr": "builder.assert_zero(flags.next_is_first.clone() * (sstart_next.clone() - F_1));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 94,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:6667674650badcb1": {
+    "source_expr": "builder.assert_zero(f_dyn.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 211,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:66bed174e6927f09": {
+    "source_expr": "builder .when_transition() .assert_zero(f_end.clone() * f_repeat_next.clone() * (hi_next - hi));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 231,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:672d7dd3c15def49": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:67bc70b2bfdf1e5f": {
+    "source_expr": "builder.assert_eq(acc1_next, acc_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 231,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:680f541f12b3de6e": {
+    "source_expr": "builder.assert_eq(s7_next, cswap_c * s4.into() + cswap_c_inv.clone() * s8.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 337,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:6a3ebb115cbf592f": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.system.fn_hash[i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 101,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:6a5b0e0c6b867409": {
+    "source_expr": "builder.assert_eq(krom_next.root[3], krom.root[3]);",
+    "file": "./src/constraints/chiplets/kernel_rom.rs",
+    "line": 75,
+    "function": "miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints"
+  },
+  "base:6c019014e7909fde": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 122,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:6c7486ebd0fbcf31": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:6d0552f34cdfad67": {
+    "source_expr": "builder.assert_eq(tmp1_0, tmp1_exp_0);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 139,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:6d9b74a0f8f7dbf3": {
+    "source_expr": "builder.when_last_row().assert_zero(local.stack.b1);",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 59,
+    "function": "miden_air::constraints::stack::overflow::enforce_main"
+  },
+  "base:6f983bc8167cfc2c": {
+    "source_expr": "builder.assert_zero(bitwise_flag * (output - expected_z));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 160,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:71991ed6f158d1f0": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:71ec27a935fe913b": {
+    "source_expr": "builder.when(gate).assert_zero(s0_next.clone() + s0.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 87,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:74a044a9322e56f2": {
+    "source_expr": "builder.assert_eq(s5_next, cswap_c * s2.into() + cswap_c_inv.clone() * s6.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 334,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:765035aafe7f6ce3": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:767cd256a2ef0bb5": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next.clone(), s0.clone() + s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 81,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:76972f38e49012cb": {
+    "source_expr": "builder.assert_bool(s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 133,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:76c528daa30338e4": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:78ed18d46cd3c6b1": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s9);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 154,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:79d04330c1646183": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s5);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 142,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:7a75aa74f6087dfc": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s5);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 199,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:7ab7c8289ce26cc9": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:7b4f9a1ce04e7164": {
+    "source_expr": "builder.assert_eq(s0 - s0_next.clone(), u32_v_hi.clone() + F_1);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 248,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:7be7896a12ed341b": {
+    "source_expr": "builder.assert_zero(is_u32madd * (s0.clone() * s1.clone() + s2 - u32_v64));",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 239,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:7cbcc54e08ab667c": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 150,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:7d0eb8004c68fb83": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b0.clone() * (rate0_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 136,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:7dc3787ba1aeb7fb": {
+    "source_expr": "builder.assert_eq(s3_next, s7);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 250,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:7dee3124981ff6cf": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 110,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:7fec19d60046bb03": {
+    "source_expr": "builder.assert_eq(acc_next, acc * exp_val);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:81bdab6d35cadb38": {
+    "source_expr": "builder.assert_eq(s9_next, s1);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 298,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:81d11174d1935a01": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b1.clone() * (rate1_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 143,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:8224b4e64679a1fc": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:822c0a3d79b85a22": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:8286d5efeb76d7e2": {
+    "source_expr": "builder.assert_zero(small_batch.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 475,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:82f0d8eb6e2337da": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:84a2b5dfdaaf8098": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:8512ed686aec190f": {
+    "source_expr": "builder.when_transition().assert_zero(f_halt * f_halt_next.not());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 237,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:85343915e6637bff": {
+    "source_expr": "builder.when(ctx.hasher_flag.clone()).assert_bools(ctx.cols.selectors);",
+    "file": "./src/constraints/chiplets/hasher/mod.rs",
+    "line": 189,
+    "function": "miden_air::constraints::chiplets::hasher::enforce_hasher_constraints"
+  },
+  "base:865d5019a55726d5": {
+    "source_expr": "builder.when(gate).assert_eq(s4_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 225,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:890d38f22267e5cb": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 110,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:8938e9b5b78382e1": {
+    "source_expr": "builder.assert_eq(s12_next, s4);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 301,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:89a92218aa9aab0a": {
+    "source_expr": "builder.assert_eq(ext_c0, ext_a0_b0.clone() + ext_a1_b1.clone() * F_7);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 194,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:8a2e0719044ecd53": {
+    "source_expr": "builder.assert_eq(acc1_next, acc_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 149,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:8aae5d629b6228ea": {
+    "source_expr": "builder.when_transition().assert_eq(next.system.clk, local.system.clk + F_1);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 58,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:8c871c80bfbf0d51": {
+    "source_expr": "builder.assert_eq(s15_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 282,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:8cb3ef3e93eb1232": {
+    "source_expr": "builder.when(default_flag).assert_eq(ctx_next, ctx);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:8d5ea31441b76cc1": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:8ef84127a71612ea": {
+    "source_expr": "builder.assert_eq(s1_next.clone(), u32_v_lo.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 236,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:8f5d392f225e6653": {
+    "source_expr": "builder .when_transition() .assert_zero(f_end.clone() * f_repeat_next.clone() * (hi_next - hi));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 231,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:9006fe4831f2ec35": {
+    "source_expr": "builder.assert_eq(s8_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 297,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:9135c9ab1eb2b32b": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 151,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:914cc25eff722253": {
+    "source_expr": "builder.assert_zero(gate_first.clone() * expr);",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 121,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:915c1c314436e632": {
+    "source_expr": "builder.assert_eq(ext_d1, ext_b1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 193,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:917f382c9612345d": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:917f6d27e05d56f1": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:91c343f43bc0d6b4": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.decoder[HASHER_STATE_OFFSET + i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 94,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:922c15260ece66b4": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:9289bfa6f7c84dd6": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b1.clone() * (rate1_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 143,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:92a072fc4d5a536d": {
+    "source_expr": "builder.when_last_row().assert_zero(local.stack.b1);",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 60,
+    "function": "miden_air::constraints::stack::overflow::enforce_main"
+  },
+  "base:92e21218ffef0422": {
+    "source_expr": "builder.assert_zero(gate * id0);",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 193,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:942c5f174f6ec3d0": {
+    "source_expr": "builder.assert_eq(s12_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 279,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:959fa1a9161c25b2": {
+    "source_expr": "builder.assert_eq(s13_next, s1);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 280,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:95f81a53d76c1c77": {
+    "source_expr": "builder.assert_eq(tmp0_1, tmp0_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 138,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:9650cf2e8901cfe2": {
+    "source_expr": "builder.assert_zero(constrain_value(c2, cols.values[2], cols_next.values[2]));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 204,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last"
+  },
+  "base:96bf109ec62cbb48": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:9743901acd007ac2": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:9796358beddcb4de": {
+    "source_expr": "builder.when_transition().assert_zero(span_flag * sp_next.clone().not());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 129,
+    "function": "miden_air::constraints::decoder::enforce_in_span_constraints"
+  },
+  "base:97b359817c42a1a7": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:981c76b8165857d2": {
+    "source_expr": "builder.assert_eq(s14_next, s6);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 303,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:98b398c17cbe3882": {
+    "source_expr": "builder.assert_eq(dec.extra[1], expected_e1);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 155,
+    "function": "miden_air::constraints::decoder::enforce_extra_columns"
+  },
+  "base:99d5c2511b4827b5": {
+    "source_expr": "builder.assert_eq(next.stack[13], local.stack[13].into() + F_8);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 53,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:9a8627ab8f221997": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:9a916565afe89fc6": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:9ae19c327f51af8e": {
+    "source_expr": "builder.assert_eq(s10_next, s2);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 267,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:9b69a738cd8ca46f": {
+    "source_expr": "builder.assert_zero(small_batch.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 475,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:9d5f993b86a06059": {
+    "source_expr": "builder .assert_zero(span_or_respan.clone() - (f_g1.clone() + f_g2.clone() + f_g4.clone() + f_g8));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 464,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:9dce28b001bd623a": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:9de572a5166dcc0b": {
+    "source_expr": "builder.assert_eq(s2_next, fn_hash_2);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 348,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:9e1f81d8e7ebdbee": {
+    "source_expr": "builder.assert_eq(s15_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 283,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:9e3cb5846addcc76": {
+    "source_expr": "builder.when(gate).assert_eq(s7_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 237,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:9f3446bf2caaedf5": {
+    "source_expr": "builder.assert_eq(s2_next, cswap_c * s7.into() + cswap_c_inv.clone() * s3.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 331,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:9f7ec73e28f67e00": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 152,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:9fa9edf94d71f2f9": {
+    "source_expr": "builder.when_last_row().assert_eq(v, TWO_POW_16_MINUS_1);",
+    "file": "./src/constraints/range/mod.rs",
+    "line": 31,
+    "function": "miden_air::constraints::range::enforce_main"
+  },
+  "base:a08185028ec3a4d8": {
+    "source_expr": "builder.when_transition().assert_zero(sp * sp_next * ng.not() * delta_ox);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 424,
+    "function": "miden_air::constraints::decoder::enforce_op_index_constraints"
+  },
+  "base:a150411fc8067c71": {
+    "source_expr": "builder.assert_zero(gate * (b.square() - b.clone()));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 73,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints"
+  },
+  "base:a170da8d4627c3ee": {
+    "source_expr": "builder.assert_zero(within_section_gate.clone() * (clk_next.clone() - clk.clone()));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 147,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:a193dbc8c0022e70": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:a35e176a3348e478": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:a440ec62d598a73b": {
+    "source_expr": "builder.when(is_cswapw.clone()).assert_bool(cswap_c);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 324,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:a4f600497b1ae7b3": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:a5ca09fa25b0cdf0": {
+    "source_expr": "builder.assert_eq(s1_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 181,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:a6ce8db3d6e828a4": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:a6e7777d108157bc": {
+    "source_expr": "builder.assert_bool(sel[0]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 109,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:a89f547061fb535c": {
+    "source_expr": "builder.assert_zero( flag_memory_active_not_last.clone() * (is_same_ctx_and_word_next.clone() - deltas.n0.not() * deltas.n1.not()), );",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 170,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last"
+  },
+  "base:a8c437878b56c92e": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:a90e852183131442": {
+    "source_expr": "builder.when_transition().assert_zero( change_v.clone() * (change_v.clone() - F_1) * (change_v.clone() - F_3) * (change_v.clone() - F_9) * (change_v.clone() - F_27) * (change_v.clone() - F_81) * (change_v.clone() - F_243) * (change_v.clone() - F_729) * (change_v - F_2187), );",
+    "file": "./src/constraints/range/mod.rs",
+    "line": 41,
+    "function": "miden_air::constraints::range::enforce_main"
+  },
+  "base:aa1ee997634b937b": {
+    "source_expr": "builder.assert_eq(s11_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 300,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:aa31f1d2eb980c03": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:aa93cc39f55a353e": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:abdceb1b3b0b7061": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.system.fn_hash[i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 101,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:ad9de33ec1e5c7b8": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:ae2edbb5b407d514": {
+    "source_expr": "builder.assert_zero(gate * (node_index_next.clone() - node_index.clone()));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_node_index_constraints"
+  },
+  "base:ae8e789344369d08": {
+    "source_expr": "builder .when(gate) .assert_eq(s0_next.clone(), s0.clone() + s1.clone() - s0.clone() * s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 138,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:aeb522f3eab86892": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:af46cd28232175f6": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:af663a07ca66c9f8": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:afa0a892808e38e3": {
+    "source_expr": "builder.assert_zero(gate_transition.clone() * expr);",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 130,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:afa280d571605ae6": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s2);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 130,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:b058c00b5e8cdc12": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:b142efc32cee23d6": {
+    "source_expr": "builder.assert_zero( span_or_respan.not() * (dec.batch_flags[0].into() + dec.batch_flags[1].into() + dec.batch_flags[2].into()), );",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 467,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:b1c407d630908d7a": {
+    "source_expr": "builder.assert_eq(s1_next, cswap_c * s6.into() + cswap_c_inv.clone() * s2.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 330,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:b2196114fc947f68": {
+    "source_expr": "builder.when_transition().assert_zero(right_shift_constraint);",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 167,
+    "function": "miden_air::constraints::stack::overflow::enforce_overflow_index_constraints"
+  },
+  "base:b29b169c258d639c": {
+    "source_expr": "builder.assert_eq(tmp1, tmp_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 222,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:b2b936240a58bf11": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next.clone(), s0.clone() * s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 125,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:b3993ebcdd58080a": {
+    "source_expr": "builder.assert_eq(s1_next.clone(), u32_v_hi.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 223,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:b3f62672998660cb": {
+    "source_expr": "builder.assert_zero(u32_split_mul_madd * (u32_v_hi_comp * u32_v_lo.clone()));",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 212,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:b408e79064a9c4d7": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s4);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 195,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:b4bbc4a73cebb3cc": {
+    "source_expr": "builder.assert_eq(s1_next, cswap_c * s1.into() + cswap_c_inv.clone() * s2.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 320,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:b6acc474340d8ad1": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:b6f1abd759f72699": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:b73f235c04c4ea77": {
+    "source_expr": "builder.assert_zero(f_end.clone() * end_flags.is_loop * s0);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 222,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:b8c155abf2c38628": {
+    "source_expr": "builder.assert_eq(s3_next, s11);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 264,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:b9391ac8105581f7": {
+    "source_expr": "builder.assert_zero(bitwise_flag.clone() * op_flag.clone() * (op_flag.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 92,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:b95119471d6822b9": {
+    "source_expr": "builder.assert_bools(dec.op_bits);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 74,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:b9bd1ac00aad1057": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:b9e6b7f1d06fde51": {
+    "source_expr": "builder.assert_zero(ace_flag.clone() * sstart.clone() * sblock.clone());",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 118,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:b9f45b55e06bc5cc": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next.clone(), s0.clone() * s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 93,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:ba34201b228f8299": {
+    "source_expr": "builder.when_last_row().assert_eq(local.stack.b0, F_16);",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 57,
+    "function": "miden_air::constraints::stack::overflow::enforce_main"
+  },
+  "base:ba43fb8e47af138a": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b0.clone() * (rate0_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 136,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:ba777ee673801762": {
+    "source_expr": "builder.assert_eq(s3_next, cswap_c * s8.into() + cswap_c_inv.clone() * s4.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 332,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:bbe5003e9fda8b14": {
+    "source_expr": "builder.assert_zero(ace_transition.clone() * sstart.clone() * sstart_next.clone());",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 116,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:bc1bb7fdc52a2640": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:bc1cac764b020bfd": {
+    "source_expr": "builder.assert_zero(halt_flag * addr);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 528,
+    "function": "miden_air::constraints::decoder::enforce_block_address_constraints"
+  },
+  "base:bcb02cec55cf2223": {
+    "source_expr": "last.assert_one(sel[4]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 154,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:bcd310999c9670f2": {
+    "source_expr": "builder.assert_zero(small_batch.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 475,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:bd272c0ac8f9fe9b": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:bf4e333e241987da": {
+    "source_expr": "builder.assert_zeros([gate.clone() * (s1_next - s1.clone()), gate * (s2_next - s2)]);",
+    "file": "./src/constraints/chiplets/hasher/selectors.rs",
+    "line": 70,
+    "function": "miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency"
+  },
+  "base:bf9ab0c51629fef3": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:c145bdda280e561a": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_absorb.clone() * cap_next[i].clone() }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 125,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:c204fb96a21bf9e8": {
+    "source_expr": "builder.assert_bools(dec.op_bits);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 74,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:c206addd1ac23f16": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:c34453b5151a52fc": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:c39634c1851479b8": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.decoder[HASHER_STATE_OFFSET + i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 94,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:c3d9d1cf8b3faf79": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:c4493dccc83503bf": {
+    "source_expr": "builder.when(gate).assert_one(s0_next.clone() * s0.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 99,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:c57ccddf6882e072": {
+    "source_expr": "builder.when(flag_next_row_first_kernel_rom).assert_one(krom_next.s_first);",
+    "file": "./src/constraints/chiplets/kernel_rom.rs",
+    "line": 86,
+    "function": "miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints"
+  },
+  "base:c68f5dd779cc15f4": {
+    "source_expr": "builder.when(ctx.hasher_flag.clone()).assert_bools(ctx.cols.selectors);",
+    "file": "./src/constraints/chiplets/hasher/mod.rs",
+    "line": 189,
+    "function": "miden_air::constraints::chiplets::hasher::enforce_hasher_constraints"
+  },
+  "base:c6a79de9d6185955": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:c6cb3268dee13757": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:c9e5a2859a1d070a": {
+    "source_expr": "builder.assert_eq(s2_next, s6);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 249,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:caff37a882fd9aa9": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:cb125f7691a2d450": {
+    "source_expr": "builder.assert_zero(gate_not_n0 * not_n1 * addr_delta);",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 340,
+    "function": "miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints"
+  },
+  "base:ccf489c27e7519f6": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 110,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:cd0c85ab94881fed": {
+    "source_expr": "builder.assert_zero(small_batch.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 475,
+    "function": "miden_air::constraints::decoder::enforce_batch_flags_constraints"
+  },
+  "base:cd1caea157052901": {
+    "source_expr": "builder.assert_eq(krom_next.root[2], krom.root[2]);",
+    "file": "./src/constraints/chiplets/kernel_rom.rs",
+    "line": 74,
+    "function": "miden_air::constraints::chiplets::kernel_rom::enforce_kernel_rom_constraints"
+  },
+  "base:cdbde3ecd4448301": {
+    "source_expr": "builder.assert_eq(s6_next, s14);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 295,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:cf1eb44d77fb05bf": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:cf6092d665d0e6c0": {
+    "source_expr": "builder.assert_zero(op_flags.overflow().not() * (depth.into() - F_16));",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 69,
+    "function": "miden_air::constraints::stack::overflow::enforce_main"
+  },
+  "base:d1009c8a07cb69d1": {
+    "source_expr": "builder.assert_eq(s15_next, s7);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 305,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:d20d54072da5ca49": {
+    "source_expr": "builder.when(gate).assert_eq(s6_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 233,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:d21460d65f83019e": {
+    "source_expr": "builder.assert_zero(gate_transition.clone() * expr);",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 130,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:d24ed0e2ad9e7c74": {
+    "source_expr": "builder.assert_zero(very_high_prefix * b1);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 178,
+    "function": "miden_air::constraints::decoder::enforce_op_bit_group_constraints"
+  },
+  "base:d2d94669629a0c26": {
+    "source_expr": "builder.assert_zero( flag_memory_active_not_last * cols_next.is_same_ctx_and_word.into() * clk_no_change * any_write, );",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 363,
+    "function": "miden_air::constraints::chiplets::memory::enforce_scw_readonly_constraint"
+  },
+  "base:d2f635a1c926e10e": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:d316d678ab9b3a9e": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 106,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:d373df2e076f374c": {
+    "source_expr": "builder.assert_zero(is_u32add * (s0.clone() + s1.clone() - u32_v48.clone()));",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 226,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:d3ddbce8aa81d969": {
+    "source_expr": "builder.when_transition().assert_zero(sp.clone() * ng.clone() * ox_next.clone());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 419,
+    "function": "miden_air::constraints::decoder::enforce_op_index_constraints"
+  },
+  "base:d47b89aa7acb2032": {
+    "source_expr": "builder.assert_eq(s1_next, s9);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 290,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:d52daf858ba61aeb": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.system.fn_hash[i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 101,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:d5ab94d5c8839a17": {
+    "source_expr": "builder.when(gate).assert_eq(s0.clone() + s0_next.clone(), F_1);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 114,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:d78703b782739976": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate.clone() * (h_cap_next[i].clone() - h_cap[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 113,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation"
+  },
+  "base:d803b711b7b3f129": {
+    "source_expr": "builder.assert_zero(gate_first.clone() * expr);",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 121,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:d8165265bc371598": {
+    "source_expr": "builder.when_first_row().assert_zero(sp);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 122,
+    "function": "miden_air::constraints::decoder::enforce_in_span_constraints"
+  },
+  "base:d8414cf1f89dc28a": {
+    "source_expr": "builder.when(gate).assert_eq(s5_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 229,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:d866f136810cbf36": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s8);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 211,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:d8f982c9a36143f4": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:da8a557d6228f62e": {
+    "source_expr": "builder.assert_zero(u32_prefix * b0.clone());",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 174,
+    "function": "miden_air::constraints::decoder::enforce_op_bit_group_constraints"
+  },
+  "base:dae76c910072e36d": {
+    "source_expr": "builder .when_transition() .assert_zero(delta_gc.clone() * (end_next + respan_next));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 305,
+    "function": "miden_air::constraints::decoder::enforce_group_count_constraints"
+  },
+  "base:dafd2f41dc438dc4": {
+    "source_expr": "builder.assert_zero(gate * idx1.clone() * (idx1.clone() - F_1));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 94,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows"
+  },
+  "base:dc0fc9c6b6d546cd": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate.clone() * (h_cap_next[i].clone() - h_cap[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 113,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation"
+  },
+  "base:dc16547dbee2ba78": {
+    "source_expr": "builder.assert_eq(s3_next, fn_hash_3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 349,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:dc3ae77a4c4e94ba": {
+    "source_expr": "builder.assert_eq(next.stack[14], local.stack[14]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 54,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:dc4f48088d9970c1": {
+    "source_expr": "builder.when(s0123.clone()).assert_bool(sel[4]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 119,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:dc56135951fafd70": {
+    "source_expr": "builder.assert_zero(word_gate * idx1);",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 98,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows"
+  },
+  "base:dd24fba8aea54e53": {
+    "source_expr": "builder.assert_zero(eval_gate.clone() * (expected_1 - v0_1.clone()));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 182,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:de02682e938d1de0": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:de9d8f8450bceabb": {
+    "source_expr": "builder.assert_zero( flag_memory_active_not_last.clone() * (deltas.computed_delta.clone() - deltas.delta_next.clone()), );",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 160,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows_except_last"
+  },
+  "base:df7e7fcded607c36": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:dfa2247b2300ce85": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:dfa4a7c1d72ea3f7": {
+    "source_expr": "builder.assert_zero(end_flag * gc);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 310,
+    "function": "miden_air::constraints::decoder::enforce_group_count_constraints"
+  },
+  "base:dfeba64404c28705": {
+    "source_expr": "builder.assert_eq(s2_next, s14);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 277,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:e03174a4f25d55d7": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:e03f8ef1173c8a89": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:e0bd21f4d2634581": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b0.clone() * (rate0_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 136,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:e25dda93780b8ce1": {
+    "source_expr": "let mut transition = builder.when_transition();",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 136,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:e25edeecd4579b8d": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:e349ea156ddecf60": {
+    "source_expr": "builder.assert_eq(ext_c1, (ext_a0 + ext_a1) * (ext_b0 + ext_b1) - ext_a0_b0 - ext_a1_b1);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 196,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:e372734a97dbfbd5": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:e3d6744c62ba822d": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:e3fde60a915fb6b6": {
+    "source_expr": "builder.assert_zero(gate_not_n0.clone() * ctx_delta);",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 336,
+    "function": "miden_air::constraints::chiplets::memory::enforce_delta_inverse_constraints"
+  },
+  "base:e41739508821d66a": {
+    "source_expr": "builder.assert_zero(gate.clone() * idx0.clone() * (idx0.clone() - F_1));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 92,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows"
+  },
+  "base:e459dc59bbb4e4cd": {
+    "source_expr": "builder.assert_bools(dec.op_bits);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 74,
+    "function": "miden_air::constraints::decoder::enforce_main"
+  },
+  "base:e5c82628cba70c9d": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s1);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 126,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:e5d071b939628646": {
+    "source_expr": "builder.when_transition().assert_zero(left_shift_constraint);",
+    "file": "./src/constraints/stack/overflow/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::overflow::enforce_overflow_index_constraints"
+  },
+  "base:e5e380d9202eec17": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate_b1.clone() * (rate1_next[i].clone() - digest[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/merkle.rs",
+    "line": 143,
+    "function": "miden_air::constraints::chiplets::hasher::merkle::enforce_merkle_absorb_state"
+  },
+  "base:e71be058892623c7": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_init.clone() * (h_next[i].clone() - expected_init[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 83,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:e72c637254004344": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s7);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 150,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:e750b6ae45cd29b8": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:e7657b91f2d09971": {
+    "source_expr": "builder.assert_eq(s5_next, s13);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 294,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:e775c1950a0caa79": {
+    "source_expr": "builder.assert_zero(f_dyn.clone() * dec.hasher_state[4 + i]);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 211,
+    "function": "miden_air::constraints::decoder::enforce_general_constraints"
+  },
+  "base:e7d35437bde1484e": {
+    "source_expr": "builder.assert_eq(tmp1_1, tmp1_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:e86291bdb722a307": {
+    "source_expr": "builder.assert_eq(s3_next, fn_hash_3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 350,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:e8bffe92a68cb6a2": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:e8f853a7361fe3e7": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.decoder[HASHER_STATE_OFFSET + i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 94,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:e922c85f1da58359": {
+    "source_expr": "builder.assert_zero(word_gate * idx1);",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 99,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows"
+  },
+  "base:e9eb9214abc15a2c": {
+    "source_expr": "builder.assert_eq(s1_next, cswap_c * s1.into() + cswap_c_inv.clone() * s2.into());",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 319,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:eae788ad825b6454": {
+    "source_expr": "builder.assert_eq(exp_b, exp_b_next * F_2 + exp_bit.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 173,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:ebcb0c98d544451e": {
+    "source_expr": "builder.when_transition().assert_eq(next.system.clk, local.system.clk + F_1);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 57,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:ed82b29756c061d6": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, 4, _>(|i| { gate.clone() * (h_cap_next[i].clone() - h_cap[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 113,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_abp_capacity_preservation"
+  },
+  "base:edc481c6053ee809": {
+    "source_expr": "builder.when(s01.clone()).assert_bool(sel[2]);",
+    "file": "./src/constraints/chiplets/selectors.rs",
+    "line": 117,
+    "function": "miden_air::constraints::chiplets::selectors::build_chiplet_selectors"
+  },
+  "base:ee717c9613387edc": {
+    "source_expr": "builder.assert_zero(gate_first.clone() * expr);",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 121,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:eed2ab7640e9f529": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:f0399f41fc60d0fc": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:f1a44fe70f4e18f6": {
+    "source_expr": "builder.assert_zero(eval_gate.clone() * (expected_1 - v0_1.clone()));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 181,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:f27f011ad7af7c0f": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:f2b76ca1531914b5": {
+    "source_expr": "builder.assert_eq(next.stack[15], local.stack[15]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 56,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:f2febf92fb709644": {
+    "source_expr": "builder.assert_zero(gate.clone() * v0_1);",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 192,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:f372c2d1d826262c": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:f373bbdae463c587": {
+    "source_expr": "builder.assert_eq(s1_next, fn_hash_1);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 347,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:f39f38b8224e18fb": {
+    "source_expr": "builder.assert_zero(gate * s0_next);",
+    "file": "./src/constraints/chiplets/hasher/selectors.rs",
+    "line": 75,
+    "function": "miden_air::constraints::chiplets::hasher::selectors::enforce_selector_consistency"
+  },
+  "base:f3af616e4d617c81": {
+    "source_expr": "builder.assert_bool(s1.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 122,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:f3f0db9377938f18": {
+    "source_expr": "builder.assert_eq(s0_next.clone(), AB::Expr::ONE - eq_diff * uop_h0.clone());",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 148,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:f4135f10e7fdc1f9": {
+    "source_expr": "builder.assert_eq(next.system.fn_hash[i], local.decoder[HASHER_STATE_OFFSET + i]);",
+    "file": "./src/constraints/system/mod.rs",
+    "line": 94,
+    "function": "miden_air::constraints::system::enforce_main"
+  },
+  "base:f5956e66ada6a592": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s2);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 187,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:f76fd2bcc671b90e": {
+    "source_expr": "builder.assert_eq(s1_next, s13);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 276,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:f8564b492146438e": {
+    "source_expr": "builder.assert_eq(tmp1_1, tmp1_exp_1);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 141,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:f915719019f98d74": {
+    "source_expr": "builder.assert_eq(next.stack[9], local.stack[9]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 49,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:f93330d92e20a709": {
+    "source_expr": "builder .when_transition() .assert_zero((span_flag + respan_flag + is_push) * (delta_gc.clone() - F_1));",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 297,
+    "function": "miden_air::constraints::decoder::enforce_group_count_constraints"
+  },
+  "base:f9c476a2d717e508": {
+    "source_expr": "builder.assert_zero(within_section_gate * (id0.clone() - expected_id0));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 150,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:f9c8d97cc58383c5": {
+    "source_expr": "builder.assert_eq(s1_next, s0);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 180,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:f9ccb648e24f9a17": {
+    "source_expr": "builder.assert_zero(ace_flag.clone() * sblock.clone() * (sblock.clone() - AB::Expr::ONE));",
+    "file": "./src/constraints/chiplets/ace.rs",
+    "line": 101,
+    "function": "miden_air::constraints::chiplets::ace::enforce_ace_constraints_all_rows"
+  },
+  "base:f9cf1194e5da6a93": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:f9d0d05b1d185be8": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:fa0ced4c271cd4fe": {
+    "source_expr": "builder.assert_zero(is_u32add3 * (s0.clone() + s1.clone() + s2.clone() - u32_v48));",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 228,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:fa42ffbcd554e10c": {
+    "source_expr": "builder.assert_eq(ext_c1, (ext_a0 + ext_a1) * (ext_b0 + ext_b1) - ext_a0_b0 - ext_a1_b1);",
+    "file": "./src/constraints/stack/stack_arith/mod.rs",
+    "line": 195,
+    "function": "miden_air::constraints::stack::stack_arith::enforce_main"
+  },
+  "base:fadc6dc84993cca0": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 80,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerbase_constraints"
+  },
+  "base:fb5055427480ca4b": {
+    "source_expr": "builder.when(gate).assert_eq(s0_next, s13);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 162,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:fc755b70c034e0a6": {
+    "source_expr": "builder.assert_eq(next.stack[i], local.stack[i]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 172,
+    "function": "miden_air::constraints::stack::crypto::enforce_hornerext_constraints"
+  },
+  "base:fd4dad373d2c7f57": {
+    "source_expr": "builder.assert_zero(gate.clone() * bit.clone() * (bit.clone() - F_1));",
+    "file": "./src/constraints/chiplets/bitwise.rs",
+    "line": 106,
+    "function": "miden_air::constraints::chiplets::bitwise::enforce_bitwise_constraints"
+  },
+  "base:fd4e1eb1a76d2691": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_ext.clone() * (h_next[i].clone() - expected_ext[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 88,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "base:fd5ca15582851a1b": {
+    "source_expr": "builder.assert_eq(next.stack[11], local.stack[11]);",
+    "file": "./src/constraints/stack/crypto/mod.rs",
+    "line": 51,
+    "function": "miden_air::constraints::stack::crypto::enforce_cryptostream_constraints"
+  },
+  "base:fd820a5316806df0": {
+    "source_expr": "builder.assert_eq(s7_next, s3);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 255,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:fde131b1a52cc5fd": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:fe2e54cab17dccd5": {
+    "source_expr": "builder.assert_zero(range_check);",
+    "file": "./src/constraints/decoder/mod.rs",
+    "line": 432,
+    "function": "miden_air::constraints::decoder::enforce_op_index_constraints"
+  },
+  "base:fe850f0688a27156": {
+    "source_expr": "builder.when_transition().assert_zero(actual * flag_sum - expected);",
+    "file": "./src/constraints/stack/general/mod.rs",
+    "line": 76,
+    "function": "miden_air::constraints::stack::general::enforce_main"
+  },
+  "base:fe85bcd97be72ee9": {
+    "source_expr": "builder.assert_eq(s2_next, s10);",
+    "file": "./src/constraints/stack/ops/mod.rs",
+    "line": 291,
+    "function": "miden_air::constraints::stack::ops::enforce_main"
+  },
+  "base:fe90b9798554972a": {
+    "source_expr": "builder.assert_eq(local.stack[i], so[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 53,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:ff15a362ebd67f8c": {
+    "source_expr": "builder.assert_eq(local.stack[i], si[i]);",
+    "file": "./src/constraints/public_inputs.rs",
+    "line": 44,
+    "function": "miden_air::constraints::public_inputs::enforce_main"
+  },
+  "base:ff61c8be4955e573": {
+    "source_expr": "builder.assert_zero(gate * idx1.clone() * (idx1.clone() - F_1));",
+    "file": "./src/constraints/chiplets/memory.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::memory::enforce_memory_constraints_all_rows"
+  },
+  "base:ff8009dac187aa46": {
+    "source_expr": "builder.assert_zeros(core::array::from_fn::<_, STATE_WIDTH, _>(|i| { gate_int.clone() * (h_next[i].clone() - expected_int[i].clone()) }));",
+    "file": "./src/constraints/chiplets/hasher/state.rs",
+    "line": 93,
+    "function": "miden_air::constraints::chiplets::hasher::state::enforce_permutation_steps"
+  },
+  "ext:09ff9e009d7c673c_c496b6868d77850c": {
+    "source_expr": "builder.when_transition().assert_zero_ext( b_next_term - b_term - rc_term + s0_term + s1_term + s2_term + s3_term + m0_term + m1_term, );",
+    "file": "./src/constraints/range/bus.rs",
+    "line": 116,
+    "function": "miden_air::constraints::range::bus::enforce_bus"
+  },
+  "ext:20c12d1b3fbe467b_19f451d1e6b75d57": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:2a14b8a67cf1559d_e8f98b0586944b38": {
+    "source_expr": "builder .when_transition() .assert_eq_ext(p_next_ef * requests, p_local_ef * responses);",
+    "file": "./src/constraints/chiplets/bus/hash_kernel.rs",
+    "line": 254,
+    "function": "miden_air::constraints::chiplets::bus::hash_kernel::enforce_hash_kernel_constraint"
+  },
+  "ext:3385ec8692775d36_1a60835c88d9f57a": {
+    "source_expr": "builder.when_transition().assert_eq_ext(lhs, rhs);",
+    "file": "./src/constraints/stack/bus.rs",
+    "line": 130,
+    "function": "miden_air::constraints::stack::bus::enforce_bus"
+  },
+  "ext:3bc484929cfaaecb_debcb87918297cf6": {
+    "source_expr": "builder.when_transition().assert_eq_ext(lhs, rhs);",
+    "file": "./src/constraints/chiplets/bus/chiplets.rs",
+    "line": 327,
+    "function": "miden_air::constraints::chiplets::bus::chiplets::enforce_chiplets_bus_constraint"
+  },
+  "ext:3e99b0a636258495_853701863c182b4d": {
+    "source_expr": "first.assert_zero_ext(b_rng);",
+    "file": "./src/constraints/mod.rs",
+    "line": 115,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:49e71c183eb4e0b8_d9c7cd5f8f08bfbb": {
+    "source_expr": "builder.when_transition().assert_eq_ext(lhs, rhs);",
+    "file": "./src/constraints/decoder/bus.rs",
+    "line": 653,
+    "function": "miden_air::constraints::decoder::bus::enforce_block_hash_table_constraint"
+  },
+  "ext:613c9bb7eac614c1_6c9dce67a880beb0": {
+    "source_expr": "first.assert_zero_ext(v_wir);",
+    "file": "./src/constraints/mod.rs",
+    "line": 117,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:643f03f99d91f4b5_0a8662cd54f3d710": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:6526bfd3500d26e5_cdb2e3ffcfa75151": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:7159271ca5c5876b_eab8bf60d7031a93": {
+    "source_expr": "let mut first = builder.when_first_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 112,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:75dc7b124143c8d3_32fdd3485ff0e6ce": {
+    "source_expr": "let mut first = builder.when_first_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 111,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:7891b41ac09aad8e_7efbbb3ec59b8255": {
+    "source_expr": "first.assert_one_ext(b_hk);",
+    "file": "./src/constraints/mod.rs",
+    "line": 113,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:7f07752fdafc6f91_c902b5444f316dde": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:824ab7b8af178eee_6ab6961299b26cc1": {
+    "source_expr": "builder.when_transition().assert_eq_ext(lhs, rhs);",
+    "file": "./src/constraints/decoder/bus.rs",
+    "line": 851,
+    "function": "miden_air::constraints::decoder::bus::enforce_op_group_table_constraint"
+  },
+  "ext:9244c3f6a5220636_811899051ef95506": {
+    "source_expr": "first.assert_one_ext(b_ch);",
+    "file": "./src/constraints/mod.rs",
+    "line": 114,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:93d55e17d1fe0e04_8bd0e350d0b73e20": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:a62d98f6de952176_1784551da6bbc0a9": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:b862aa2e88596658_34acc269b0697230": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:bf4fa2b67913b539_4956905ccfc5de53": {
+    "source_expr": "let mut first = builder.when_first_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 110,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:c30075511562c1d6_7eed890bf86f7c50": {
+    "source_expr": "let mut last = builder.when_last_row();",
+    "file": "./src/constraints/mod.rs",
+    "line": 140,
+    "function": "miden_air::constraints::enforce_bus_last_row"
+  },
+  "ext:da2c38aba5a7269a_1463831c3352196b": {
+    "source_expr": "builder.when_transition().assert_eq_ext(lhs, rhs);",
+    "file": "./src/constraints/decoder/bus.rs",
+    "line": 427,
+    "function": "miden_air::constraints::decoder::bus::enforce_block_stack_table_constraint"
+  },
+  "ext:f4e81cf7d41bd195_9fa6db849a702cd9": {
+    "source_expr": "first.assert_zero_ext(v_wir);",
+    "file": "./src/constraints/mod.rs",
+    "line": 116,
+    "function": "miden_air::constraints::enforce_bus_first_row"
+  },
+  "ext:ffafca43f539b308_c9560cc258eee592": {
+    "source_expr": "builder.when_transition().assert_zero_ext(wiring_constraint);",
+    "file": "./src/constraints/chiplets/bus/wiring.rs",
+    "line": 149,
+    "function": "miden_air::constraints::chiplets::bus::wiring::enforce_wiring_bus_constraint"
+  }
+}

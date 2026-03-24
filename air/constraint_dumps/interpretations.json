@@ -28,5 +28,11 @@
       "group_remark": "Small helper function inlined; constraint expression unchanged, only call-site location moved.",
       "applies_to": "all"
     }
+  ],
+  "ac2a1ba98b": [
+    {
+      "group_remark": "Constraint style refactor: gates factored into when() chains, semantic assertions applied. 7 sign flips (assert_zero(g*(1-x)) → when(g).assert_one(x)) and 3 constraints gained is_transition factor (op flags vanish on last row, so constraints were already vacuous there). All changes are semantically equivalent.",
+      "applies_to": "all"
+    }
   ]
 }

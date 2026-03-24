@@ -31,8 +31,11 @@ air/constraint_dumps/
 
 ### Full run (build every commit)
 
+Always use the full commit range for this PR, starting from `0d20707a7c`
+(the commit that added the constraint recorder):
+
 ```bash
-python3 scripts/diff_constraints.py <start> <end> --pr-comment <PR>
+python3 scripts/diff_constraints.py 0d20707a7c HEAD --pr-comment <PR>
 ```
 
 This checks out each commit, builds, runs the recorder, extracts source
