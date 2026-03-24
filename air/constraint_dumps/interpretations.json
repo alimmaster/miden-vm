@@ -1,25 +1,25 @@
 {
   "94b25974d5": [
     {
-      "group_remark": "`ChipletSelectors` struct now threaded as parameter; selector access changed from field lookup to method call, shifting line numbers.",
+      "group_remark": "`ChipletSelectors` struct now threaded as parameter; precomputed selector products (e.g. `ace_chiplet_flag`, `is_transition`) replace inline compositions from raw selector columns. The constraint polynomials are algebraically different because the selector factoring changed, but semantically equivalent under correct trace assignment.",
       "applies_to": "all"
     }
   ],
   "39e1e3a01f": [
     {
-      "group_remark": "New last-row constraints enforce all chiplet selectors equal 1 at the final trace row.",
+      "group_remark": "New last-row constraints enforce all 5 chiplet selectors equal 1 at the final trace row. Note: 3 of 5 source expressions show a `let mut last = builder.when_last_row()` binding instead of the actual assertion due to a source-extraction artifact; the recorded fingerprints correspond to the `last.assert_one(...)` calls.",
       "applies_to": "all"
     }
   ],
   "fa79579f7d": [
     {
-      "group_remark": "`when_transition()` guard removed; transition gate now multiplied directly into each constraint expression.",
+      "group_remark": "`when_transition()` guard removed from chiplet constraints. Each constraint polynomial lost its `(1 - z_last)` factor. Soundness preserved because the preceding commit (`39e1e3a01f`) enforces all selectors = 1 on the last row, so every chiplet's derived `is_active` flag vanishes there, making the constraints auto-zero without the explicit transition guard. Polynomially non-equivalent but semantically equivalent under the last-row invariant.",
       "applies_to": "all"
     }
   ],
   "7a366bde1f": [
     {
-      "group_remark": "Per-bus domain tag added to `Challenges` encoding; each bus constraint now includes a distinct domain separator.",
+      "group_remark": "**Intentional non-equivalent change.** Per-bus domain tag added to `Challenges` encoding; each bus constraint polynomial now includes a distinct domain separator constant. This is a soundness improvement, not a refactor.",
       "applies_to": "all"
     }
   ],
@@ -29,9 +29,9 @@
       "applies_to": "all"
     }
   ],
-  "ac2a1ba98b": [
+  "0216cd69de": [
     {
-      "group_remark": "Constraint style refactor: gates factored into when() chains, semantic assertions applied. 7 sign flips (assert_zero(g*(1-x)) → when(g).assert_one(x)) and 3 constraints gained is_transition factor (op flags vanish on last row, so constraints were already vacuous there). All changes are semantically equivalent.",
+      "group_remark": "Constraint style refactor: gates factored into `when()` chains, semantic assertions applied. 7 sign flips (`assert_zero(g*(1-x))` to `when(g).assert_one(x)`) and 3 constraints gained `is_transition` factor (`when_transition().when(flag)` where the flag is an op flag that vanishes on the last row, so the constraint was already vacuous there). All changes are semantically equivalent.",
       "applies_to": "all"
     }
   ]
