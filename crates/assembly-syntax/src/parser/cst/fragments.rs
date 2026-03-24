@@ -6,6 +6,7 @@ use alloc::{
     sync::Arc,
     vec::Vec,
 };
+
 use miden_assembly_syntax_cst::{
     SyntaxKind, SyntaxToken,
     ast::{
