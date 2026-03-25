@@ -175,6 +175,25 @@ build path does. If you need diff files, run a full build.
 
 ## Writing interpretations
 
+### Per-constraint analysis is mandatory
+
+**Analyze every constraint change individually.** Do not write a group remark
+and move on. For each commit with changes:
+
+1. Read the tool's diff output (before/after expressions for each constraint).
+2. Classify each constraint change into one of the categories below.
+3. If ALL changes in a commit are the same transformation, a group remark is
+   acceptable — but it must include the count, list which files/functions are
+   affected, and explain the specific transformation.
+4. If changes are **heterogeneous** (different transformations in the same
+   commit), write **per-constraint entries** using `old_fp`/`new_fp` pairs
+   for each distinct sub-group. A group remark may serve as the fallback for
+   the majority case; per-constraint entries override it for specific pairs.
+5. For any constraint that **gained or lost a factor** (e.g., `is_transition`),
+   read the actual source code at the before and after commits to verify the
+   claim. State which specific flag/gate is involved and why the change is
+   sound.
+
 ### File format
 
 `interpretations.json` maps short commit hashes to arrays of remark entries:
@@ -183,11 +202,9 @@ build path does. If you need diff files, run a full build.
 {
   "<commit_hash>": [
     {
-      "group_remark": "Explanation for all changes in this commit.",
+      "group_remark": "Fallback explanation for changes not matched by a per-constraint entry.",
       "applies_to": "all"
-    }
-  ],
-  "<other_hash>": [
+    },
     {
       "old_fp": "base:<old_fingerprint>",
       "new_fp": "base:<new_fingerprint>",
@@ -195,6 +212,15 @@ build path does. If you need diff files, run a full build.
     }
   ]
 }
+```
+
+Per-constraint entries are matched by `old_fp` + `new_fp` and take priority
+over the group remark. Use both when a commit has a dominant pattern (group
+remark) plus exceptions (per-constraint entries).
+
+To find fingerprints, look in the dump files:
+```
+grep -B2 "file.rs:LINE" air/constraint_dumps/XX_<hash>_dump.txt
 ```
 
 ### Categories of constraint changes
@@ -210,23 +236,40 @@ valid traces. Examples: sign flips (`assert_zero(1-x)` → `assert_one(x)`),
 
 **Template:**
 ```
-"Expression restructured: <old pattern> → <new pattern>. Polynomial
-algebraically different but semantically equivalent."
+"<file>:<old_line>→<new_line>. Sign flip: `<old>` → `<new>`. Equivalent."
 ```
 
-#### 2. Guard removal relying on invariants
+#### 2. Guard removal/addition relying on invariants
 
-A guard factor (like `when_transition()`) was removed because a separately
-enforced invariant makes the constraint auto-vanish where the guard was active.
+A guard factor (like `when_transition()`) was removed or added because a
+separately enforced invariant makes the constraint auto-vanish where the
+guard was active.
 
 **Template:**
 ```
-"Guard `<guard>` removed. Constraint polynomial lost `<factor>`. Soundness
-preserved because <invariant> (established in commit `<hash>`). Polynomially
-non-equivalent but semantically equivalent under the invariant."
+"<file>:<line> (<name>). Gained/Lost `<factor>`. Before: `<old>`.
+After: `<new>`. Semantically equivalent because `<flag>` is <reason it
+vanishes> on the last row."
 ```
 
-#### 3. Intentional non-equivalent changes
+**This category requires verification.** Read the source code at both commits.
+Identify the specific flag (e.g., `is_assert`, `hasher_flag`). Explain why
+it is zero on the last row. Do not write "op flags vanish on the last row"
+without naming which op flag.
+
+#### 3. Identical expressions, changed upstream gate
+
+The assertion source expression is textually identical, but the fingerprint
+changed because a gate variable (`gate`, `within_section_gate`) was
+recomputed upstream using different factors.
+
+**Template:**
+```
+"Identical assertion expression; fingerprint changed because `<gate_var>`
+recomputed using <new source> (was <old source>). Equivalent."
+```
+
+#### 4. Intentional non-equivalent changes
 
 The polynomial IS different by design — new constraints, domain separators,
 changed semantics. These MUST be flagged explicitly.
@@ -236,7 +279,7 @@ changed semantics. These MUST be flagged explicitly.
 "**Intentional non-equivalent change.** <description>."
 ```
 
-#### 4. Source extraction artifacts
+#### 5. Source extraction artifacts
 
 The "Expression" column sometimes shows a `let` binding instead of the actual
 assertion (see [Known limitations](#known-limitations)). Note this in the
@@ -246,11 +289,12 @@ remark so readers aren't confused.
 
 | Mistake | Why it's wrong |
 |---------|---------------|
+| Blanket group remarks without analysis | Each constraint must be individually classified. Group remarks are only acceptable when all changes are truly identical. |
 | "Shifting line numbers" | Line number changes do NOT cause fingerprint changes. If the fingerprint changed, the polynomial changed. |
 | Inverted causation | Describe what the commit DID (e.g., "removed guard"), not the opposite (e.g., "added gate directly"). |
-| Conflating source text and fingerprint | A `let` binding in the Expression column is a source extraction artifact, not the recorded constraint. |
+| Conflating source text and fingerprint | A `let` binding in the Expression column is a source extraction artifact, not the recorded constraint. Identical source text with different fingerprints means an upstream gate changed. |
 | Failing to flag intentional changes | If the polynomial IS different by design, say so — otherwise reviewers assume it should be equivalent. |
-| Unverified semantic claims | "Flags vanish on the last row" is a correctness claim. Verify the specific flag in question before asserting this. |
+| Unverified semantic claims | "Flags vanish on the last row" is a correctness claim. Name the specific flag, read the code, verify it. |
 
 ## Verification checklist
 

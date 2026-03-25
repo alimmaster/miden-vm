@@ -1,38 +1,88 @@
 {
   "94b25974d5": [
     {
-      "group_remark": "`ChipletSelectors` struct now threaded as parameter; precomputed selector products (e.g. `ace_chiplet_flag`, `is_transition`) replace inline compositions from raw selector columns. The constraint polynomials are algebraically different because the selector factoring changed, but semantically equivalent under correct trace assignment.",
+      "group_remark": "`ChipletSelectors` struct threaded as parameter. 18 constraints affected in 3 sub-groups: (A) 4 in ace.rs where inline `ace_flag * flag_ace_last` / `ace_flag * flag_ace_next` / `is_transition * ace_flag` products replaced by precomputed `ace_last` / `ace_transition`; (B) 1 in kernel_rom.rs where `when_transition()` folded into the precomputed `flag_next_row_first_kernel_rom` which now includes the transition factor; (C) 13 in ace.rs, kernel_rom.rs, memory.rs with identical source expressions — fingerprints changed because the scoped builder's gate was recomputed using `ChipletSelectors` products. All 18 are semantically equivalent.",
       "applies_to": "all"
     }
   ],
   "39e1e3a01f": [
     {
-      "group_remark": "New last-row constraints enforce all 5 chiplet selectors equal 1 at the final trace row. Note: 3 of 5 source expressions show a `let mut last = builder.when_last_row()` binding instead of the actual assertion due to a source-extraction artifact; the recorded fingerprints correspond to the `last.assert_one(...)` calls.",
+      "group_remark": "5 new last-row constraints enforce chiplet selectors s0–s4 equal 1 at the final trace row (`builder.when_last_row().assert_one(sel[i])` for i in 0..5). Source-extraction artifact: 3 of 5 expressions display the `let builder = &mut builder.when_last_row()` binding instead of the actual `builder.assert_one(sel[i])` call; all 5 fingerprints correspond to genuine `assert_one` assertions on distinct selector columns.",
       "applies_to": "all"
     }
   ],
   "fa79579f7d": [
     {
-      "group_remark": "`when_transition()` guard removed from chiplet constraints. Each constraint polynomial lost its `(1 - z_last)` factor. Soundness preserved because the preceding commit (`39e1e3a01f`) enforces all selectors = 1 on the last row, so every chiplet's derived `is_active` flag vanishes there, making the constraints auto-zero without the explicit transition guard. Polynomially non-equivalent but semantically equivalent under the last-row invariant.",
+      "group_remark": "`when_transition()` guard removed from all chiplet constraints. 61 constraints across ace.rs (4), hasher/merkle.rs (14), hasher/selectors.rs (3), hasher/state.rs (36 — init/ext/int permutation steps × 12 lanes + 4 ABP capacity). Each constraint polynomial lost its `(1 − z_last)` factor. Soundness preserved because `39e1e3a01f` enforces all selectors = 1 on the last row → every chiplet `is_active` flag vanishes there → constraints auto-zero without the explicit transition guard. Polynomially non-equivalent but semantically equivalent under the last-row invariant.",
       "applies_to": "all"
     }
   ],
   "7a366bde1f": [
     {
-      "group_remark": "**Intentional non-equivalent change.** Per-bus domain tag added to `Challenges` encoding; each bus constraint polynomial now includes a distinct domain separator constant. This is a soundness improvement, not a refactor.",
+      "group_remark": "**Intentional non-equivalent change.** Per-bus domain tag added to `Challenges` encoding. 8 bus constraints affected: chiplets bus (1), hash_kernel bus (1), wiring bus (1), decoder bus (3), range bus (1), stack bus (1). Each polynomial now includes a distinct domain separator constant. Source expressions are identical before/after — the change is in how `Challenges` computes the encoding, not in the assertion code.",
       "applies_to": "all"
     }
   ],
   "c14fd13f56": [
     {
-      "group_remark": "Small helper function inlined; constraint expression unchanged, only call-site location moved.",
+      "group_remark": "Helper `enforce_decoder_selector` inlined into call site. Expression restructured: `assert_zero(ONE - sp - ctrl_flag)` → `assert_one(sp + control_flow())`. Polynomial sign-flipped (`-(1 - sp - ctrl)` vs `sp + ctrl - 1`) but both assert the same zero. Moved from decoder/mod.rs:699 to decoder/mod.rs:132.",
       "applies_to": "all"
     }
   ],
   "0216cd69de": [
     {
-      "group_remark": "Constraint style refactor: gates factored into `when()` chains, semantic assertions applied. 7 sign flips (`assert_zero(g*(1-x))` to `when(g).assert_one(x)`) and 3 constraints gained `is_transition` factor (`when_transition().when(flag)` where the flag is an op flag that vanishes on the last row, so the constraint was already vacuous there). All changes are semantically equivalent.",
+      "group_remark": "Sign flip: `assert_zero(gate * x.not())` → `when(gate).assert_one(x)`. Polynomial negated but equivalent.",
       "applies_to": "all"
+    },
+    {
+      "old_fp": "base:33cd4a4cdfe025b7",
+      "new_fp": "base:cc32b5b2201fda4a",
+      "remark": "ace.rs:121→132. Gate extraction: `assert_zero(ace_transition * f_next * sblock * sblock_next.not())` → `when(ace_transition).when(f_next).when(sblock).assert_one(sblock_next)`. Sign flip + compound gate decomposed into `when()` chain. Equivalent."
+    },
+    {
+      "old_fp": "base:41f16c99a7b98bd6",
+      "new_fp": "base:be0e93655846742b",
+      "remark": "ace.rs:125→136. Gate extraction: `assert_zero(ace_flag * f_end * sblock.not())` → `when(ace_flag).when(f_end).assert_one(sblock)`. Sign flip + gate decomposition. Equivalent."
+    },
+    {
+      "old_fp": "base:9796358beddcb4de",
+      "new_fp": "base:6869ca7312234b23",
+      "remark": "decoder:129. Sign flip: `when_transition().assert_zero(span_flag * sp_next.not())` → `when_transition().when(span_flag).assert_one(sp_next)`. Equivalent."
+    },
+    {
+      "old_fp": "base:3261692f76c5327e",
+      "new_fp": "base:cd9e96cf893acd83",
+      "remark": "decoder:133. Sign flip: `when_transition().assert_zero(respan_flag * sp_next.not())` → `when_transition().when(respan_flag).assert_one(sp_next)`. Equivalent."
+    },
+    {
+      "old_fp": "base:0f9fe67a1d548d3b",
+      "new_fp": "base:f0601984e2ab72c6",
+      "remark": "decoder:217→225. Gate extraction into `when(f_repeat)` scope: `assert_zero(f_repeat * s0.not())` → `when(f_repeat).assert_one(s0)`. Sign flip + gate moved to scoped builder. Equivalent."
+    },
+    {
+      "old_fp": "base:19bf739af9b37fd6",
+      "new_fp": "base:e6408c64064c802b",
+      "remark": "decoder:218→226. Gate extraction into `when(f_repeat)` scope: `assert_zero(f_repeat * is_loop_body.not())` → `when(f_repeat).assert_one(is_loop_body)`. Sign flip + gate moved to scoped builder. Equivalent."
+    },
+    {
+      "old_fp": "base:8512ed686aec190f",
+      "new_fp": "base:7aed12969513e6f2",
+      "remark": "decoder:237→245. Sign flip: `when_transition().assert_zero(f_halt * f_halt_next.not())` → `when_transition().when(f_halt).assert_one(f_halt_next)`. Equivalent."
+    },
+    {
+      "old_fp": "base:51f7bc0eab84a09a",
+      "new_fp": "base:39f8f5542815155e",
+      "remark": "stack/ops:313→227 (CSWAP). Gained `is_transition` factor: gate `builder.is_transition() * is_cswap` was manually computed, now `when_transition()` hoisted to function scope. Polynomial restructured but algebraically identical — `is_transition * is_cswap` present in both. Equivalent."
+    },
+    {
+      "old_fp": "base:a440ec62d598a73b",
+      "new_fp": "base:df3339a291b1e6b0",
+      "remark": "stack/ops:324→237 (CSWAPW). Gained `is_transition` factor: same restructuring as CSWAP — manually computed `builder.is_transition() * is_cswapw` gate replaced by function-level `when_transition()`. Algebraically identical. Equivalent."
+    },
+    {
+      "old_fp": "base:2076f65ca97d7633",
+      "new_fp": "base:20141445ab6da46c",
+      "remark": "stack/ops:341→253 (ASSERT). **Gained `is_transition` factor** not present before. Before: `when(is_assert).assert_one(s0)` (all rows). After: `when_transition().when(is_assert).assert_one(s0)` (transition rows only). Semantically equivalent because `is_assert` is an op flag that is zero on the last row (no operation executes there), so the constraint was already vacuous on the last row."
     }
   ]
 }
